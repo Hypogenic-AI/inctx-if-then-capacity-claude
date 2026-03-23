@@ -1,0 +1,304 @@
+[
+  {
+    "id": "scale_1cond_0_trigger",
+    "type": "scaling_1",
+    "num_conditions": 1,
+    "instruction": "If the message contains the word 'science', include '[SCI]' somewhere in your response.",
+    "input": "Tell me about science and its impact on society.",
+    "expected_markers": [
+      "[SCI]"
+    ],
+    "absent_markers": [],
+    "should_trigger": true
+  },
+  {
+    "id": "scale_1cond_0_nontrigger",
+    "type": "scaling_1",
+    "num_conditions": 1,
+    "instruction": "If the message contains the word 'science', include '[SCI]' somewhere in your response.",
+    "input": "Tell me about the weather today.",
+    "expected_markers": [],
+    "absent_markers": [
+      "[SCI]"
+    ],
+    "should_trigger": false
+  },
+  {
+    "id": "scale_1cond_1_trigger",
+    "type": "scaling_1",
+    "num_conditions": 1,
+    "instruction": "If the message contains the word 'history', include '[HIST]' somewhere in your response.",
+    "input": "Tell me about history and its impact on society.",
+    "expected_markers": [
+      "[HIST]"
+    ],
+    "absent_markers": [],
+    "should_trigger": true
+  },
+  {
+    "id": "scale_1cond_1_nontrigger",
+    "type": "scaling_1",
+    "num_conditions": 1,
+    "instruction": "If the message contains the word 'history', include '[HIST]' somewhere in your response.",
+    "input": "Tell me about the weather today.",
+    "expected_markers": [],
+    "absent_markers": [
+      "[HIST]"
+    ],
+    "should_trigger": false
+  },
+  {
+    "id": "scale_1cond_2_trigger",
+    "type": "scaling_1",
+    "num_conditions": 1,
+    "instruction": "If the message contains the word 'art', include '[ART]' somewhere in your response.",
+    "input": "Tell me about art and its impact on society.",
+    "expected_markers": [
+      "[ART]"
+    ],
+    "absent_markers": [],
+    "should_trigger": true
+  },
+  {
+    "id": "scale_1cond_2_nontrigger",
+    "type": "scaling_1",
+    "num_conditions": 1,
+    "instruction": "If the message contains the word 'art', include '[ART]' somewhere in your response.",
+    "input": "Tell me about the weather today.",
+    "expected_markers": [],
+    "absent_markers": [
+      "[ART]"
+    ],
+    "should_trigger": false
+  },
+  {
+    "id": "scale_1cond_3_trigger",
+    "type": "scaling_1",
+    "num_conditions": 1,
+    "instruction": "If the message contains the word 'math', include '[MATH]' somewhere in your response.",
+    "input": "Tell me about math and its impact on society.",
+    "expected_markers": [
+      "[MATH]"
+    ],
+    "absent_markers": [],
+    "should_trigger": true
+  },
+  {
+    "id": "scale_1cond_3_nontrigger",
+    "type": "scaling_1",
+    "num_conditions": 1,
+    "instruction": "If the message contains the word 'math', include '[MATH]' somewhere in your response.",
+    "input": "Tell me about the weather today.",
+    "expected_markers": [],
+    "absent_markers": [
+      "[MATH]"
+    ],
+    "should_trigger": false
+  },
+  {
+    "id": "scale_2cond_0_both_trigger",
+    "type": "scaling_2",
+    "num_conditions": 2,
+    "instruction": "If the message contains the word 'science', include '[SCI]' somewhere in your response. If the message contains the word 'history', include '[HIST]' somewhere in your response.",
+    "input": "I love both science and history.",
+    "expected_markers": [
+      "[SCI]",
+      "[HIST]"
+    ],
+    "absent_markers": [],
+    "should_trigger": true
+  },
+  {
+    "id": "scale_2cond_0_one_trigger",
+    "type": "scaling_2",
+    "num_conditions": 2,
+    "instruction": "If the message contains the word 'science', include '[SCI]' somewhere in your response. If the message contains the word 'history', include '[HIST]' somewhere in your response.",
+    "input": "Tell me about science please.",
+    "expected_markers": [
+      "[SCI]"
+    ],
+    "absent_markers": [
+      "[HIST]"
+    ],
+    "should_trigger": true
+  },
+  {
+    "id": "scale_2cond_0_none_trigger",
+    "type": "scaling_2",
+    "num_conditions": 2,
+    "instruction": "If the message contains the word 'science', include '[SCI]' somewhere in your response. If the message contains the word 'history', include '[HIST]' somewhere in your response.",
+    "input": "Tell me about the weather today.",
+    "expected_markers": [],
+    "absent_markers": [
+      "[SCI]",
+      "[HIST]"
+    ],
+    "should_trigger": false
+  },
+  {
+    "id": "scale_2cond_1_both_trigger",
+    "type": "scaling_2",
+    "num_conditions": 2,
+    "instruction": "If the message contains the word 'art', include '[ART]' somewhere in your response. If the message contains the word 'math', include '[MATH]' somewhere in your response.",
+    "input": "I love both art and math.",
+    "expected_markers": [
+      "[ART]",
+      "[MATH]"
+    ],
+    "absent_markers": [],
+    "should_trigger": true
+  },
+  {
+    "id": "scale_2cond_1_one_trigger",
+    "type": "scaling_2",
+    "num_conditions": 2,
+    "instruction": "If the message contains the word 'art', include '[ART]' somewhere in your response. If the message contains the word 'math', include '[MATH]' somewhere in your response.",
+    "input": "Tell me about art please.",
+    "expected_markers": [
+      "[ART]"
+    ],
+    "absent_markers": [
+      "[MATH]"
+    ],
+    "should_trigger": true
+  },
+  {
+    "id": "scale_2cond_1_none_trigger",
+    "type": "scaling_2",
+    "num_conditions": 2,
+    "instruction": "If the message contains the word 'art', include '[ART]' somewhere in your response. If the message contains the word 'math', include '[MATH]' somewhere in your response.",
+    "input": "Tell me about the weather today.",
+    "expected_markers": [],
+    "absent_markers": [
+      "[ART]",
+      "[MATH]"
+    ],
+    "should_trigger": false
+  },
+  {
+    "id": "scale_2cond_2_both_trigger",
+    "type": "scaling_2",
+    "num_conditions": 2,
+    "instruction": "If the message contains the word 'science', include '[SCI]' somewhere in your response. If the message contains the word 'art', include '[ART]' somewhere in your response.",
+    "input": "I love both science and art.",
+    "expected_markers": [
+      "[SCI]",
+      "[ART]"
+    ],
+    "absent_markers": [],
+    "should_trigger": true
+  },
+  {
+    "id": "scale_2cond_2_one_trigger",
+    "type": "scaling_2",
+    "num_conditions": 2,
+    "instruction": "If the message contains the word 'science', include '[SCI]' somewhere in your response. If the message contains the word 'art', include '[ART]' somewhere in your response.",
+    "input": "Tell me about science please.",
+    "expected_markers": [
+      "[SCI]"
+    ],
+    "absent_markers": [
+      "[ART]"
+    ],
+    "should_trigger": true
+  },
+  {
+    "id": "scale_2cond_2_none_trigger",
+    "type": "scaling_2",
+    "num_conditions": 2,
+    "instruction": "If the message contains the word 'science', include '[SCI]' somewhere in your response. If the message contains the word 'art', include '[ART]' somewhere in your response.",
+    "input": "Tell me about the weather today.",
+    "expected_markers": [],
+    "absent_markers": [
+      "[SCI]",
+      "[ART]"
+    ],
+    "should_trigger": false
+  },
+  {
+    "id": "scale_2cond_3_both_trigger",
+    "type": "scaling_2",
+    "num_conditions": 2,
+    "instruction": "If the message contains the word 'history', include '[HIST]' somewhere in your response. If the message contains the word 'math', include '[MATH]' somewhere in your response.",
+    "input": "I love both history and math.",
+    "expected_markers": [
+      "[HIST]",
+      "[MATH]"
+    ],
+    "absent_markers": [],
+    "should_trigger": true
+  },
+  {
+    "id": "scale_2cond_3_one_trigger",
+    "type": "scaling_2",
+    "num_conditions": 2,
+    "instruction": "If the message contains the word 'history', include '[HIST]' somewhere in your response. If the message contains the word 'math', include '[MATH]' somewhere in your response.",
+    "input": "Tell me about history please.",
+    "expected_markers": [
+      "[HIST]"
+    ],
+    "absent_markers": [
+      "[MATH]"
+    ],
+    "should_trigger": true
+  },
+  {
+    "id": "scale_2cond_3_none_trigger",
+    "type": "scaling_2",
+    "num_conditions": 2,
+    "instruction": "If the message contains the word 'history', include '[HIST]' somewhere in your response. If the message contains the word 'math', include '[MATH]' somewhere in your response.",
+    "input": "Tell me about the weather today.",
+    "expected_markers": [],
+    "absent_markers": [
+      "[HIST]",
+      "[MATH]"
+    ],
+    "should_trigger": false
+  },
+  {
+    "id": "scale_4cond_all_trigger",
+    "type": "scaling_4",
+    "num_conditions": 4,
+    "instruction": "If the message contains the word 'science', include '[SCI]' somewhere in your response. If the message contains the word 'history', include '[HIST]' somewhere in your response. If the message contains the word 'art', include '[ART]' somewhere in your response. If the message contains the word 'math', include '[MATH]' somewhere in your response.",
+    "input": "I'm interested in science, history, art, and math.",
+    "expected_markers": [
+      "[SCI]",
+      "[HIST]",
+      "[ART]",
+      "[MATH]"
+    ],
+    "absent_markers": [],
+    "should_trigger": true
+  },
+  {
+    "id": "scale_4cond_two_trigger",
+    "type": "scaling_4",
+    "num_conditions": 4,
+    "instruction": "If the message contains the word 'science', include '[SCI]' somewhere in your response. If the message contains the word 'history', include '[HIST]' somewhere in your response. If the message contains the word 'art', include '[ART]' somewhere in your response. If the message contains the word 'math', include '[MATH]' somewhere in your response.",
+    "input": "I study science and art.",
+    "expected_markers": [
+      "[SCI]",
+      "[ART]"
+    ],
+    "absent_markers": [
+      "[HIST]",
+      "[MATH]"
+    ],
+    "should_trigger": true
+  },
+  {
+    "id": "scale_4cond_none_trigger",
+    "type": "scaling_4",
+    "num_conditions": 4,
+    "instruction": "If the message contains the word 'science', include '[SCI]' somewhere in your response. If the message contains the word 'history', include '[HIST]' somewhere in your response. If the message contains the word 'art', include '[ART]' somewhere in your response. If the message contains the word 'math', include '[MATH]' somewhere in your response.",
+    "input": "Tell me about cooking Italian food.",
+    "expected_markers": [],
+    "absent_markers": [
+      "[SCI]",
+      "[HIST]",
+      "[ART]",
+      "[MATH]"
+    ],
+    "should_trigger": false
+  }
+]

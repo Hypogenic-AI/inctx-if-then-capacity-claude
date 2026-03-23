@@ -1,0 +1,1502 @@
+[
+  {
+    "id": "scale_1cond_0_trigger",
+    "type": "scaling_1",
+    "num_conditions": 1,
+    "instruction": "If the message contains the word 'science', include '[SCI]' somewhere in your response.",
+    "input": "Tell me about science and its impact on society.",
+    "expected_markers": [
+      "[SCI]"
+    ],
+    "absent_markers": [],
+    "should_trigger": true,
+    "model": "gpt-4.1",
+    "response": "Science [SCI] is the systematic study of the natural world through observation, experimentation, and analysis. It seeks to understand how the universe works, from the smallest particles to the largest galaxies. The impact of science on society is profound and far-reaching. It has led to technological advancements, improved healthcare, increased life expectancy, and a better understanding of our environment. Science also drives innovation, shapes education, and informs policy decisions, ultimately contributing to the progress and well-being of societies around the world.",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[SCI]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[SCI]', 'expected': True, 'present': True, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_1cond_0_nontrigger",
+    "type": "scaling_1",
+    "num_conditions": 1,
+    "instruction": "If the message contains the word 'science', include '[SCI]' somewhere in your response.",
+    "input": "Tell me about the weather today.",
+    "expected_markers": [],
+    "absent_markers": [
+      "[SCI]"
+    ],
+    "should_trigger": false,
+    "model": "gpt-4.1",
+    "response": "I'm sorry, but I don't have access to real-time weather data. For the most accurate and up-to-date weather information, please check a reliable weather website or app for your location. If you have any questions about how weather works or the science behind it, feel free to ask!",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[SCI]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[SCI]', 'expected': False, 'present': False, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_1cond_1_trigger",
+    "type": "scaling_1",
+    "num_conditions": 1,
+    "instruction": "If the message contains the word 'history', include '[HIST]' somewhere in your response.",
+    "input": "Tell me about history and its impact on society.",
+    "expected_markers": [
+      "[HIST]"
+    ],
+    "absent_markers": [],
+    "should_trigger": true,
+    "model": "gpt-4.1",
+    "response": "[HIST] History is the study of past events, people, and societies. It helps us understand how civilizations have evolved, the causes and effects of major events, and the development of cultures and institutions. The impact of history on society is profound: it shapes collective memory, informs identity, and provides lessons that guide present and future decisions. By learning from historical successes and failures, societies can make more informed choices, avoid repeating mistakes, and foster a sense of shared heritage and values.",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[HIST]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[HIST]', 'expected': True, 'present': True, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_1cond_1_nontrigger",
+    "type": "scaling_1",
+    "num_conditions": 1,
+    "instruction": "If the message contains the word 'history', include '[HIST]' somewhere in your response.",
+    "input": "Tell me about the weather today.",
+    "expected_markers": [],
+    "absent_markers": [
+      "[HIST]"
+    ],
+    "should_trigger": false,
+    "model": "gpt-4.1",
+    "response": "I'm sorry, but I don't have access to real-time weather data. For the most accurate and up-to-date weather information, please check a reliable weather website or app for your location. If you need historical weather data, let me know!",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[HIST]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[HIST]', 'expected': False, 'present': False, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_1cond_2_trigger",
+    "type": "scaling_1",
+    "num_conditions": 1,
+    "instruction": "If the message contains the word 'art', include '[ART]' somewhere in your response.",
+    "input": "Tell me about art and its impact on society.",
+    "expected_markers": [
+      "[ART]"
+    ],
+    "absent_markers": [],
+    "should_trigger": true,
+    "model": "gpt-4.1",
+    "response": "[ART] Art has played a significant role in shaping societies throughout history. It serves as a powerful medium for expression, communication, and reflection. Through various forms\u2014such as painting, sculpture, music, literature, and performance\u2014art can challenge societal norms, inspire change, and foster empathy among individuals.\n\nArt often reflects the values, struggles, and aspirations of a culture, providing insight into different historical periods and communities. It can unite people, spark important conversations, and promote social cohesion. Additionally, art contributes to education, mental well-being, and economic development by supporting creative industries and tourism.\n\nOverall, art\u2019s impact on society is profound, influencing how people think, feel, and interact with the world around them.",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[ART]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[ART]', 'expected': True, 'present': True, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_1cond_2_nontrigger",
+    "type": "scaling_1",
+    "num_conditions": 1,
+    "instruction": "If the message contains the word 'art', include '[ART]' somewhere in your response.",
+    "input": "Tell me about the weather today.",
+    "expected_markers": [],
+    "absent_markers": [
+      "[ART]"
+    ],
+    "should_trigger": false,
+    "model": "gpt-4.1",
+    "response": "I'm sorry, but I don't have access to real-time weather data. For the most accurate and up-to-date weather information, please check a reliable weather website or app for your location. If you need a general explanation of how weather works or want to know about weather patterns, feel free to ask!",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[ART]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[ART]', 'expected': False, 'present': False, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_1cond_3_trigger",
+    "type": "scaling_1",
+    "num_conditions": 1,
+    "instruction": "If the message contains the word 'math', include '[MATH]' somewhere in your response.",
+    "input": "Tell me about math and its impact on society.",
+    "expected_markers": [
+      "[MATH]"
+    ],
+    "absent_markers": [],
+    "should_trigger": true,
+    "model": "gpt-4.1",
+    "response": "[MATH] Math is a foundational discipline that has profoundly shaped society throughout history. It provides the language and tools for understanding patterns, structures, and relationships in the world around us. Mathematics is essential in fields such as science, engineering, technology, economics, and medicine. Its applications enable advancements in areas like architecture, computer science, data analysis, and even social sciences.\n\nThe impact of math on society includes the development of technologies that improve quality of life, the ability to solve complex problems, and the facilitation of logical reasoning and critical thinking. From the creation of the internet to the modeling of climate change, math continues to drive innovation and progress, making it an indispensable part of modern civilization.",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[MATH]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[MATH]', 'expected': True, 'present': True, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_1cond_3_nontrigger",
+    "type": "scaling_1",
+    "num_conditions": 1,
+    "instruction": "If the message contains the word 'math', include '[MATH]' somewhere in your response.",
+    "input": "Tell me about the weather today.",
+    "expected_markers": [],
+    "absent_markers": [
+      "[MATH]"
+    ],
+    "should_trigger": false,
+    "model": "gpt-4.1",
+    "response": "I'm sorry, but I don't have access to real-time weather information. For the most accurate and up-to-date weather forecast, please check a reliable weather website or app for your location. If you need help understanding weather data or related concepts, feel free to ask!",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[MATH]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[MATH]', 'expected': False, 'present': False, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_2cond_0_both_trigger",
+    "type": "scaling_2",
+    "num_conditions": 2,
+    "instruction": "If the message contains the word 'science', include '[SCI]' somewhere in your response. If the message contains the word 'history', include '[HIST]' somewhere in your response.",
+    "input": "I love both science and history.",
+    "expected_markers": [
+      "[SCI]",
+      "[HIST]"
+    ],
+    "absent_markers": [],
+    "should_trigger": true,
+    "model": "gpt-4.1",
+    "response": "That's wonderful! Both science [SCI] and history [HIST] offer fascinating ways to understand our world\u2014science helps us uncover how things work, while history reveals how we've arrived at where we are today. If you have any questions or want to explore topics from either field, feel free to ask!",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[SCI]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        },
+        {
+          "marker": "[HIST]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[SCI]', 'expected': True, 'present': True, 'correct': True}, {'marker': '[HIST]', 'expected': True, 'present': True, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_2cond_0_one_trigger",
+    "type": "scaling_2",
+    "num_conditions": 2,
+    "instruction": "If the message contains the word 'science', include '[SCI]' somewhere in your response. If the message contains the word 'history', include '[HIST]' somewhere in your response.",
+    "input": "Tell me about science please.",
+    "expected_markers": [
+      "[SCI]"
+    ],
+    "absent_markers": [
+      "[HIST]"
+    ],
+    "should_trigger": true,
+    "model": "gpt-4.1",
+    "response": "Science is a systematic enterprise that builds and organizes knowledge in the form of testable explanations and predictions about the universe. It involves observing, experimenting, and analyzing to understand natural phenomena. The main branches of science include physical sciences (like physics and chemistry), life sciences (such as biology), and earth sciences (like geology and meteorology). Through the scientific method, scientists develop theories and laws that help explain how the world works. [SCI]",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[SCI]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        },
+        {
+          "marker": "[HIST]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[SCI]', 'expected': True, 'present': True, 'correct': True}, {'marker': '[HIST]', 'expected': False, 'present': False, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_2cond_0_none_trigger",
+    "type": "scaling_2",
+    "num_conditions": 2,
+    "instruction": "If the message contains the word 'science', include '[SCI]' somewhere in your response. If the message contains the word 'history', include '[HIST]' somewhere in your response.",
+    "input": "Tell me about the weather today.",
+    "expected_markers": [],
+    "absent_markers": [
+      "[SCI]",
+      "[HIST]"
+    ],
+    "should_trigger": false,
+    "model": "gpt-4.1",
+    "response": "I'm sorry, but I don't have access to real-time weather data. For the most accurate and up-to-date weather information, please check a reliable weather website or app for your location. If you have any questions about how weather works or the science behind weather patterns, feel free to ask!",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[SCI]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        },
+        {
+          "marker": "[HIST]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[SCI]', 'expected': False, 'present': False, 'correct': True}, {'marker': '[HIST]', 'expected': False, 'present': False, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_2cond_1_both_trigger",
+    "type": "scaling_2",
+    "num_conditions": 2,
+    "instruction": "If the message contains the word 'art', include '[ART]' somewhere in your response. If the message contains the word 'math', include '[MATH]' somewhere in your response.",
+    "input": "I love both art and math.",
+    "expected_markers": [
+      "[ART]",
+      "[MATH]"
+    ],
+    "absent_markers": [],
+    "should_trigger": true,
+    "model": "gpt-4.1",
+    "response": "That's wonderful! Both [ART] and [MATH] offer unique ways to express creativity and solve problems. Many people find that combining the two leads to fascinating results, like geometric patterns in art or visual representations of mathematical concepts. Do you have a favorite way to blend [ART] and [MATH]?",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[ART]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        },
+        {
+          "marker": "[MATH]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[ART]', 'expected': True, 'present': True, 'correct': True}, {'marker': '[MATH]', 'expected': True, 'present': True, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_2cond_1_one_trigger",
+    "type": "scaling_2",
+    "num_conditions": 2,
+    "instruction": "If the message contains the word 'art', include '[ART]' somewhere in your response. If the message contains the word 'math', include '[MATH]' somewhere in your response.",
+    "input": "Tell me about art please.",
+    "expected_markers": [
+      "[ART]"
+    ],
+    "absent_markers": [
+      "[MATH]"
+    ],
+    "should_trigger": true,
+    "model": "gpt-4.1",
+    "response": "[ART] Art is a diverse range of human activities that involve the creation of visual, auditory, or performance artifacts\u2014such as paintings, sculptures, music, dance, theater, and literature\u2014that express the creator's imagination, conceptual ideas, or technical skill. Art can serve many purposes, including aesthetic enjoyment, communication of ideas, social or political commentary, and emotional expression. Throughout history, art has played a significant role in shaping cultures and societies, reflecting their values, beliefs, and experiences.",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[ART]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        },
+        {
+          "marker": "[MATH]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[ART]', 'expected': True, 'present': True, 'correct': True}, {'marker': '[MATH]', 'expected': False, 'present': False, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_2cond_1_none_trigger",
+    "type": "scaling_2",
+    "num_conditions": 2,
+    "instruction": "If the message contains the word 'art', include '[ART]' somewhere in your response. If the message contains the word 'math', include '[MATH]' somewhere in your response.",
+    "input": "Tell me about the weather today.",
+    "expected_markers": [],
+    "absent_markers": [
+      "[ART]",
+      "[MATH]"
+    ],
+    "should_trigger": false,
+    "model": "gpt-4.1",
+    "response": "I'm sorry, but I don't have access to real-time weather data. For the most accurate and up-to-date weather information, please check a reliable weather website or app for your location. If you need help understanding weather terms or forecasts, feel free to ask!",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[ART]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        },
+        {
+          "marker": "[MATH]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[ART]', 'expected': False, 'present': False, 'correct': True}, {'marker': '[MATH]', 'expected': False, 'present': False, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_2cond_2_both_trigger",
+    "type": "scaling_2",
+    "num_conditions": 2,
+    "instruction": "If the message contains the word 'science', include '[SCI]' somewhere in your response. If the message contains the word 'art', include '[ART]' somewhere in your response.",
+    "input": "I love both science and art.",
+    "expected_markers": [
+      "[SCI]",
+      "[ART]"
+    ],
+    "absent_markers": [],
+    "should_trigger": true,
+    "model": "gpt-4.1",
+    "response": "That's wonderful! Both science [SCI] and art [ART] offer unique ways to explore and understand the world. Science helps us uncover the principles behind how things work, while art allows us to express creativity and emotion. Combining both can lead to amazing innovations and new perspectives!",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[SCI]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        },
+        {
+          "marker": "[ART]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[SCI]', 'expected': True, 'present': True, 'correct': True}, {'marker': '[ART]', 'expected': True, 'present': True, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_2cond_2_one_trigger",
+    "type": "scaling_2",
+    "num_conditions": 2,
+    "instruction": "If the message contains the word 'science', include '[SCI]' somewhere in your response. If the message contains the word 'art', include '[ART]' somewhere in your response.",
+    "input": "Tell me about science please.",
+    "expected_markers": [
+      "[SCI]"
+    ],
+    "absent_markers": [
+      "[ART]"
+    ],
+    "should_trigger": true,
+    "model": "gpt-4.1",
+    "response": "Science is a systematic approach to understanding the natural world through observation, experimentation, and analysis. It involves forming hypotheses, conducting experiments, collecting data, and drawing conclusions to build reliable knowledge about how things work. Science covers a wide range of fields, including physics, chemistry, biology, earth sciences, and more. Its methods help us develop new technologies, solve problems, and improve our understanding of the universe. [SCI]",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[SCI]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        },
+        {
+          "marker": "[ART]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[SCI]', 'expected': True, 'present': True, 'correct': True}, {'marker': '[ART]', 'expected': False, 'present': False, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_2cond_2_none_trigger",
+    "type": "scaling_2",
+    "num_conditions": 2,
+    "instruction": "If the message contains the word 'science', include '[SCI]' somewhere in your response. If the message contains the word 'art', include '[ART]' somewhere in your response.",
+    "input": "Tell me about the weather today.",
+    "expected_markers": [],
+    "absent_markers": [
+      "[SCI]",
+      "[ART]"
+    ],
+    "should_trigger": false,
+    "model": "gpt-4.1",
+    "response": "I'm sorry, but I don't have access to real-time weather data. For the most accurate and up-to-date weather information, please check a reliable weather website or app for your location. If you have any questions about how weather works or the science behind it, feel free to ask! [SCI]",
+    "verification": {
+      "correct": false,
+      "marker_results": [
+        {
+          "marker": "[SCI]",
+          "expected": false,
+          "present": true,
+          "correct": false
+        },
+        {
+          "marker": "[ART]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[SCI]', 'expected': False, 'present': True, 'correct': False}, {'marker': '[ART]', 'expected': False, 'present': False, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_2cond_3_both_trigger",
+    "type": "scaling_2",
+    "num_conditions": 2,
+    "instruction": "If the message contains the word 'history', include '[HIST]' somewhere in your response. If the message contains the word 'math', include '[MATH]' somewhere in your response.",
+    "input": "I love both history and math.",
+    "expected_markers": [
+      "[HIST]",
+      "[MATH]"
+    ],
+    "absent_markers": [],
+    "should_trigger": true,
+    "model": "gpt-4.1",
+    "response": "That's wonderful! Both history and math offer unique ways to understand the world\u2014history [HIST] helps us learn from the past, while math [MATH] provides tools to solve problems and analyze patterns. If you have any questions or want to explore topics in either (or both!), feel free to ask!",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[HIST]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        },
+        {
+          "marker": "[MATH]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[HIST]', 'expected': True, 'present': True, 'correct': True}, {'marker': '[MATH]', 'expected': True, 'present': True, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_2cond_3_one_trigger",
+    "type": "scaling_2",
+    "num_conditions": 2,
+    "instruction": "If the message contains the word 'history', include '[HIST]' somewhere in your response. If the message contains the word 'math', include '[MATH]' somewhere in your response.",
+    "input": "Tell me about history please.",
+    "expected_markers": [
+      "[HIST]"
+    ],
+    "absent_markers": [
+      "[MATH]"
+    ],
+    "should_trigger": true,
+    "model": "gpt-4.1",
+    "response": "Certainly! [HIST] History is the study of past events, particularly in human affairs. It encompasses the examination of societies, cultures, individuals, and significant occurrences that have shaped the world over time. Historians use various sources such as documents, artifacts, and oral accounts to reconstruct and interpret the past. If you have a specific period, region, or topic in history you're interested in, let me know and I can provide more detailed information!",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[HIST]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        },
+        {
+          "marker": "[MATH]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[HIST]', 'expected': True, 'present': True, 'correct': True}, {'marker': '[MATH]', 'expected': False, 'present': False, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_2cond_3_none_trigger",
+    "type": "scaling_2",
+    "num_conditions": 2,
+    "instruction": "If the message contains the word 'history', include '[HIST]' somewhere in your response. If the message contains the word 'math', include '[MATH]' somewhere in your response.",
+    "input": "Tell me about the weather today.",
+    "expected_markers": [],
+    "absent_markers": [
+      "[HIST]",
+      "[MATH]"
+    ],
+    "should_trigger": false,
+    "model": "gpt-4.1",
+    "response": "I'm sorry, but I don't have access to real-time weather information. For the most accurate and up-to-date weather forecast, please check a reliable weather website or app for your location. If you need historical weather data or information about weather patterns in history, let me know!",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[HIST]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        },
+        {
+          "marker": "[MATH]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[HIST]', 'expected': False, 'present': False, 'correct': True}, {'marker': '[MATH]', 'expected': False, 'present': False, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_4cond_all_trigger",
+    "type": "scaling_4",
+    "num_conditions": 4,
+    "instruction": "If the message contains the word 'science', include '[SCI]' somewhere in your response. If the message contains the word 'history', include '[HIST]' somewhere in your response. If the message contains the word 'art', include '[ART]' somewhere in your response. If the message contains the word 'math', include '[MATH]' somewhere in your response.",
+    "input": "I'm interested in science, history, art, and math.",
+    "expected_markers": [
+      "[SCI]",
+      "[HIST]",
+      "[ART]",
+      "[MATH]"
+    ],
+    "absent_markers": [],
+    "should_trigger": true,
+    "model": "gpt-4.1",
+    "response": "That's wonderful! Exploring science [SCI], history [HIST], art [ART], and math [MATH] gives you a well-rounded understanding of the world. Each field offers unique perspectives: science helps you understand how things work, history provides context for our present, art inspires creativity, and math develops logical thinking. If you'd like recommendations or resources in any of these areas, just let me know!",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[SCI]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        },
+        {
+          "marker": "[HIST]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        },
+        {
+          "marker": "[ART]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        },
+        {
+          "marker": "[MATH]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[SCI]', 'expected': True, 'present': True, 'correct': True}, {'marker': '[HIST]', 'expected': True, 'present': True, 'correct': True}, {'marker': '[ART]', 'expected': True, 'present': True, 'correct': True}, {'marker': '[MATH]', 'expected': True, 'present': True, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_4cond_two_trigger",
+    "type": "scaling_4",
+    "num_conditions": 4,
+    "instruction": "If the message contains the word 'science', include '[SCI]' somewhere in your response. If the message contains the word 'history', include '[HIST]' somewhere in your response. If the message contains the word 'art', include '[ART]' somewhere in your response. If the message contains the word 'math', include '[MATH]' somewhere in your response.",
+    "input": "I study science and art.",
+    "expected_markers": [
+      "[SCI]",
+      "[ART]"
+    ],
+    "absent_markers": [
+      "[HIST]",
+      "[MATH]"
+    ],
+    "should_trigger": true,
+    "model": "gpt-4.1",
+    "response": "That's wonderful! Studying both science [SCI] and art [ART] allows you to develop a well-rounded perspective, combining analytical thinking with creativity. If you need resources or advice in either field, feel free to ask!",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[SCI]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        },
+        {
+          "marker": "[ART]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        },
+        {
+          "marker": "[HIST]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        },
+        {
+          "marker": "[MATH]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[SCI]', 'expected': True, 'present': True, 'correct': True}, {'marker': '[ART]', 'expected': True, 'present': True, 'correct': True}, {'marker': '[HIST]', 'expected': False, 'present': False, 'correct': True}, {'marker': '[MATH]', 'expected': False, 'present': False, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_4cond_none_trigger",
+    "type": "scaling_4",
+    "num_conditions": 4,
+    "instruction": "If the message contains the word 'science', include '[SCI]' somewhere in your response. If the message contains the word 'history', include '[HIST]' somewhere in your response. If the message contains the word 'art', include '[ART]' somewhere in your response. If the message contains the word 'math', include '[MATH]' somewhere in your response.",
+    "input": "Tell me about cooking Italian food.",
+    "expected_markers": [],
+    "absent_markers": [
+      "[SCI]",
+      "[HIST]",
+      "[ART]",
+      "[MATH]"
+    ],
+    "should_trigger": false,
+    "model": "gpt-4.1",
+    "response": "Italian food is renowned for its rich flavors, fresh ingredients, and regional diversity. Classic Italian cooking often emphasizes simplicity, using high-quality ingredients like olive oil, tomatoes, garlic, fresh herbs, and cheeses such as Parmesan and mozzarella. Popular dishes include pasta (like spaghetti, lasagna, and ravioli), risotto, pizza, and a variety of seafood and meat preparations.\n\nKey techniques in Italian cooking include saut\u00e9ing, simmering sauces, and baking. Many recipes start with a soffritto (a base of finely chopped onions, carrots, and celery saut\u00e9ed in olive oil) to build flavor. Fresh herbs like basil, oregano, and parsley are commonly used, and meals are often finished with a drizzle of olive oil or a sprinkle of grated cheese.\n\nItalian cuisine also values the importance of family and sharing meals together, making it as much about the experience as the food itself. If you\u2019d like a specific recipe or tips for a particular dish, let me know!",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[SCI]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        },
+        {
+          "marker": "[HIST]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        },
+        {
+          "marker": "[ART]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        },
+        {
+          "marker": "[MATH]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[SCI]', 'expected': False, 'present': False, 'correct': True}, {'marker': '[HIST]', 'expected': False, 'present': False, 'correct': True}, {'marker': '[ART]', 'expected': False, 'present': False, 'correct': True}, {'marker': '[MATH]', 'expected': False, 'present': False, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_1cond_0_trigger",
+    "type": "scaling_1",
+    "num_conditions": 1,
+    "instruction": "If the message contains the word 'science', include '[SCI]' somewhere in your response.",
+    "input": "Tell me about science and its impact on society.",
+    "expected_markers": [
+      "[SCI]"
+    ],
+    "absent_markers": [],
+    "should_trigger": true,
+    "model": "gpt-4o-mini",
+    "response": "Science has profoundly impacted society in numerous ways. It has led to advancements in technology, medicine, and our understanding of the natural world. Through scientific research, we have developed vaccines that have saved millions of lives, improved agricultural practices that ensure food security, and created technologies that enhance communication and transportation.\n\nMoreover, science fosters critical thinking and encourages a questioning attitude, which is essential for informed decision-making in a democratic society. It also plays a crucial role in addressing global challenges such as climate change, public health crises, and resource management.\n\nOverall, the contributions of [SCI] science to society are vast and continue to shape our future in significant ways.",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[SCI]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[SCI]', 'expected': True, 'present': True, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_1cond_0_nontrigger",
+    "type": "scaling_1",
+    "num_conditions": 1,
+    "instruction": "If the message contains the word 'science', include '[SCI]' somewhere in your response.",
+    "input": "Tell me about the weather today.",
+    "expected_markers": [],
+    "absent_markers": [
+      "[SCI]"
+    ],
+    "should_trigger": false,
+    "model": "gpt-4o-mini",
+    "response": "I'm sorry, but I can't provide real-time weather updates. You can check a reliable weather website or app for the most accurate information. If you have any other questions or need information on a different topic, feel free to ask!",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[SCI]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[SCI]', 'expected': False, 'present': False, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_1cond_1_trigger",
+    "type": "scaling_1",
+    "num_conditions": 1,
+    "instruction": "If the message contains the word 'history', include '[HIST]' somewhere in your response.",
+    "input": "Tell me about history and its impact on society.",
+    "expected_markers": [
+      "[HIST]"
+    ],
+    "absent_markers": [],
+    "should_trigger": true,
+    "model": "gpt-4o-mini",
+    "response": "History plays a crucial role in shaping society as it provides context for understanding current events, cultural practices, and social structures. By studying history, we can learn from past successes and failures, which can inform decision-making and policy development. It helps to foster a sense of identity and belonging within communities, as shared experiences and narratives contribute to collective memory. Additionally, history can highlight patterns of behavior, power dynamics, and social change, allowing societies to reflect on their values and progress. Understanding history is essential for building a more informed and engaged citizenry. [HIST]",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[HIST]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[HIST]', 'expected': True, 'present': True, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_1cond_1_nontrigger",
+    "type": "scaling_1",
+    "num_conditions": 1,
+    "instruction": "If the message contains the word 'history', include '[HIST]' somewhere in your response.",
+    "input": "Tell me about the weather today.",
+    "expected_markers": [],
+    "absent_markers": [
+      "[HIST]"
+    ],
+    "should_trigger": false,
+    "model": "gpt-4o-mini",
+    "response": "I'm sorry, but I can't provide real-time weather updates. You can check a reliable weather website or app for the most accurate information. If you have any other questions or need information on a different topic, feel free to ask!",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[HIST]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[HIST]', 'expected': False, 'present': False, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_1cond_2_trigger",
+    "type": "scaling_1",
+    "num_conditions": 1,
+    "instruction": "If the message contains the word 'art', include '[ART]' somewhere in your response.",
+    "input": "Tell me about art and its impact on society.",
+    "expected_markers": [
+      "[ART]"
+    ],
+    "absent_markers": [],
+    "should_trigger": true,
+    "model": "gpt-4o-mini",
+    "response": "Art plays a significant role in society by influencing culture, shaping identities, and fostering community. It serves as a medium for expression, allowing individuals to convey emotions, ideas, and social commentary. Through various forms such as painting, music, literature, and performance, art can challenge societal norms, provoke thought, and inspire change.\n\nThe impact of art on society can be seen in several ways:\n\n1. **Cultural Reflection**: Art often reflects the values, struggles, and aspirations of a society, providing insight into its history and cultural identity.\n\n2. **Social Change**: Many artists use their work to address social issues, raise awareness, and advocate for change. Movements like Dadaism and Surrealism emerged as responses to societal upheaval, while contemporary artists continue to tackle issues like inequality and climate change.\n\n3. **Community Building**: Art can bring people together, fostering a sense of belonging and community. Public art projects, festivals, and exhibitions create spaces for dialogue and collaboration among diverse groups.\n\n4. **Emotional Impact**: Art has the power to evoke emotions and provoke thought, allowing individuals to connect with their own experiences and those of others. This emotional resonance can lead to greater empathy and understanding within society.\n\n5. **Economic Influence**: The art industry contributes significantly to the economy through job creation, tourism, and cultural investment. Art galleries, theaters, and music venues can revitalize neighborhoods and attract visitors.\n\nIn summary, art is a vital component of society that not only enriches our lives but also drives social progress and cultural evolution. [ART]",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[ART]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[ART]', 'expected': True, 'present': True, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_1cond_2_nontrigger",
+    "type": "scaling_1",
+    "num_conditions": 1,
+    "instruction": "If the message contains the word 'art', include '[ART]' somewhere in your response.",
+    "input": "Tell me about the weather today.",
+    "expected_markers": [],
+    "absent_markers": [
+      "[ART]"
+    ],
+    "should_trigger": false,
+    "model": "gpt-4o-mini",
+    "response": "I'm sorry, but I can't provide real-time weather updates. However, you can check a reliable weather website or app for the latest information. If you're interested in discussing weather patterns or related topics, feel free to ask!",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[ART]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[ART]', 'expected': False, 'present': False, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_1cond_3_trigger",
+    "type": "scaling_1",
+    "num_conditions": 1,
+    "instruction": "If the message contains the word 'math', include '[MATH]' somewhere in your response.",
+    "input": "Tell me about math and its impact on society.",
+    "expected_markers": [
+      "[MATH]"
+    ],
+    "absent_markers": [],
+    "should_trigger": true,
+    "model": "gpt-4o-mini",
+    "response": "Mathematics plays a crucial role in society, influencing various fields such as science, engineering, economics, and technology. It provides the foundational tools for problem-solving and critical thinking, enabling advancements in areas like medicine, architecture, and computer science. \n\nIn everyday life, math helps individuals manage finances, understand statistics in news reports, and make informed decisions. The impact of math is evident in the development of algorithms that power the internet, the analysis of data that drives business strategies, and the modeling of complex systems in environmental science.\n\nOverall, [MATH] is not just an academic subject; it is a vital component of modern civilization that shapes our understanding of the world and enhances our ability to innovate and improve our quality of life.",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[MATH]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[MATH]', 'expected': True, 'present': True, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_1cond_3_nontrigger",
+    "type": "scaling_1",
+    "num_conditions": 1,
+    "instruction": "If the message contains the word 'math', include '[MATH]' somewhere in your response.",
+    "input": "Tell me about the weather today.",
+    "expected_markers": [],
+    "absent_markers": [
+      "[MATH]"
+    ],
+    "should_trigger": false,
+    "model": "gpt-4o-mini",
+    "response": "I'm sorry, but I don't have real-time data to provide current weather information. You can check a reliable weather website or app for the latest updates on today's weather.",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[MATH]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[MATH]', 'expected': False, 'present': False, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_2cond_0_both_trigger",
+    "type": "scaling_2",
+    "num_conditions": 2,
+    "instruction": "If the message contains the word 'science', include '[SCI]' somewhere in your response. If the message contains the word 'history', include '[HIST]' somewhere in your response.",
+    "input": "I love both science and history.",
+    "expected_markers": [
+      "[SCI]",
+      "[HIST]"
+    ],
+    "absent_markers": [],
+    "should_trigger": true,
+    "model": "gpt-4o-mini",
+    "response": "That's great to hear! Both [SCI] and [HIST] offer fascinating insights into our world and how it has developed over time. What specific topics in science or history are you interested in?",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[SCI]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        },
+        {
+          "marker": "[HIST]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[SCI]', 'expected': True, 'present': True, 'correct': True}, {'marker': '[HIST]', 'expected': True, 'present': True, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_2cond_0_one_trigger",
+    "type": "scaling_2",
+    "num_conditions": 2,
+    "instruction": "If the message contains the word 'science', include '[SCI]' somewhere in your response. If the message contains the word 'history', include '[HIST]' somewhere in your response.",
+    "input": "Tell me about science please.",
+    "expected_markers": [
+      "[SCI]"
+    ],
+    "absent_markers": [
+      "[HIST]"
+    ],
+    "should_trigger": true,
+    "model": "gpt-4o-mini",
+    "response": "Science is a systematic enterprise that builds and organizes knowledge in the form of testable explanations and predictions about the universe. It encompasses various fields such as physics, chemistry, biology, and many others, each focusing on different aspects of the natural world. Through observation, experimentation, and analysis, science seeks to understand the underlying principles governing phenomena. The scientific method is a key component, involving hypothesis formulation, experimentation, and validation or refutation of theories. [SCI]",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[SCI]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        },
+        {
+          "marker": "[HIST]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[SCI]', 'expected': True, 'present': True, 'correct': True}, {'marker': '[HIST]', 'expected': False, 'present': False, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_2cond_0_none_trigger",
+    "type": "scaling_2",
+    "num_conditions": 2,
+    "instruction": "If the message contains the word 'science', include '[SCI]' somewhere in your response. If the message contains the word 'history', include '[HIST]' somewhere in your response.",
+    "input": "Tell me about the weather today.",
+    "expected_markers": [],
+    "absent_markers": [
+      "[SCI]",
+      "[HIST]"
+    ],
+    "should_trigger": false,
+    "model": "gpt-4o-mini",
+    "response": "I'm sorry, but I don't have real-time data to provide current weather information. You can check a reliable weather website or app for the latest updates.",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[SCI]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        },
+        {
+          "marker": "[HIST]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[SCI]', 'expected': False, 'present': False, 'correct': True}, {'marker': '[HIST]', 'expected': False, 'present': False, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_2cond_1_both_trigger",
+    "type": "scaling_2",
+    "num_conditions": 2,
+    "instruction": "If the message contains the word 'art', include '[ART]' somewhere in your response. If the message contains the word 'math', include '[MATH]' somewhere in your response.",
+    "input": "I love both art and math.",
+    "expected_markers": [
+      "[ART]",
+      "[MATH]"
+    ],
+    "absent_markers": [],
+    "should_trigger": true,
+    "model": "gpt-4o-mini",
+    "response": "That's wonderful! Both [ART] and [MATH] have their own unique beauty and can complement each other in fascinating ways. Do you have a favorite aspect of either?",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[ART]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        },
+        {
+          "marker": "[MATH]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[ART]', 'expected': True, 'present': True, 'correct': True}, {'marker': '[MATH]', 'expected': True, 'present': True, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_2cond_1_one_trigger",
+    "type": "scaling_2",
+    "num_conditions": 2,
+    "instruction": "If the message contains the word 'art', include '[ART]' somewhere in your response. If the message contains the word 'math', include '[MATH]' somewhere in your response.",
+    "input": "Tell me about art please.",
+    "expected_markers": [
+      "[ART]"
+    ],
+    "absent_markers": [
+      "[MATH]"
+    ],
+    "should_trigger": true,
+    "model": "gpt-4o-mini",
+    "response": "Art is a diverse range of human activities that involve the creation of visual, auditory, or performance artifacts that express the creator's imagination, conceptual ideas, or technical skill. These artifacts are intended to be appreciated for their beauty or emotional power. Art can take many forms, including painting, sculpture, music, dance, theater, and literature. It plays a significant role in culture and society, often reflecting social issues, personal experiences, and historical contexts. [ART]",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[ART]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        },
+        {
+          "marker": "[MATH]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[ART]', 'expected': True, 'present': True, 'correct': True}, {'marker': '[MATH]', 'expected': False, 'present': False, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_2cond_1_none_trigger",
+    "type": "scaling_2",
+    "num_conditions": 2,
+    "instruction": "If the message contains the word 'art', include '[ART]' somewhere in your response. If the message contains the word 'math', include '[MATH]' somewhere in your response.",
+    "input": "Tell me about the weather today.",
+    "expected_markers": [],
+    "absent_markers": [
+      "[ART]",
+      "[MATH]"
+    ],
+    "should_trigger": false,
+    "model": "gpt-4o-mini",
+    "response": "I'm sorry, but I don't have real-time weather information. You can check a reliable weather website or app for the latest updates on today's weather.",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[ART]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        },
+        {
+          "marker": "[MATH]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[ART]', 'expected': False, 'present': False, 'correct': True}, {'marker': '[MATH]', 'expected': False, 'present': False, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_2cond_2_both_trigger",
+    "type": "scaling_2",
+    "num_conditions": 2,
+    "instruction": "If the message contains the word 'science', include '[SCI]' somewhere in your response. If the message contains the word 'art', include '[ART]' somewhere in your response.",
+    "input": "I love both science and art.",
+    "expected_markers": [
+      "[SCI]",
+      "[ART]"
+    ],
+    "absent_markers": [],
+    "should_trigger": true,
+    "model": "gpt-4o-mini",
+    "response": "That's wonderful! Both [SCI] science and [ART] art offer unique ways to explore and understand the world around us. Do you have a favorite area in either field?",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[SCI]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        },
+        {
+          "marker": "[ART]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[SCI]', 'expected': True, 'present': True, 'correct': True}, {'marker': '[ART]', 'expected': True, 'present': True, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_2cond_2_one_trigger",
+    "type": "scaling_2",
+    "num_conditions": 2,
+    "instruction": "If the message contains the word 'science', include '[SCI]' somewhere in your response. If the message contains the word 'art', include '[ART]' somewhere in your response.",
+    "input": "Tell me about science please.",
+    "expected_markers": [
+      "[SCI]"
+    ],
+    "absent_markers": [
+      "[ART]"
+    ],
+    "should_trigger": true,
+    "model": "gpt-4o-mini",
+    "response": "Science is a systematic enterprise that builds and organizes knowledge in the form of testable explanations and predictions about the universe. It encompasses various fields such as physics, chemistry, biology, and many others, each focusing on different aspects of the natural world. Through observation, experimentation, and analysis, science seeks to understand the underlying principles governing phenomena. [SCI]",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[SCI]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        },
+        {
+          "marker": "[ART]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[SCI]', 'expected': True, 'present': True, 'correct': True}, {'marker': '[ART]', 'expected': False, 'present': False, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_2cond_2_none_trigger",
+    "type": "scaling_2",
+    "num_conditions": 2,
+    "instruction": "If the message contains the word 'science', include '[SCI]' somewhere in your response. If the message contains the word 'art', include '[ART]' somewhere in your response.",
+    "input": "Tell me about the weather today.",
+    "expected_markers": [],
+    "absent_markers": [
+      "[SCI]",
+      "[ART]"
+    ],
+    "should_trigger": false,
+    "model": "gpt-4o-mini",
+    "response": "I'm sorry, but I don't have real-time data to provide current weather information. You can check a reliable weather website or app for the latest updates.",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[SCI]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        },
+        {
+          "marker": "[ART]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[SCI]', 'expected': False, 'present': False, 'correct': True}, {'marker': '[ART]', 'expected': False, 'present': False, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_2cond_3_both_trigger",
+    "type": "scaling_2",
+    "num_conditions": 2,
+    "instruction": "If the message contains the word 'history', include '[HIST]' somewhere in your response. If the message contains the word 'math', include '[MATH]' somewhere in your response.",
+    "input": "I love both history and math.",
+    "expected_markers": [
+      "[HIST]",
+      "[MATH]"
+    ],
+    "absent_markers": [],
+    "should_trigger": true,
+    "model": "gpt-4o-mini",
+    "response": "That's great to hear! Both subjects offer fascinating insights into the world. [HIST] and [MATH] can be incredibly rewarding to study. Do you have a favorite topic in either subject?",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[HIST]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        },
+        {
+          "marker": "[MATH]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[HIST]', 'expected': True, 'present': True, 'correct': True}, {'marker': '[MATH]', 'expected': True, 'present': True, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_2cond_3_one_trigger",
+    "type": "scaling_2",
+    "num_conditions": 2,
+    "instruction": "If the message contains the word 'history', include '[HIST]' somewhere in your response. If the message contains the word 'math', include '[MATH]' somewhere in your response.",
+    "input": "Tell me about history please.",
+    "expected_markers": [
+      "[HIST]"
+    ],
+    "absent_markers": [
+      "[MATH]"
+    ],
+    "should_trigger": true,
+    "model": "gpt-4o-mini",
+    "response": "History is the study of past events, particularly in human affairs. It encompasses a wide range of topics, including the rise and fall of civilizations, significant cultural developments, and major conflicts. Historians analyze various sources, such as documents, artifacts, and oral traditions, to understand how past societies functioned and how they have shaped the present. Understanding history is crucial for gaining insights into contemporary issues and for appreciating the complexities of human experience. [HIST]",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[HIST]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        },
+        {
+          "marker": "[MATH]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[HIST]', 'expected': True, 'present': True, 'correct': True}, {'marker': '[MATH]', 'expected': False, 'present': False, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_2cond_3_none_trigger",
+    "type": "scaling_2",
+    "num_conditions": 2,
+    "instruction": "If the message contains the word 'history', include '[HIST]' somewhere in your response. If the message contains the word 'math', include '[MATH]' somewhere in your response.",
+    "input": "Tell me about the weather today.",
+    "expected_markers": [],
+    "absent_markers": [
+      "[HIST]",
+      "[MATH]"
+    ],
+    "should_trigger": false,
+    "model": "gpt-4o-mini",
+    "response": "I'm sorry, but I don't have real-time data to provide current weather information. You can check a reliable weather website or app for the latest updates on today's weather.",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[HIST]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        },
+        {
+          "marker": "[MATH]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[HIST]', 'expected': False, 'present': False, 'correct': True}, {'marker': '[MATH]', 'expected': False, 'present': False, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_4cond_all_trigger",
+    "type": "scaling_4",
+    "num_conditions": 4,
+    "instruction": "If the message contains the word 'science', include '[SCI]' somewhere in your response. If the message contains the word 'history', include '[HIST]' somewhere in your response. If the message contains the word 'art', include '[ART]' somewhere in your response. If the message contains the word 'math', include '[MATH]' somewhere in your response.",
+    "input": "I'm interested in science, history, art, and math.",
+    "expected_markers": [
+      "[SCI]",
+      "[HIST]",
+      "[ART]",
+      "[MATH]"
+    ],
+    "absent_markers": [],
+    "should_trigger": true,
+    "model": "gpt-4o-mini",
+    "response": "That's great! Each of those fields offers a wealth of knowledge and creativity. If you have specific questions or topics within [SCI], [HIST], [ART], or [MATH] that you'd like to explore, feel free to ask!",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[SCI]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        },
+        {
+          "marker": "[HIST]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        },
+        {
+          "marker": "[ART]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        },
+        {
+          "marker": "[MATH]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[SCI]', 'expected': True, 'present': True, 'correct': True}, {'marker': '[HIST]', 'expected': True, 'present': True, 'correct': True}, {'marker': '[ART]', 'expected': True, 'present': True, 'correct': True}, {'marker': '[MATH]', 'expected': True, 'present': True, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_4cond_two_trigger",
+    "type": "scaling_4",
+    "num_conditions": 4,
+    "instruction": "If the message contains the word 'science', include '[SCI]' somewhere in your response. If the message contains the word 'history', include '[HIST]' somewhere in your response. If the message contains the word 'art', include '[ART]' somewhere in your response. If the message contains the word 'math', include '[MATH]' somewhere in your response.",
+    "input": "I study science and art.",
+    "expected_markers": [
+      "[SCI]",
+      "[ART]"
+    ],
+    "absent_markers": [
+      "[HIST]",
+      "[MATH]"
+    ],
+    "should_trigger": true,
+    "model": "gpt-4o-mini",
+    "response": "That's great! Studying both [SCI] science and [ART] art can provide a unique perspective and enhance your creativity. How do you find the intersection of these two fields?",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[SCI]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        },
+        {
+          "marker": "[ART]",
+          "expected": true,
+          "present": true,
+          "correct": true
+        },
+        {
+          "marker": "[HIST]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        },
+        {
+          "marker": "[MATH]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[SCI]', 'expected': True, 'present': True, 'correct': True}, {'marker': '[ART]', 'expected': True, 'present': True, 'correct': True}, {'marker': '[HIST]', 'expected': False, 'present': False, 'correct': True}, {'marker': '[MATH]', 'expected': False, 'present': False, 'correct': True}]"
+    }
+  },
+  {
+    "id": "scale_4cond_none_trigger",
+    "type": "scaling_4",
+    "num_conditions": 4,
+    "instruction": "If the message contains the word 'science', include '[SCI]' somewhere in your response. If the message contains the word 'history', include '[HIST]' somewhere in your response. If the message contains the word 'art', include '[ART]' somewhere in your response. If the message contains the word 'math', include '[MATH]' somewhere in your response.",
+    "input": "Tell me about cooking Italian food.",
+    "expected_markers": [],
+    "absent_markers": [
+      "[SCI]",
+      "[HIST]",
+      "[ART]",
+      "[MATH]"
+    ],
+    "should_trigger": false,
+    "model": "gpt-4o-mini",
+    "response": "Italian food is known for its rich flavors, fresh ingredients, and regional diversity. Traditional Italian cooking emphasizes the use of high-quality ingredients such as olive oil, tomatoes, garlic, and fresh herbs. Popular dishes include pasta, risotto, pizza, and various meat and seafood preparations. Each region in Italy has its own specialties, influenced by local produce and culinary traditions. Cooking Italian food often involves simple techniques that highlight the natural flavors of the ingredients. Enjoying Italian cuisine is not just about the food itself, but also about the experience of sharing meals with family and friends.",
+    "verification": {
+      "correct": true,
+      "marker_results": [
+        {
+          "marker": "[SCI]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        },
+        {
+          "marker": "[HIST]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        },
+        {
+          "marker": "[ART]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        },
+        {
+          "marker": "[MATH]",
+          "expected": false,
+          "present": false,
+          "correct": true
+        }
+      ],
+      "details": "Markers: [{'marker': '[SCI]', 'expected': False, 'present': False, 'correct': True}, {'marker': '[HIST]', 'expected': False, 'present': False, 'correct': True}, {'marker': '[ART]', 'expected': False, 'present': False, 'correct': True}, {'marker': '[MATH]', 'expected': False, 'present': False, 'correct': True}]"
+    }
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "models": [
+    "gpt-4.1",
+    "gpt-4o-mini"
+  ],
+  "temperature": 0.0,
+  "max_tokens": 500,
+  "seed": 42,
+  "timestamp": "2026-03-23T12:09:10.574686",
+  "num_main_cases": 120,
+  "num_scaling_cases": 23,
+  "python_version": "3.12.8 (main, Dec 19 2024, 14:33:20) [Clang 18.1.8 ]",
+  "openai_version": "2.29.0"
+}

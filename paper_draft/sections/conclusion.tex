@@ -1,0 +1,8 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+We introduced \benchname, the first benchmark specifically designed to evaluate conditional (if-then) instruction following in large language models. Across 120 test cases spanning 8 conditional instruction types, we found that if-then capacity is significantly inconsistent: accuracy ranges from 100\% on keyword conditions to as low as 50\% on length conditions depending on the model. The difficulty ranking is highly consistent across models (Spearman $\rho = 0.83$, $p = 0.011$), establishing a hierarchy of conditional instruction difficulty: keyword $<$ negation $<$ disjunction $<$ format $<$ conjunction $<$ content $<$ length $<$ nested. We further showed that the capacity bottleneck lies in the complexity of individual conditions rather than the number of concurrent conditions, and that stronger and weaker models exhibit opposite failure modes---over-triggering versus under-triggering, respectively.
+
+These findings have immediate practical implications: practitioners should prefer keyword-based conditions, avoid nested logic, and test prompts with both trigger and non-trigger inputs. For the research community, our results motivate dedicated benchmarks and training methods for conditional instruction following as a distinct capability.
+
+Future work should expand \benchname to more models and model families, increase sample sizes, test complex multi-type condition compositions, and explore whether structured instruction formats or targeted fine-tuning can close the gap on hard condition types like nested branching and length control.

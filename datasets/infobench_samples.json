@@ -1,0 +1,137 @@
+[
+  {
+    "id": "user_oriented_task_167",
+    "input": "The typical avocado is over 300 calories from the oil in it. That\u2019s the amount of calories in a large candy bar. If you get enough exercise to eat a large candy bar every day without gaining weight, it wouldn\u2019t be a problem to eat an avocado every day. Other wise you should probably eat them sparingly.",
+    "category": "Quora",
+    "instruction": "Choose an appealing title for your post.",
+    "decomposed_questions": [
+      "Is the generated text a post title?",
+      "Is the generated text appealing as a post tile?",
+      "Is the generated post title suitable for the post in the given input?"
+    ],
+    "subset": "Easy_set",
+    "question_label": [
+      [
+        "Format"
+      ],
+      [
+        "Content"
+      ],
+      [
+        "Content"
+      ]
+    ]
+  },
+  {
+    "id": "user_oriented_task_205",
+    "input": "Language: Python\nFunction: input",
+    "category": "w3schools",
+    "instruction": "Given a programming language and the name of a function, write a command to show how to use the function.",
+    "decomposed_questions": [
+      "Does the generated text include a command?",
+      "Is the command in the generated text in the given programming language (Python)?",
+      "Does the command in the generated text show how to use the function in the given input?",
+      "Is the command in the generated text correct?"
+    ],
+    "subset": "Easy_set",
+    "question_label": [
+      [
+        "Format"
+      ],
+      [
+        "Linguistic"
+      ],
+      [
+        "Content"
+      ],
+      [
+        "Content"
+      ]
+    ]
+  },
+  {
+    "id": "user_oriented_task_187",
+    "input": "We were recently able to increase the amount of stock we hold with the same supplier thereby reducing our risk.",
+    "category": "Grammarly",
+    "instruction": "Change the first person to the third person in the given sentence. The meaning should be kept, but you can paraphrase it or expand it in order to have a better pose.",
+    "decomposed_questions": [
+      "Is the generated text expressed in third person?",
+      "Does the generated text have a better pose than the given input?",
+      "Does the generated text convey the same meaning as the original sentence in the given input?"
+    ],
+    "subset": "Easy_set",
+    "question_label": [
+      [
+        "Linguistic"
+      ],
+      [
+        "Style"
+      ],
+      [
+        "Content"
+      ]
+    ]
+  },
+  {
+    "id": "user_oriented_task_103",
+    "input": "Programming for Everybody (Getting Started with Python)",
+    "category": "Coursera",
+    "instruction": "Design a syllabus for the given course. Students should be given a list of the chapters with brief explanations of each chapter's purpose.",
+    "decomposed_questions": [
+      "Is the generated text a course syllabus?",
+      "Does the generated text include a list of chapters?",
+      "Does every chapter in the generated list include a description?",
+      "Is the description of each chapter in the generated text concise?",
+      "Is the generated text relevant to the course in the given input?",
+      "Does the description of each chapter in the generated text explain the purpose of the chapter?"
+    ],
+    "subset": "Easy_set",
+    "question_label": [
+      [
+        "Format"
+      ],
+      [
+        "Format"
+      ],
+      [
+        "Format"
+      ],
+      [
+        "Style"
+      ],
+      [
+        "Content"
+      ],
+      [
+        "Content"
+      ]
+    ]
+  },
+  {
+    "id": "user_oriented_task_94",
+    "input": "",
+    "category": "Leetcode",
+    "instruction": "Think of topics that are most common in classic interview questions for a job in computer science.",
+    "decomposed_questions": [
+      "Does the generated text include some topics?",
+      "Are the generated topics relevant to computer science?",
+      "Are the generated topics suitable for interview questions?",
+      "Are the generated topics common subjects in the classic interview?"
+    ],
+    "subset": "Easy_set",
+    "question_label": [
+      [
+        "Format"
+      ],
+      [
+        "Content"
+      ],
+      [
+        "Content"
+      ],
+      [
+        "Content"
+      ]
+    ]
+  }
+]

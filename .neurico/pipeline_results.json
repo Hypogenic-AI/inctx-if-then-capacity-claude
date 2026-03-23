@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "stages": {
+    "resource_finder": {
+      "success": true,
+      "completion_marker": "/workspaces/inctx-if-then-capacity-claude/.resource_finder_complete",
+      "outputs": {
+        "literature_review": "/workspaces/inctx-if-then-capacity-claude/literature_review.md",
+        "resources_catalog": "/workspaces/inctx-if-then-capacity-claude/resources.md",
+        "papers_dir": "/workspaces/inctx-if-then-capacity-claude/papers",
+        "datasets_dir": "/workspaces/inctx-if-then-capacity-claude/datasets",
+        "code_dir": "/workspaces/inctx-if-then-capacity-claude/code"
+      },
+      "log_file": "/workspaces/inctx-if-then-capacity-claude/logs/resource_finder_claude.log",
+      "transcript_file": "/workspaces/inctx-if-then-capacity-claude/logs/resource_finder_claude_transcript.jsonl",
+      "elapsed_time": 1411.1735203266144
+    },
+    "experiment_runner": {
+      "success": true,
+      "return_code": 0,
+      "elapsed_time": 1145.2474179267883,
+      "log_file": "/workspaces/inctx-if-then-capacity-claude/logs/execution_claude.log",
+      "transcript_file": "/workspaces/inctx-if-then-capacity-claude/logs/execution_claude_transcript.jsonl"
+    }
+  },
+  "work_dir": "/workspaces/inctx-if-then-capacity-claude"
+}

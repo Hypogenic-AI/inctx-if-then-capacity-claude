@@ -1,0 +1,1250 @@
+[
+  {
+    "id": "keyword_0_trigger_0",
+    "type": "keyword",
+    "instruction": "If the user's message contains the word 'urgent', start your response with 'PRIORITY: ' (exactly). Otherwise, just answer normally.",
+    "input": "This is an urgent matter regarding the budget deadline.",
+    "should_trigger": true,
+    "verifier": "starts_with_if_keyword",
+    "verifier_args": {
+      "keyword": "urgent",
+      "prefix": "PRIORITY: "
+    }
+  },
+  {
+    "id": "keyword_0_trigger_1",
+    "type": "keyword",
+    "instruction": "If the user's message contains the word 'urgent', start your response with 'PRIORITY: ' (exactly). Otherwise, just answer normally.",
+    "input": "I need urgent help with my account settings.",
+    "should_trigger": true,
+    "verifier": "starts_with_if_keyword",
+    "verifier_args": {
+      "keyword": "urgent",
+      "prefix": "PRIORITY: "
+    }
+  },
+  {
+    "id": "keyword_0_trigger_2",
+    "type": "keyword",
+    "instruction": "If the user's message contains the word 'urgent', start your response with 'PRIORITY: ' (exactly). Otherwise, just answer normally.",
+    "input": "The urgent request from the client needs attention.",
+    "should_trigger": true,
+    "verifier": "starts_with_if_keyword",
+    "verifier_args": {
+      "keyword": "urgent",
+      "prefix": "PRIORITY: "
+    }
+  },
+  {
+    "id": "keyword_0_nontrigger_0",
+    "type": "keyword",
+    "instruction": "If the user's message contains the word 'urgent', start your response with 'PRIORITY: ' (exactly). Otherwise, just answer normally.",
+    "input": "Can you explain how photosynthesis works?",
+    "should_trigger": false,
+    "verifier": "starts_with_if_keyword",
+    "verifier_args": {
+      "keyword": "urgent",
+      "prefix": "PRIORITY: "
+    }
+  },
+  {
+    "id": "keyword_0_nontrigger_1",
+    "type": "keyword",
+    "instruction": "If the user's message contains the word 'urgent', start your response with 'PRIORITY: ' (exactly). Otherwise, just answer normally.",
+    "input": "What is the capital of France?",
+    "should_trigger": false,
+    "verifier": "starts_with_if_keyword",
+    "verifier_args": {
+      "keyword": "urgent",
+      "prefix": "PRIORITY: "
+    }
+  },
+  {
+    "id": "keyword_0_nontrigger_2",
+    "type": "keyword",
+    "instruction": "If the user's message contains the word 'urgent', start your response with 'PRIORITY: ' (exactly). Otherwise, just answer normally.",
+    "input": "Tell me about the history of jazz music.",
+    "should_trigger": false,
+    "verifier": "starts_with_if_keyword",
+    "verifier_args": {
+      "keyword": "urgent",
+      "prefix": "PRIORITY: "
+    }
+  },
+  {
+    "id": "keyword_1_trigger_0",
+    "type": "keyword",
+    "instruction": "If the user's message contains the word 'recipe', end your response with 'Bon appetit!' on a new line. Otherwise, respond normally.",
+    "input": "Can you share a recipe for chocolate cake?",
+    "should_trigger": true,
+    "verifier": "ends_with_if_keyword",
+    "verifier_args": {
+      "keyword": "recipe",
+      "suffix": "Bon appetit!"
+    }
+  },
+  {
+    "id": "keyword_1_trigger_1",
+    "type": "keyword",
+    "instruction": "If the user's message contains the word 'recipe', end your response with 'Bon appetit!' on a new line. Otherwise, respond normally.",
+    "input": "I need a recipe that uses chicken and rice.",
+    "should_trigger": true,
+    "verifier": "ends_with_if_keyword",
+    "verifier_args": {
+      "keyword": "recipe",
+      "suffix": "Bon appetit!"
+    }
+  },
+  {
+    "id": "keyword_1_trigger_2",
+    "type": "keyword",
+    "instruction": "If the user's message contains the word 'recipe', end your response with 'Bon appetit!' on a new line. Otherwise, respond normally.",
+    "input": "What's your favorite pasta recipe?",
+    "should_trigger": true,
+    "verifier": "ends_with_if_keyword",
+    "verifier_args": {
+      "keyword": "recipe",
+      "suffix": "Bon appetit!"
+    }
+  },
+  {
+    "id": "keyword_1_nontrigger_0",
+    "type": "keyword",
+    "instruction": "If the user's message contains the word 'recipe', end your response with 'Bon appetit!' on a new line. Otherwise, respond normally.",
+    "input": "How do I fix a flat tire?",
+    "should_trigger": false,
+    "verifier": "ends_with_if_keyword",
+    "verifier_args": {
+      "keyword": "recipe",
+      "suffix": "Bon appetit!"
+    }
+  },
+  {
+    "id": "keyword_1_nontrigger_1",
+    "type": "keyword",
+    "instruction": "If the user's message contains the word 'recipe', end your response with 'Bon appetit!' on a new line. Otherwise, respond normally.",
+    "input": "Explain the theory of relativity.",
+    "should_trigger": false,
+    "verifier": "ends_with_if_keyword",
+    "verifier_args": {
+      "keyword": "recipe",
+      "suffix": "Bon appetit!"
+    }
+  },
+  {
+    "id": "keyword_1_nontrigger_2",
+    "type": "keyword",
+    "instruction": "If the user's message contains the word 'recipe', end your response with 'Bon appetit!' on a new line. Otherwise, respond normally.",
+    "input": "What programming language should I learn first?",
+    "should_trigger": false,
+    "verifier": "ends_with_if_keyword",
+    "verifier_args": {
+      "keyword": "recipe",
+      "suffix": "Bon appetit!"
+    }
+  },
+  {
+    "id": "keyword_2_trigger_0",
+    "type": "keyword",
+    "instruction": "If the user's message contains the word 'compare', use a numbered list in your response. Otherwise, answer in a single paragraph.",
+    "input": "Compare Python and JavaScript for web development.",
+    "should_trigger": true,
+    "verifier": "numbered_list_if_keyword",
+    "verifier_args": {
+      "keyword": "compare"
+    }
+  },
+  {
+    "id": "keyword_2_trigger_1",
+    "type": "keyword",
+    "instruction": "If the user's message contains the word 'compare', use a numbered list in your response. Otherwise, answer in a single paragraph.",
+    "input": "Can you compare the climates of London and Tokyo?",
+    "should_trigger": true,
+    "verifier": "numbered_list_if_keyword",
+    "verifier_args": {
+      "keyword": "compare"
+    }
+  },
+  {
+    "id": "keyword_2_trigger_2",
+    "type": "keyword",
+    "instruction": "If the user's message contains the word 'compare', use a numbered list in your response. Otherwise, answer in a single paragraph.",
+    "input": "I want to compare electric cars vs hybrid cars.",
+    "should_trigger": true,
+    "verifier": "numbered_list_if_keyword",
+    "verifier_args": {
+      "keyword": "compare"
+    }
+  },
+  {
+    "id": "keyword_2_nontrigger_0",
+    "type": "keyword",
+    "instruction": "If the user's message contains the word 'compare', use a numbered list in your response. Otherwise, answer in a single paragraph.",
+    "input": "What is machine learning?",
+    "should_trigger": false,
+    "verifier": "numbered_list_if_keyword",
+    "verifier_args": {
+      "keyword": "compare"
+    }
+  },
+  {
+    "id": "keyword_2_nontrigger_1",
+    "type": "keyword",
+    "instruction": "If the user's message contains the word 'compare', use a numbered list in your response. Otherwise, answer in a single paragraph.",
+    "input": "Tell me about the Great Wall of China.",
+    "should_trigger": false,
+    "verifier": "numbered_list_if_keyword",
+    "verifier_args": {
+      "keyword": "compare"
+    }
+  },
+  {
+    "id": "keyword_2_nontrigger_2",
+    "type": "keyword",
+    "instruction": "If the user's message contains the word 'compare', use a numbered list in your response. Otherwise, answer in a single paragraph.",
+    "input": "How does a solar panel work?",
+    "should_trigger": false,
+    "verifier": "numbered_list_if_keyword",
+    "verifier_args": {
+      "keyword": "compare"
+    }
+  },
+  {
+    "id": "format_0_trigger_0",
+    "type": "format",
+    "instruction": "If the user asks about a person, respond in JSON format with keys 'name', 'known_for', and 'era'. Otherwise, respond in plain text.",
+    "input": "Tell me about Albert Einstein.",
+    "should_trigger": true,
+    "verifier": "json_if_about_person",
+    "verifier_args": {}
+  },
+  {
+    "id": "format_0_trigger_1",
+    "type": "format",
+    "instruction": "If the user asks about a person, respond in JSON format with keys 'name', 'known_for', and 'era'. Otherwise, respond in plain text.",
+    "input": "Who was Cleopatra?",
+    "should_trigger": true,
+    "verifier": "json_if_about_person",
+    "verifier_args": {}
+  },
+  {
+    "id": "format_0_trigger_2",
+    "type": "format",
+    "instruction": "If the user asks about a person, respond in JSON format with keys 'name', 'known_for', and 'era'. Otherwise, respond in plain text.",
+    "input": "What did Marie Curie accomplish?",
+    "should_trigger": true,
+    "verifier": "json_if_about_person",
+    "verifier_args": {}
+  },
+  {
+    "id": "format_0_nontrigger_0",
+    "type": "format",
+    "instruction": "If the user asks about a person, respond in JSON format with keys 'name', 'known_for', and 'era'. Otherwise, respond in plain text.",
+    "input": "What causes earthquakes?",
+    "should_trigger": false,
+    "verifier": "json_if_about_person",
+    "verifier_args": {}
+  },
+  {
+    "id": "format_0_nontrigger_1",
+    "type": "format",
+    "instruction": "If the user asks about a person, respond in JSON format with keys 'name', 'known_for', and 'era'. Otherwise, respond in plain text.",
+    "input": "Explain how WiFi works.",
+    "should_trigger": false,
+    "verifier": "json_if_about_person",
+    "verifier_args": {}
+  },
+  {
+    "id": "format_0_nontrigger_2",
+    "type": "format",
+    "instruction": "If the user asks about a person, respond in JSON format with keys 'name', 'known_for', and 'era'. Otherwise, respond in plain text.",
+    "input": "What is the tallest mountain in the world?",
+    "should_trigger": false,
+    "verifier": "json_if_about_person",
+    "verifier_args": {}
+  },
+  {
+    "id": "format_1_trigger_0",
+    "type": "format",
+    "instruction": "If the user asks a yes/no question, respond with exactly 'Yes.' or 'No.' as the first word followed by a period, then explain. Otherwise, answer freely.",
+    "input": "Is the Earth round?",
+    "should_trigger": true,
+    "verifier": "yes_no_start_if_yesno_question",
+    "verifier_args": {}
+  },
+  {
+    "id": "format_1_trigger_1",
+    "type": "format",
+    "instruction": "If the user asks a yes/no question, respond with exactly 'Yes.' or 'No.' as the first word followed by a period, then explain. Otherwise, answer freely.",
+    "input": "Can humans breathe underwater?",
+    "should_trigger": true,
+    "verifier": "yes_no_start_if_yesno_question",
+    "verifier_args": {}
+  },
+  {
+    "id": "format_1_trigger_2",
+    "type": "format",
+    "instruction": "If the user asks a yes/no question, respond with exactly 'Yes.' or 'No.' as the first word followed by a period, then explain. Otherwise, answer freely.",
+    "input": "Do cats see in color?",
+    "should_trigger": true,
+    "verifier": "yes_no_start_if_yesno_question",
+    "verifier_args": {}
+  },
+  {
+    "id": "format_1_nontrigger_0",
+    "type": "format",
+    "instruction": "If the user asks a yes/no question, respond with exactly 'Yes.' or 'No.' as the first word followed by a period, then explain. Otherwise, answer freely.",
+    "input": "How many planets are in the solar system?",
+    "should_trigger": false,
+    "verifier": "yes_no_start_if_yesno_question",
+    "verifier_args": {}
+  },
+  {
+    "id": "format_1_nontrigger_1",
+    "type": "format",
+    "instruction": "If the user asks a yes/no question, respond with exactly 'Yes.' or 'No.' as the first word followed by a period, then explain. Otherwise, answer freely.",
+    "input": "What is the meaning of life?",
+    "should_trigger": false,
+    "verifier": "yes_no_start_if_yesno_question",
+    "verifier_args": {}
+  },
+  {
+    "id": "format_1_nontrigger_2",
+    "type": "format",
+    "instruction": "If the user asks a yes/no question, respond with exactly 'Yes.' or 'No.' as the first word followed by a period, then explain. Otherwise, answer freely.",
+    "input": "Describe the process of making cheese.",
+    "should_trigger": false,
+    "verifier": "yes_no_start_if_yesno_question",
+    "verifier_args": {}
+  },
+  {
+    "id": "format_2_trigger_0",
+    "type": "format",
+    "instruction": "If the user asks about a country, respond using bullet points. Otherwise, respond in a single paragraph.",
+    "input": "Tell me about Japan.",
+    "should_trigger": true,
+    "verifier": "bullets_if_country",
+    "verifier_args": {}
+  },
+  {
+    "id": "format_2_trigger_1",
+    "type": "format",
+    "instruction": "If the user asks about a country, respond using bullet points. Otherwise, respond in a single paragraph.",
+    "input": "What should I know about Brazil?",
+    "should_trigger": true,
+    "verifier": "bullets_if_country",
+    "verifier_args": {}
+  },
+  {
+    "id": "format_2_trigger_2",
+    "type": "format",
+    "instruction": "If the user asks about a country, respond using bullet points. Otherwise, respond in a single paragraph.",
+    "input": "Describe the culture of Italy.",
+    "should_trigger": true,
+    "verifier": "bullets_if_country",
+    "verifier_args": {}
+  },
+  {
+    "id": "format_2_nontrigger_0",
+    "type": "format",
+    "instruction": "If the user asks about a country, respond using bullet points. Otherwise, respond in a single paragraph.",
+    "input": "How does gravity work?",
+    "should_trigger": false,
+    "verifier": "bullets_if_country",
+    "verifier_args": {}
+  },
+  {
+    "id": "format_2_nontrigger_1",
+    "type": "format",
+    "instruction": "If the user asks about a country, respond using bullet points. Otherwise, respond in a single paragraph.",
+    "input": "What is an algorithm?",
+    "should_trigger": false,
+    "verifier": "bullets_if_country",
+    "verifier_args": {}
+  },
+  {
+    "id": "format_2_nontrigger_2",
+    "type": "format",
+    "instruction": "If the user asks about a country, respond using bullet points. Otherwise, respond in a single paragraph.",
+    "input": "Explain the water cycle.",
+    "should_trigger": false,
+    "verifier": "bullets_if_country",
+    "verifier_args": {}
+  },
+  {
+    "id": "length_0_trigger_0",
+    "type": "length",
+    "instruction": "If the user's message is a single word, respond in exactly one sentence (ending with a period). If it's longer, respond in at least three sentences.",
+    "input": "Photosynthesis",
+    "should_trigger": true,
+    "verifier": "length_by_input_wordcount",
+    "verifier_args": {
+      "threshold": 1,
+      "short_max_sentences": 1,
+      "long_min_sentences": 3
+    }
+  },
+  {
+    "id": "length_0_trigger_1",
+    "type": "length",
+    "instruction": "If the user's message is a single word, respond in exactly one sentence (ending with a period). If it's longer, respond in at least three sentences.",
+    "input": "Democracy",
+    "should_trigger": true,
+    "verifier": "length_by_input_wordcount",
+    "verifier_args": {
+      "threshold": 1,
+      "short_max_sentences": 1,
+      "long_min_sentences": 3
+    }
+  },
+  {
+    "id": "length_0_trigger_2",
+    "type": "length",
+    "instruction": "If the user's message is a single word, respond in exactly one sentence (ending with a period). If it's longer, respond in at least three sentences.",
+    "input": "Blockchain",
+    "should_trigger": true,
+    "verifier": "length_by_input_wordcount",
+    "verifier_args": {
+      "threshold": 1,
+      "short_max_sentences": 1,
+      "long_min_sentences": 3
+    }
+  },
+  {
+    "id": "length_0_nontrigger_0",
+    "type": "length",
+    "instruction": "If the user's message is a single word, respond in exactly one sentence (ending with a period). If it's longer, respond in at least three sentences.",
+    "input": "Can you explain how photosynthesis works in plants?",
+    "should_trigger": false,
+    "verifier": "length_by_input_wordcount",
+    "verifier_args": {
+      "threshold": 1,
+      "short_max_sentences": 1,
+      "long_min_sentences": 3
+    }
+  },
+  {
+    "id": "length_0_nontrigger_1",
+    "type": "length",
+    "instruction": "If the user's message is a single word, respond in exactly one sentence (ending with a period). If it's longer, respond in at least three sentences.",
+    "input": "What are the main principles of democracy?",
+    "should_trigger": false,
+    "verifier": "length_by_input_wordcount",
+    "verifier_args": {
+      "threshold": 1,
+      "short_max_sentences": 1,
+      "long_min_sentences": 3
+    }
+  },
+  {
+    "id": "length_0_nontrigger_2",
+    "type": "length",
+    "instruction": "If the user's message is a single word, respond in exactly one sentence (ending with a period). If it's longer, respond in at least three sentences.",
+    "input": "How does blockchain technology ensure data security?",
+    "should_trigger": false,
+    "verifier": "length_by_input_wordcount",
+    "verifier_args": {
+      "threshold": 1,
+      "short_max_sentences": 1,
+      "long_min_sentences": 3
+    }
+  },
+  {
+    "id": "length_1_trigger_0",
+    "type": "length",
+    "instruction": "If the user's question contains more than 20 words, give a brief answer in under 30 words. If it's short (20 words or fewer), give a detailed answer of at least 80 words.",
+    "input": "I was wondering if you could please explain to me in great detail how exactly the process of nuclear fusion works inside the core of stars like our sun and what elements are produced during this process?",
+    "should_trigger": true,
+    "verifier": "inverse_length_response",
+    "verifier_args": {
+      "input_threshold": 20,
+      "short_response_max": 30,
+      "long_response_min": 80
+    }
+  },
+  {
+    "id": "length_1_trigger_1",
+    "type": "length",
+    "instruction": "If the user's question contains more than 20 words, give a brief answer in under 30 words. If it's short (20 words or fewer), give a detailed answer of at least 80 words.",
+    "input": "Given all the recent advancements in artificial intelligence and machine learning technology over the past decade, what do you think will be the most significant breakthrough in the next five years?",
+    "should_trigger": true,
+    "verifier": "inverse_length_response",
+    "verifier_args": {
+      "input_threshold": 20,
+      "short_response_max": 30,
+      "long_response_min": 80
+    }
+  },
+  {
+    "id": "length_1_trigger_2",
+    "type": "length",
+    "instruction": "If the user's question contains more than 20 words, give a brief answer in under 30 words. If it's short (20 words or fewer), give a detailed answer of at least 80 words.",
+    "input": "Could you please provide me with a comprehensive and detailed explanation about the various different types of renewable energy sources that are currently being developed and used around the world today?",
+    "should_trigger": true,
+    "verifier": "inverse_length_response",
+    "verifier_args": {
+      "input_threshold": 20,
+      "short_response_max": 30,
+      "long_response_min": 80
+    }
+  },
+  {
+    "id": "length_1_nontrigger_0",
+    "type": "length",
+    "instruction": "If the user's question contains more than 20 words, give a brief answer in under 30 words. If it's short (20 words or fewer), give a detailed answer of at least 80 words.",
+    "input": "What is gravity?",
+    "should_trigger": false,
+    "verifier": "inverse_length_response",
+    "verifier_args": {
+      "input_threshold": 20,
+      "short_response_max": 30,
+      "long_response_min": 80
+    }
+  },
+  {
+    "id": "length_1_nontrigger_1",
+    "type": "length",
+    "instruction": "If the user's question contains more than 20 words, give a brief answer in under 30 words. If it's short (20 words or fewer), give a detailed answer of at least 80 words.",
+    "input": "Why is the sky blue?",
+    "should_trigger": false,
+    "verifier": "inverse_length_response",
+    "verifier_args": {
+      "input_threshold": 20,
+      "short_response_max": 30,
+      "long_response_min": 80
+    }
+  },
+  {
+    "id": "length_1_nontrigger_2",
+    "type": "length",
+    "instruction": "If the user's question contains more than 20 words, give a brief answer in under 30 words. If it's short (20 words or fewer), give a detailed answer of at least 80 words.",
+    "input": "How do computers work?",
+    "should_trigger": false,
+    "verifier": "inverse_length_response",
+    "verifier_args": {
+      "input_threshold": 20,
+      "short_response_max": 30,
+      "long_response_min": 80
+    }
+  },
+  {
+    "id": "content_0_trigger_0",
+    "type": "content",
+    "instruction": "If the user mentions any number in their message, include a mathematical fact in your response (prefixed with 'Math fact:'). Otherwise, answer normally without any math references.",
+    "input": "I have 3 cats at home.",
+    "should_trigger": true,
+    "verifier": "math_fact_if_number",
+    "verifier_args": {}
+  },
+  {
+    "id": "content_0_trigger_1",
+    "type": "content",
+    "instruction": "If the user mentions any number in their message, include a mathematical fact in your response (prefixed with 'Math fact:'). Otherwise, answer normally without any math references.",
+    "input": "The building is 50 stories tall, tell me about skyscrapers.",
+    "should_trigger": true,
+    "verifier": "math_fact_if_number",
+    "verifier_args": {}
+  },
+  {
+    "id": "content_0_trigger_2",
+    "type": "content",
+    "instruction": "If the user mentions any number in their message, include a mathematical fact in your response (prefixed with 'Math fact:'). Otherwise, answer normally without any math references.",
+    "input": "What happened in the year 1969?",
+    "should_trigger": true,
+    "verifier": "math_fact_if_number",
+    "verifier_args": {}
+  },
+  {
+    "id": "content_0_nontrigger_0",
+    "type": "content",
+    "instruction": "If the user mentions any number in their message, include a mathematical fact in your response (prefixed with 'Math fact:'). Otherwise, answer normally without any math references.",
+    "input": "Tell me about cats.",
+    "should_trigger": false,
+    "verifier": "math_fact_if_number",
+    "verifier_args": {}
+  },
+  {
+    "id": "content_0_nontrigger_1",
+    "type": "content",
+    "instruction": "If the user mentions any number in their message, include a mathematical fact in your response (prefixed with 'Math fact:'). Otherwise, answer normally without any math references.",
+    "input": "What makes a building a skyscraper?",
+    "should_trigger": false,
+    "verifier": "math_fact_if_number",
+    "verifier_args": {}
+  },
+  {
+    "id": "content_0_nontrigger_2",
+    "type": "content",
+    "instruction": "If the user mentions any number in their message, include a mathematical fact in your response (prefixed with 'Math fact:'). Otherwise, answer normally without any math references.",
+    "input": "What happened when humans first walked on the moon?",
+    "should_trigger": false,
+    "verifier": "math_fact_if_number",
+    "verifier_args": {}
+  },
+  {
+    "id": "content_1_trigger_0",
+    "type": "content",
+    "instruction": "If the user mentions a color in their message, include the hex code for that color somewhere in your response (formatted as #XXXXXX). Otherwise, respond normally.",
+    "input": "What emotions does the color blue evoke?",
+    "should_trigger": true,
+    "verifier": "hex_code_if_color",
+    "verifier_args": {}
+  },
+  {
+    "id": "content_1_trigger_1",
+    "type": "content",
+    "instruction": "If the user mentions a color in their message, include the hex code for that color somewhere in your response (formatted as #XXXXXX). Otherwise, respond normally.",
+    "input": "I painted my room red last weekend.",
+    "should_trigger": true,
+    "verifier": "hex_code_if_color",
+    "verifier_args": {}
+  },
+  {
+    "id": "content_1_trigger_2",
+    "type": "content",
+    "instruction": "If the user mentions a color in their message, include the hex code for that color somewhere in your response (formatted as #XXXXXX). Otherwise, respond normally.",
+    "input": "Why do plants appear green?",
+    "should_trigger": true,
+    "verifier": "hex_code_if_color",
+    "verifier_args": {}
+  },
+  {
+    "id": "content_1_nontrigger_0",
+    "type": "content",
+    "instruction": "If the user mentions a color in their message, include the hex code for that color somewhere in your response (formatted as #XXXXXX). Otherwise, respond normally.",
+    "input": "How do emotions affect decision-making?",
+    "should_trigger": false,
+    "verifier": "hex_code_if_color",
+    "verifier_args": {}
+  },
+  {
+    "id": "content_1_nontrigger_1",
+    "type": "content",
+    "instruction": "If the user mentions a color in their message, include the hex code for that color somewhere in your response (formatted as #XXXXXX). Otherwise, respond normally.",
+    "input": "What's the best way to paint a room?",
+    "should_trigger": false,
+    "verifier": "hex_code_if_color",
+    "verifier_args": {}
+  },
+  {
+    "id": "content_1_nontrigger_2",
+    "type": "content",
+    "instruction": "If the user mentions a color in their message, include the hex code for that color somewhere in your response (formatted as #XXXXXX). Otherwise, respond normally.",
+    "input": "How do plants produce energy?",
+    "should_trigger": false,
+    "verifier": "hex_code_if_color",
+    "verifier_args": {}
+  },
+  {
+    "id": "content_2_trigger_0",
+    "type": "content",
+    "instruction": "If the user mentions an animal, end your response with 'Fun animal fact: ' followed by a fact about that animal. Otherwise, just answer the question.",
+    "input": "How fast can a cheetah run?",
+    "should_trigger": true,
+    "verifier": "animal_fact_if_animal",
+    "verifier_args": {}
+  },
+  {
+    "id": "content_2_trigger_1",
+    "type": "content",
+    "instruction": "If the user mentions an animal, end your response with 'Fun animal fact: ' followed by a fact about that animal. Otherwise, just answer the question.",
+    "input": "I saw a dolphin at the aquarium today.",
+    "should_trigger": true,
+    "verifier": "animal_fact_if_animal",
+    "verifier_args": {}
+  },
+  {
+    "id": "content_2_trigger_2",
+    "type": "content",
+    "instruction": "If the user mentions an animal, end your response with 'Fun animal fact: ' followed by a fact about that animal. Otherwise, just answer the question.",
+    "input": "Are elephants really afraid of mice?",
+    "should_trigger": true,
+    "verifier": "animal_fact_if_animal",
+    "verifier_args": {}
+  },
+  {
+    "id": "content_2_nontrigger_0",
+    "type": "content",
+    "instruction": "If the user mentions an animal, end your response with 'Fun animal fact: ' followed by a fact about that animal. Otherwise, just answer the question.",
+    "input": "How fast is the speed of light?",
+    "should_trigger": false,
+    "verifier": "animal_fact_if_animal",
+    "verifier_args": {}
+  },
+  {
+    "id": "content_2_nontrigger_1",
+    "type": "content",
+    "instruction": "If the user mentions an animal, end your response with 'Fun animal fact: ' followed by a fact about that animal. Otherwise, just answer the question.",
+    "input": "I visited the aquarium today.",
+    "should_trigger": false,
+    "verifier": "animal_fact_if_animal",
+    "verifier_args": {}
+  },
+  {
+    "id": "content_2_nontrigger_2",
+    "type": "content",
+    "instruction": "If the user mentions an animal, end your response with 'Fun animal fact: ' followed by a fact about that animal. Otherwise, just answer the question.",
+    "input": "What causes fear in humans?",
+    "should_trigger": false,
+    "verifier": "animal_fact_if_animal",
+    "verifier_args": {}
+  },
+  {
+    "id": "negation_0_trigger_0",
+    "type": "negation",
+    "instruction": "If the user's message does NOT contain a question mark, respond entirely in uppercase letters. If it contains a question mark, respond normally in mixed case.",
+    "input": "Tell me about the solar system.",
+    "should_trigger": true,
+    "verifier": "uppercase_if_no_question_mark",
+    "verifier_args": {}
+  },
+  {
+    "id": "negation_0_trigger_1",
+    "type": "negation",
+    "instruction": "If the user's message does NOT contain a question mark, respond entirely in uppercase letters. If it contains a question mark, respond normally in mixed case.",
+    "input": "Explain quantum computing.",
+    "should_trigger": true,
+    "verifier": "uppercase_if_no_question_mark",
+    "verifier_args": {}
+  },
+  {
+    "id": "negation_0_trigger_2",
+    "type": "negation",
+    "instruction": "If the user's message does NOT contain a question mark, respond entirely in uppercase letters. If it contains a question mark, respond normally in mixed case.",
+    "input": "Describe the Amazon rainforest.",
+    "should_trigger": true,
+    "verifier": "uppercase_if_no_question_mark",
+    "verifier_args": {}
+  },
+  {
+    "id": "negation_0_nontrigger_0",
+    "type": "negation",
+    "instruction": "If the user's message does NOT contain a question mark, respond entirely in uppercase letters. If it contains a question mark, respond normally in mixed case.",
+    "input": "What is the solar system?",
+    "should_trigger": false,
+    "verifier": "uppercase_if_no_question_mark",
+    "verifier_args": {}
+  },
+  {
+    "id": "negation_0_nontrigger_1",
+    "type": "negation",
+    "instruction": "If the user's message does NOT contain a question mark, respond entirely in uppercase letters. If it contains a question mark, respond normally in mixed case.",
+    "input": "Can you explain quantum computing?",
+    "should_trigger": false,
+    "verifier": "uppercase_if_no_question_mark",
+    "verifier_args": {}
+  },
+  {
+    "id": "negation_0_nontrigger_2",
+    "type": "negation",
+    "instruction": "If the user's message does NOT contain a question mark, respond entirely in uppercase letters. If it contains a question mark, respond normally in mixed case.",
+    "input": "Where is the Amazon rainforest?",
+    "should_trigger": false,
+    "verifier": "uppercase_if_no_question_mark",
+    "verifier_args": {}
+  },
+  {
+    "id": "negation_1_trigger_0",
+    "type": "negation",
+    "instruction": "If the user's message does NOT mention any food item, include the phrase 'Speaking of food,' somewhere in your response and mention a random dish. If it mentions food, just answer normally.",
+    "input": "How do airplanes stay in the air?",
+    "should_trigger": true,
+    "verifier": "food_tangent_if_no_food",
+    "verifier_args": {}
+  },
+  {
+    "id": "negation_1_trigger_1",
+    "type": "negation",
+    "instruction": "If the user's message does NOT mention any food item, include the phrase 'Speaking of food,' somewhere in your response and mention a random dish. If it mentions food, just answer normally.",
+    "input": "What is the stock market?",
+    "should_trigger": true,
+    "verifier": "food_tangent_if_no_food",
+    "verifier_args": {}
+  },
+  {
+    "id": "negation_1_trigger_2",
+    "type": "negation",
+    "instruction": "If the user's message does NOT mention any food item, include the phrase 'Speaking of food,' somewhere in your response and mention a random dish. If it mentions food, just answer normally.",
+    "input": "Explain how batteries work.",
+    "should_trigger": true,
+    "verifier": "food_tangent_if_no_food",
+    "verifier_args": {}
+  },
+  {
+    "id": "negation_1_nontrigger_0",
+    "type": "negation",
+    "instruction": "If the user's message does NOT mention any food item, include the phrase 'Speaking of food,' somewhere in your response and mention a random dish. If it mentions food, just answer normally.",
+    "input": "What's the best way to cook pasta?",
+    "should_trigger": false,
+    "verifier": "food_tangent_if_no_food",
+    "verifier_args": {}
+  },
+  {
+    "id": "negation_1_nontrigger_1",
+    "type": "negation",
+    "instruction": "If the user's message does NOT mention any food item, include the phrase 'Speaking of food,' somewhere in your response and mention a random dish. If it mentions food, just answer normally.",
+    "input": "Is chocolate good for your health?",
+    "should_trigger": false,
+    "verifier": "food_tangent_if_no_food",
+    "verifier_args": {}
+  },
+  {
+    "id": "negation_1_nontrigger_2",
+    "type": "negation",
+    "instruction": "If the user's message does NOT mention any food item, include the phrase 'Speaking of food,' somewhere in your response and mention a random dish. If it mentions food, just answer normally.",
+    "input": "How do you make sourdough bread?",
+    "should_trigger": false,
+    "verifier": "food_tangent_if_no_food",
+    "verifier_args": {}
+  },
+  {
+    "id": "negation_2_trigger_0",
+    "type": "negation",
+    "instruction": "If the user's message does NOT contain the word 'please', start your response with 'Remember to say please! ' and then answer. If 'please' is present, just answer directly.",
+    "input": "Tell me how to bake a cake.",
+    "should_trigger": true,
+    "verifier": "please_reminder_if_no_please",
+    "verifier_args": {}
+  },
+  {
+    "id": "negation_2_trigger_1",
+    "type": "negation",
+    "instruction": "If the user's message does NOT contain the word 'please', start your response with 'Remember to say please! ' and then answer. If 'please' is present, just answer directly.",
+    "input": "What's the weather like on Mars?",
+    "should_trigger": true,
+    "verifier": "please_reminder_if_no_please",
+    "verifier_args": {}
+  },
+  {
+    "id": "negation_2_trigger_2",
+    "type": "negation",
+    "instruction": "If the user's message does NOT contain the word 'please', start your response with 'Remember to say please! ' and then answer. If 'please' is present, just answer directly.",
+    "input": "Explain gravity to me.",
+    "should_trigger": true,
+    "verifier": "please_reminder_if_no_please",
+    "verifier_args": {}
+  },
+  {
+    "id": "negation_2_nontrigger_0",
+    "type": "negation",
+    "instruction": "If the user's message does NOT contain the word 'please', start your response with 'Remember to say please! ' and then answer. If 'please' is present, just answer directly.",
+    "input": "Please tell me how to bake a cake.",
+    "should_trigger": false,
+    "verifier": "please_reminder_if_no_please",
+    "verifier_args": {}
+  },
+  {
+    "id": "negation_2_nontrigger_1",
+    "type": "negation",
+    "instruction": "If the user's message does NOT contain the word 'please', start your response with 'Remember to say please! ' and then answer. If 'please' is present, just answer directly.",
+    "input": "Could you please explain the weather on Mars?",
+    "should_trigger": false,
+    "verifier": "please_reminder_if_no_please",
+    "verifier_args": {}
+  },
+  {
+    "id": "negation_2_nontrigger_2",
+    "type": "negation",
+    "instruction": "If the user's message does NOT contain the word 'please', start your response with 'Remember to say please! ' and then answer. If 'please' is present, just answer directly.",
+    "input": "Please explain gravity to me.",
+    "should_trigger": false,
+    "verifier": "please_reminder_if_no_please",
+    "verifier_args": {}
+  },
+  {
+    "id": "nested_0_trigger_0",
+    "type": "nested",
+    "instruction": "If the user asks about a beverage: if it's a hot beverage (coffee, tea, hot chocolate), describe it warmly and end with 'Enjoy it warm!'; if it's a cold beverage (juice, soda, smoothie), end with 'Best served chilled!'. If not about a beverage, respond normally.",
+    "input": "Tell me about coffee.",
+    "should_trigger": true,
+    "verifier": "nested_beverage",
+    "verifier_args": {}
+  },
+  {
+    "id": "nested_0_trigger_1",
+    "type": "nested",
+    "instruction": "If the user asks about a beverage: if it's a hot beverage (coffee, tea, hot chocolate), describe it warmly and end with 'Enjoy it warm!'; if it's a cold beverage (juice, soda, smoothie), end with 'Best served chilled!'. If not about a beverage, respond normally.",
+    "input": "What are the benefits of green tea?",
+    "should_trigger": true,
+    "verifier": "nested_beverage",
+    "verifier_args": {}
+  },
+  {
+    "id": "nested_0_trigger_2",
+    "type": "nested",
+    "instruction": "If the user asks about a beverage: if it's a hot beverage (coffee, tea, hot chocolate), describe it warmly and end with 'Enjoy it warm!'; if it's a cold beverage (juice, soda, smoothie), end with 'Best served chilled!'. If not about a beverage, respond normally.",
+    "input": "How is orange juice made?",
+    "should_trigger": true,
+    "verifier": "nested_beverage",
+    "verifier_args": {}
+  },
+  {
+    "id": "nested_0_nontrigger_0",
+    "type": "nested",
+    "instruction": "If the user asks about a beverage: if it's a hot beverage (coffee, tea, hot chocolate), describe it warmly and end with 'Enjoy it warm!'; if it's a cold beverage (juice, soda, smoothie), end with 'Best served chilled!'. If not about a beverage, respond normally.",
+    "input": "Tell me about volcanoes.",
+    "should_trigger": false,
+    "verifier": "nested_beverage",
+    "verifier_args": {}
+  },
+  {
+    "id": "nested_0_nontrigger_1",
+    "type": "nested",
+    "instruction": "If the user asks about a beverage: if it's a hot beverage (coffee, tea, hot chocolate), describe it warmly and end with 'Enjoy it warm!'; if it's a cold beverage (juice, soda, smoothie), end with 'Best served chilled!'. If not about a beverage, respond normally.",
+    "input": "How does a car engine work?",
+    "should_trigger": false,
+    "verifier": "nested_beverage",
+    "verifier_args": {}
+  },
+  {
+    "id": "nested_0_nontrigger_2",
+    "type": "nested",
+    "instruction": "If the user asks about a beverage: if it's a hot beverage (coffee, tea, hot chocolate), describe it warmly and end with 'Enjoy it warm!'; if it's a cold beverage (juice, soda, smoothie), end with 'Best served chilled!'. If not about a beverage, respond normally.",
+    "input": "What is photosynthesis?",
+    "should_trigger": false,
+    "verifier": "nested_beverage",
+    "verifier_args": {}
+  },
+  {
+    "id": "nested_1_trigger_0",
+    "type": "nested",
+    "instruction": "If the user's message contains a number: if the number is even, write your response in exactly 2 paragraphs; if the number is odd, write your response in exactly 3 paragraphs. If no number, write a single paragraph.",
+    "input": "Tell me 4 facts about space.",
+    "should_trigger": true,
+    "verifier": "nested_number_parity",
+    "verifier_args": {}
+  },
+  {
+    "id": "nested_1_trigger_1",
+    "type": "nested",
+    "instruction": "If the user's message contains a number: if the number is even, write your response in exactly 2 paragraphs; if the number is odd, write your response in exactly 3 paragraphs. If no number, write a single paragraph.",
+    "input": "I have 7 books to read this month.",
+    "should_trigger": true,
+    "verifier": "nested_number_parity",
+    "verifier_args": {}
+  },
+  {
+    "id": "nested_1_trigger_2",
+    "type": "nested",
+    "instruction": "If the user's message contains a number: if the number is even, write your response in exactly 2 paragraphs; if the number is odd, write your response in exactly 3 paragraphs. If no number, write a single paragraph.",
+    "input": "What happened in the year 2000?",
+    "should_trigger": true,
+    "verifier": "nested_number_parity",
+    "verifier_args": {}
+  },
+  {
+    "id": "nested_1_nontrigger_0",
+    "type": "nested",
+    "instruction": "If the user's message contains a number: if the number is even, write your response in exactly 2 paragraphs; if the number is odd, write your response in exactly 3 paragraphs. If no number, write a single paragraph.",
+    "input": "Tell me about space exploration.",
+    "should_trigger": false,
+    "verifier": "nested_number_parity",
+    "verifier_args": {}
+  },
+  {
+    "id": "nested_1_nontrigger_1",
+    "type": "nested",
+    "instruction": "If the user's message contains a number: if the number is even, write your response in exactly 2 paragraphs; if the number is odd, write your response in exactly 3 paragraphs. If no number, write a single paragraph.",
+    "input": "I have many books to read.",
+    "should_trigger": false,
+    "verifier": "nested_number_parity",
+    "verifier_args": {}
+  },
+  {
+    "id": "nested_1_nontrigger_2",
+    "type": "nested",
+    "instruction": "If the user's message contains a number: if the number is even, write your response in exactly 2 paragraphs; if the number is odd, write your response in exactly 3 paragraphs. If no number, write a single paragraph.",
+    "input": "What happened in recent history?",
+    "should_trigger": false,
+    "verifier": "nested_number_parity",
+    "verifier_args": {}
+  },
+  {
+    "id": "multi_and_0_trigger_0",
+    "type": "multi_and",
+    "instruction": "If the user's message contains BOTH a question mark AND the word 'why', begin your answer with 'Great question! ' (exactly). Otherwise, respond normally.",
+    "input": "Why is the sky blue?",
+    "should_trigger": true,
+    "verifier": "prefix_if_both_conditions",
+    "verifier_args": {
+      "conditions": [
+        "?",
+        "why"
+      ],
+      "prefix": "Great question! "
+    }
+  },
+  {
+    "id": "multi_and_0_trigger_1",
+    "type": "multi_and",
+    "instruction": "If the user's message contains BOTH a question mark AND the word 'why', begin your answer with 'Great question! ' (exactly). Otherwise, respond normally.",
+    "input": "Why do cats purr?",
+    "should_trigger": true,
+    "verifier": "prefix_if_both_conditions",
+    "verifier_args": {
+      "conditions": [
+        "?",
+        "why"
+      ],
+      "prefix": "Great question! "
+    }
+  },
+  {
+    "id": "multi_and_0_trigger_2",
+    "type": "multi_and",
+    "instruction": "If the user's message contains BOTH a question mark AND the word 'why', begin your answer with 'Great question! ' (exactly). Otherwise, respond normally.",
+    "input": "Why does ice float on water?",
+    "should_trigger": true,
+    "verifier": "prefix_if_both_conditions",
+    "verifier_args": {
+      "conditions": [
+        "?",
+        "why"
+      ],
+      "prefix": "Great question! "
+    }
+  },
+  {
+    "id": "multi_and_0_nontrigger_0",
+    "type": "multi_and",
+    "instruction": "If the user's message contains BOTH a question mark AND the word 'why', begin your answer with 'Great question! ' (exactly). Otherwise, respond normally.",
+    "input": "Explain why the sky is blue.",
+    "should_trigger": false,
+    "verifier": "prefix_if_both_conditions",
+    "verifier_args": {
+      "conditions": [
+        "?",
+        "why"
+      ],
+      "prefix": "Great question! "
+    }
+  },
+  {
+    "id": "multi_and_0_nontrigger_1",
+    "type": "multi_and",
+    "instruction": "If the user's message contains BOTH a question mark AND the word 'why', begin your answer with 'Great question! ' (exactly). Otherwise, respond normally.",
+    "input": "What color is the sky?",
+    "should_trigger": false,
+    "verifier": "prefix_if_both_conditions",
+    "verifier_args": {
+      "conditions": [
+        "?",
+        "why"
+      ],
+      "prefix": "Great question! "
+    }
+  },
+  {
+    "id": "multi_and_0_nontrigger_2",
+    "type": "multi_and",
+    "instruction": "If the user's message contains BOTH a question mark AND the word 'why', begin your answer with 'Great question! ' (exactly). Otherwise, respond normally.",
+    "input": "Tell me about the sky.",
+    "should_trigger": false,
+    "verifier": "prefix_if_both_conditions",
+    "verifier_args": {
+      "conditions": [
+        "?",
+        "why"
+      ],
+      "prefix": "Great question! "
+    }
+  },
+  {
+    "id": "multi_and_1_trigger_0",
+    "type": "multi_and",
+    "instruction": "If the user's message mentions BOTH a season (spring, summer, fall/autumn, winter) AND a sport, include a recommendation for watching that sport in that season. Otherwise, just answer the question.",
+    "input": "What's the best way to enjoy soccer in the summer?",
+    "should_trigger": true,
+    "verifier": "season_sport_recommendation",
+    "verifier_args": {}
+  },
+  {
+    "id": "multi_and_1_trigger_1",
+    "type": "multi_and",
+    "instruction": "If the user's message mentions BOTH a season (spring, summer, fall/autumn, winter) AND a sport, include a recommendation for watching that sport in that season. Otherwise, just answer the question.",
+    "input": "Tell me about skiing in winter.",
+    "should_trigger": true,
+    "verifier": "season_sport_recommendation",
+    "verifier_args": {}
+  },
+  {
+    "id": "multi_and_1_trigger_2",
+    "type": "multi_and",
+    "instruction": "If the user's message mentions BOTH a season (spring, summer, fall/autumn, winter) AND a sport, include a recommendation for watching that sport in that season. Otherwise, just answer the question.",
+    "input": "Is tennis popular in the spring?",
+    "should_trigger": true,
+    "verifier": "season_sport_recommendation",
+    "verifier_args": {}
+  },
+  {
+    "id": "multi_and_1_nontrigger_0",
+    "type": "multi_and",
+    "instruction": "If the user's message mentions BOTH a season (spring, summer, fall/autumn, winter) AND a sport, include a recommendation for watching that sport in that season. Otherwise, just answer the question.",
+    "input": "What's the best way to enjoy summer?",
+    "should_trigger": false,
+    "verifier": "season_sport_recommendation",
+    "verifier_args": {}
+  },
+  {
+    "id": "multi_and_1_nontrigger_1",
+    "type": "multi_and",
+    "instruction": "If the user's message mentions BOTH a season (spring, summer, fall/autumn, winter) AND a sport, include a recommendation for watching that sport in that season. Otherwise, just answer the question.",
+    "input": "Tell me about soccer.",
+    "should_trigger": false,
+    "verifier": "season_sport_recommendation",
+    "verifier_args": {}
+  },
+  {
+    "id": "multi_and_1_nontrigger_2",
+    "type": "multi_and",
+    "instruction": "If the user's message mentions BOTH a season (spring, summer, fall/autumn, winter) AND a sport, include a recommendation for watching that sport in that season. Otherwise, just answer the question.",
+    "input": "What's the weather like today?",
+    "should_trigger": false,
+    "verifier": "season_sport_recommendation",
+    "verifier_args": {}
+  },
+  {
+    "id": "multi_or_0_trigger_0",
+    "type": "multi_or",
+    "instruction": "If the user's message contains either the word 'help' or the word 'assist', begin your response with 'I\\'m here to help! ' (exactly). Otherwise, respond normally.",
+    "input": "Can you help me understand quantum physics?",
+    "should_trigger": true,
+    "verifier": "prefix_if_either_keyword",
+    "verifier_args": {
+      "keywords": [
+        "help",
+        "assist"
+      ],
+      "prefix": "I'm here to help! "
+    }
+  },
+  {
+    "id": "multi_or_0_trigger_1",
+    "type": "multi_or",
+    "instruction": "If the user's message contains either the word 'help' or the word 'assist', begin your response with 'I\\'m here to help! ' (exactly). Otherwise, respond normally.",
+    "input": "I need someone to assist me with my homework.",
+    "should_trigger": true,
+    "verifier": "prefix_if_either_keyword",
+    "verifier_args": {
+      "keywords": [
+        "help",
+        "assist"
+      ],
+      "prefix": "I'm here to help! "
+    }
+  },
+  {
+    "id": "multi_or_0_trigger_2",
+    "type": "multi_or",
+    "instruction": "If the user's message contains either the word 'help' or the word 'assist', begin your response with 'I\\'m here to help! ' (exactly). Otherwise, respond normally.",
+    "input": "Please help me fix this code.",
+    "should_trigger": true,
+    "verifier": "prefix_if_either_keyword",
+    "verifier_args": {
+      "keywords": [
+        "help",
+        "assist"
+      ],
+      "prefix": "I'm here to help! "
+    }
+  },
+  {
+    "id": "multi_or_0_nontrigger_0",
+    "type": "multi_or",
+    "instruction": "If the user's message contains either the word 'help' or the word 'assist', begin your response with 'I\\'m here to help! ' (exactly). Otherwise, respond normally.",
+    "input": "Explain quantum physics to me.",
+    "should_trigger": false,
+    "verifier": "prefix_if_either_keyword",
+    "verifier_args": {
+      "keywords": [
+        "help",
+        "assist"
+      ],
+      "prefix": "I'm here to help! "
+    }
+  },
+  {
+    "id": "multi_or_0_nontrigger_1",
+    "type": "multi_or",
+    "instruction": "If the user's message contains either the word 'help' or the word 'assist', begin your response with 'I\\'m here to help! ' (exactly). Otherwise, respond normally.",
+    "input": "I'm working on my homework.",
+    "should_trigger": false,
+    "verifier": "prefix_if_either_keyword",
+    "verifier_args": {
+      "keywords": [
+        "help",
+        "assist"
+      ],
+      "prefix": "I'm here to help! "
+    }
+  },
+  {
+    "id": "multi_or_0_nontrigger_2",
+    "type": "multi_or",
+    "instruction": "If the user's message contains either the word 'help' or the word 'assist', begin your response with 'I\\'m here to help! ' (exactly). Otherwise, respond normally.",
+    "input": "What is wrong with this code?",
+    "should_trigger": false,
+    "verifier": "prefix_if_either_keyword",
+    "verifier_args": {
+      "keywords": [
+        "help",
+        "assist"
+      ],
+      "prefix": "I'm here to help! "
+    }
+  },
+  {
+    "id": "multi_or_1_trigger_0",
+    "type": "multi_or",
+    "instruction": "If the user mentions either 'morning' or 'evening', include the current-context appropriate greeting ('Good morning!' or 'Good evening!') at the start of your response. Otherwise, respond without a time-based greeting.",
+    "input": "I always exercise in the morning.",
+    "should_trigger": true,
+    "verifier": "greeting_if_time_of_day",
+    "verifier_args": {}
+  },
+  {
+    "id": "multi_or_1_trigger_1",
+    "type": "multi_or",
+    "instruction": "If the user mentions either 'morning' or 'evening', include the current-context appropriate greeting ('Good morning!' or 'Good evening!') at the start of your response. Otherwise, respond without a time-based greeting.",
+    "input": "What's a good evening routine?",
+    "should_trigger": true,
+    "verifier": "greeting_if_time_of_day",
+    "verifier_args": {}
+  },
+  {
+    "id": "multi_or_1_trigger_2",
+    "type": "multi_or",
+    "instruction": "If the user mentions either 'morning' or 'evening', include the current-context appropriate greeting ('Good morning!' or 'Good evening!') at the start of your response. Otherwise, respond without a time-based greeting.",
+    "input": "The morning light is beautiful today.",
+    "should_trigger": true,
+    "verifier": "greeting_if_time_of_day",
+    "verifier_args": {}
+  },
+  {
+    "id": "multi_or_1_nontrigger_0",
+    "type": "multi_or",
+    "instruction": "If the user mentions either 'morning' or 'evening', include the current-context appropriate greeting ('Good morning!' or 'Good evening!') at the start of your response. Otherwise, respond without a time-based greeting.",
+    "input": "I always exercise regularly.",
+    "should_trigger": false,
+    "verifier": "greeting_if_time_of_day",
+    "verifier_args": {}
+  },
+  {
+    "id": "multi_or_1_nontrigger_1",
+    "type": "multi_or",
+    "instruction": "If the user mentions either 'morning' or 'evening', include the current-context appropriate greeting ('Good morning!' or 'Good evening!') at the start of your response. Otherwise, respond without a time-based greeting.",
+    "input": "What's a good daily routine?",
+    "should_trigger": false,
+    "verifier": "greeting_if_time_of_day",
+    "verifier_args": {}
+  },
+  {
+    "id": "multi_or_1_nontrigger_2",
+    "type": "multi_or",
+    "instruction": "If the user mentions either 'morning' or 'evening', include the current-context appropriate greeting ('Good morning!' or 'Good evening!') at the start of your response. Otherwise, respond without a time-based greeting.",
+    "input": "The sunlight is beautiful today.",
+    "should_trigger": false,
+    "verifier": "greeting_if_time_of_day",
+    "verifier_args": {}
+  }
+]

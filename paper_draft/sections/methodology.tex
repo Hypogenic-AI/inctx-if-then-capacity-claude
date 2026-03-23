@@ -1,0 +1,71 @@
+\section{Methodology}
+\label{sec:method}
+
+\subsection{Benchmark Design}
+\label{sec:benchmark}
+
+We construct \benchname, a benchmark of 120 test cases for evaluating conditional instruction following. Each test case consists of three components: (1)~a \emph{conditional instruction} placed in the system prompt, (2)~a \emph{user input} that either satisfies or does not satisfy the condition, and (3)~a \emph{deterministic verifier} that checks whether the model's response correctly follows (or correctly does not follow) the conditional action.
+
+\para{Instruction types.}
+We define 8 types of conditional instructions, summarized in \tabref{tab:types}. The types span a range of cognitive demands: simple string matching (\itype{Keyword}), output format switching (\itype{Format}), semantic content detection (\itype{Content}), meta-property reasoning (\itype{Length}), logical negation (\itype{Negation}), multi-level branching (\itype{Nested}), conjunction (\itype{Multi-AND}), and disjunction (\itype{Multi-OR}).
+
+\begin{table}[t]
+    \centering
+    \caption{The 8 conditional instruction types in \benchname. Each type has 2--3 instruction templates, and each template has 3 trigger and 3 non-trigger inputs (12--18 cases per type, 120 total).}
+    \label{tab:types}
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{@{}llp{7.5cm}c@{}}
+        \toprule
+        \textbf{Type} & \textbf{Condition} & \textbf{Example instruction} & \textbf{Cases} \\
+        \midrule
+        \itype{Keyword} & Input contains keyword & ``If `urgent' appears, start with PRIORITY:'' & 18 \\
+        \itype{Format} & Input is about topic & ``If about a person, respond in JSON'' & 18 \\
+        \itype{Content} & Input mentions concept & ``If a color is mentioned, include hex code'' & 18 \\
+        \itype{Length} & Input has meta-property & ``If single word, answer in one sentence'' & 12 \\
+        \itype{Negation} & Input does NOT have X & ``If no question mark, respond in uppercase'' & 18 \\
+        \itype{Nested} & If A, then: if B do X; else Y & ``If beverage: if hot, `Enjoy warm!'; if cold, `Best chilled!'\,'' & 12 \\
+        \itype{Multi-AND} & Both A and B present & ``If both `?' and `why', start with `Great question!'\,'' & 12 \\
+        \itype{Multi-OR} & Either A or B present & ``If `help' or `assist', start with `I'm here to help!'\,'' & 12 \\
+        \bottomrule
+    \end{tabular}
+    }
+\end{table}
+
+\para{Balanced trigger design.}
+For each instruction template, we create an equal number of \emph{trigger} inputs (condition should activate) and \emph{non-trigger} inputs (condition should not activate). This 50/50 balance allows us to separately measure false positives (over-triggering on non-trigger inputs) and false negatives (missing triggers on trigger inputs), providing a more fine-grained view than overall accuracy alone.
+
+\para{Deterministic verification.}
+Each instruction type has a corresponding verifier function that checks the model's response against the expected behavior. For example, the \itype{Keyword} verifier checks whether the response starts with the required prefix when the keyword is present and does not start with the prefix when the keyword is absent. Verifiers include tolerance for minor formatting variations (\eg trailing whitespace, case variations where appropriate).
+
+\subsection{Scaling Benchmark}
+\label{sec:scaling}
+
+To test how performance changes with the number of simultaneous conditions, we create a separate scaling benchmark of 23 test cases. Each case contains 1, 2, or 4 keyword-to-marker conditional instructions in a single system prompt (\eg ``if input contains `alpha', include [ALPHA] in response; if input contains `beta', include [BETA]''). We evaluate both overall accuracy (all conditions correct) and per-marker accuracy (fraction of individual conditions correctly handled).
+
+\subsection{Models and Configuration}
+\label{sec:models}
+
+We evaluate two models from OpenAI's GPT family:
+\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=0pt]
+    \item \gptlarge: a state-of-the-art instruction-following model.
+    \item \gptsmall: a smaller, faster model for capability comparison.
+\end{itemize}
+
+Both models are queried via the OpenAI API with temperature $= 0.0$ and seed $= 42$ for reproducibility. Maximum generation length is 500 tokens, sufficient for all response types.
+
+\subsection{Evaluation Metrics}
+\label{sec:metrics}
+
+We report the following metrics for each instruction type and model:
+\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=0pt]
+    \item \textbf{Accuracy}: fraction of test cases where the model's response is correct (action taken when triggered, no action when not triggered).
+    \item \textbf{True positive rate} ($\TPR$): fraction of trigger inputs where the conditional action is correctly performed.
+    \item \textbf{True negative rate} ($\TNR$): fraction of non-trigger inputs where the conditional action is correctly withheld.
+    \item \textbf{False positive rate} ($\FPR = 1 - \TNR$): fraction of non-trigger inputs where the model incorrectly performs the action.
+    \item \textbf{False negative rate} ($\FNR = 1 - \TPR$): fraction of trigger inputs where the model fails to perform the action.
+\end{itemize}
+
+\subsection{Statistical Analysis}
+\label{sec:stats}
+
+We use Pearson's chi-squared test for independence to assess whether accuracy varies significantly across instruction types within each model. We compute Cram\'{e}r's $V$ as an effect size measure. To test whether difficulty rankings are consistent across models, we compute the Spearman rank correlation $\rho$ between per-type accuracy vectors. We report 95\% confidence intervals computed via the Wilson score method. All tests use a significance level of $\alpha = 0.05$.

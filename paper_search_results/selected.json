@@ -1,0 +1,893 @@
+[
+  {
+    "title": "Generalizing Verifiable Instruction Following",
+    "year": 2025,
+    "authors": "Valentina Pyatkin, Saumya Malik, Victoria Graf, Hamish Ivison, Shengyi Huang, Pradeep Dasigi, Nathan Lambert, Hanna Hajishirzi",
+    "url": "https://api.semanticscholar.org/CorpusId:280141899",
+    "relevance": 3,
+    "abstract": "A crucial factor for successful human and AI interaction is the ability of language models or chatbots to follow human instructions precisely. A common feature of instructions are output constraints like ``only answer with yes or no\"or ``mention the word `abrakadabra'at least 3 times\"that the user adds to craft a more useful answer. Even today's strongest models struggle with fulfilling such constraints. We find that most models strongly overfit on a small set of verifiable constraints from the benchmarks that test these abilities, a skill called precise instruction following, and are not able to generalize well to unseen output constraints. We introduce a new benchmark, IFBench, to evaluate precise instruction following generalization on 58 new, diverse, and challenging verifiable out-of-domain constraints. In addition, we perform an extensive analysis of how and on what data models can be trained to improve precise instruction following generalization. Specifically, we carefully design constraint verification modules and show that reinforcement learning with verifiable rewards (RLVR) significantly improves instruction following. In addition to IFBench, we release 29 additional new hand-annotated training constraints and verification functions, RLVR training prompts, and code.",
+    "citations": 46
+  },
+  {
+    "title": "When Thinking Fails: The Pitfalls of Reasoning for Instruction-Following in LLMs",
+    "year": 2025,
+    "authors": "Xiaomin Li, Zhou Yu, Zhiwei Zhang, Xupeng Chen, Ziji Zhang, Yingying Zhuang, Narayanan Sadagopan, Anurag Beniwal",
+    "url": "https://api.semanticscholar.org/CorpusId:278715317",
+    "relevance": 3,
+    "abstract": "Reasoning-enhanced large language models (RLLMs), whether explicitly trained for reasoning or prompted via chain-of-thought (CoT), have achieved state-of-the-art performance on many complex reasoning tasks. However, we uncover a surprising and previously overlooked phenomenon: explicit CoT reasoning can significantly degrade instruction-following accuracy. Evaluating 15 models on two benchmarks: IFEval (with simple, rule-verifiable constraints) and ComplexBench (with complex, compositional constraints), we consistently observe performance drops when CoT prompting is applied. Through large-scale case studies and an attention-based analysis, we identify common patterns where reasoning either helps (e.g., with formatting or lexical precision) or hurts (e.g., by neglecting simple constraints or introducing unnecessary content). We propose a metric, constraint attention, to quantify model focus during generation and show that CoT reasoning often diverts attention away from instruction-relevant tokens. To mitigate these effects, we introduce and evaluate four strategies: in-context learning, self-reflection, self-selective reasoning, and classifier-selective reasoning. Our results demonstrate that selective reasoning strategies, particularly classifier-selective reasoning, can substantially recover lost performance. To our knowledge, this is the first work to systematically expose reasoning-induced failures in instruction-following and offer practical mitigation strategies.",
+    "citations": 34
+  },
+  {
+    "title": "An Empirical Evaluation of Prompting Strategies for Large Language Models in Zero-Shot Clinical Natural Language Processing",
+    "year": 2023,
+    "authors": "Sonish Sivarajkumar, Mark Kelley, Alyssa Samolyk-Mazzanti, S. Visweswaran, Yanshan Wang",
+    "url": "https://api.semanticscholar.org/CorpusId:262012733",
+    "relevance": 3,
+    "abstract": "Large language models (LLMs) have shown remarkable capabilities in Natural Language Processing (NLP), especially in domains where labeled data is scarce or expensive, such as clinical domain. However, to unlock the clinical knowledge hidden in these LLMs, we need to design effective prompts that can guide them to perform specific clinical NLP tasks without any task-specific training data. This is known as in-context learning, which is an art and science that requires understanding the strengths and weaknesses of different LLMs and prompt engineering approaches. In this paper, we present a comprehensive and systematic experimental study on prompt engineering for five clinical NLP tasks: Clinical Sense Disambiguation, Biomedical Evidence Extraction, Coreference Resolution, Medication Status Extraction, and Medication Attribute Extraction. We assessed the prompts proposed in recent literature, including simple prefix, simple cloze, chain of thought, and anticipatory prompts, and introduced two new types of prompts, namely heuristic prompting and ensemble prompting. We evaluated the performance of these prompts on three state-of-the-art LLMs: GPT-3.5, BARD, and LLAMA2. We also contrasted zero-shot prompting with few-shot prompting, and provide novel insights and guidelines for prompt engineering for LLMs in clinical NLP. To the best of our knowledge, this is one of the first works on the empirical evaluation of different prompt engineering approaches for clinical NLP in this era of generative AI, and we hope that it will inspire and inform future research in this area.",
+    "citations": 33
+  },
+  {
+    "title": "TR2MTL: LLM based framework for Metric Temporal Logic Formalization of Traffic Rules",
+    "year": 2024,
+    "authors": "Kumar Manas, Stefan Zwicklbauer, A. Paschke",
+    "url": "https://api.semanticscholar.org/CorpusId:270371885",
+    "relevance": 3,
+    "abstract": "Traffic rules formalization is crucial for verifying the compliance and safety of autonomous vehicles (AVs). However, manual translation of natural language traffic rules as formal specification requires domain knowledge and logic expertise, which limits its adaptation. This paper introduces TR2MTL, a framework that employs large language models (LLMs) to automatically translate traffic rules (TR) into metric temporal logic (MTL). It is envisioned as a human-in-loop system for AV rule formalization. It utilizes a chain-of-thought in-context learning approach to guide the LLM in step-by-step translation and generating valid and grammatically correct MTL formulas. It can be extended to various forms of temporal logic and rules. We evaluated the framework on a challenging dataset of traffic rules we created from various sources and compared it against LLMs using different in-context learning methods. Results show that TR2MTL is domain-agnostic, achieving high accuracy and generalization capability even with a small dataset. Moreover, the method effectively predicts formulas with varying degrees of logical and semantic structure in unstructured traffic rules.",
+    "citations": 26
+  },
+  {
+    "title": "Do LLMs estimate uncertainty well in instruction-following?",
+    "year": 2024,
+    "authors": "Juyeon Heo, Miao Xiong, Christina Heinze-Deml, Jaya Narain",
+    "url": "https://api.semanticscholar.org/CorpusId:273482117",
+    "relevance": 3,
+    "abstract": "Large language models (LLMs) could be valuable personal AI agents across various domains, provided they can precisely follow user instructions. However, recent studies have shown significant limitations in LLMs' instruction-following capabilities, raising concerns about their reliability in high-stakes applications. Accurately estimating LLMs' uncertainty in adhering to instructions is critical to mitigating deployment risks. We present, to our knowledge, the first systematic evaluation of the uncertainty estimation abilities of LLMs in the context of instruction-following. Our study identifies key challenges with existing instruction-following benchmarks, where multiple factors are entangled with uncertainty stems from instruction-following, complicating the isolation and comparison across methods and models. To address these issues, we introduce a controlled evaluation setup with two benchmark versions of data, enabling a comprehensive comparison of uncertainty estimation methods under various conditions. Our findings show that existing uncertainty methods struggle, particularly when models make subtle errors in instruction following. While internal model states provide some improvement, they remain inadequate in more complex scenarios. The insights from our controlled evaluation setups provide a crucial understanding of LLMs' limitations and potential for uncertainty estimation in instruction-following tasks, paving the way for more trustworthy AI agents.",
+    "citations": 16
+  },
+  {
+    "title": "Business Process Text Sketch Automation Generation Using Large Language Model",
+    "year": 2023,
+    "authors": "Rui Zhu, Quanzhou Hu, Wenxin Li, Honghao Xiao, Chaogang Wang, Zixin Zhou",
+    "url": "https://api.semanticscholar.org/CorpusId:261530971",
+    "relevance": 3,
+    "abstract": "Business Process Management (BPM) is gaining increasing attention as it has the potential to cut costs while boosting output and quality. Business process document generation is a crucial stage in BPM. However, due to a shortage of datasets, data-driven deep learning techniques struggle to deliver the expected results. We propose an approach to transform Conditional Process Trees (CPTs) into Business Process Text Sketches (BPTSs) using Large Language Models (LLMs). The traditional prompting approach (Few-shot In-Context Learning) tries to get the correct answer in one go, and it can find the pattern of transforming simple CPTs into BPTSs, but for close-domain and CPTs with complex hierarchy, the traditional prompts perform weakly and with low correctness. We suggest using this technique to break down a difficult CPT into a number of basic CPTs and then solve each one in turn, drawing inspiration from the divide-and-conquer strategy. We chose 100 process trees with depths ranging from 2 to 5 at random, as well as CPTs with many nodes, many degrees of selection, and cyclic nesting. Experiments show that our method can achieve a correct rate of 93.42%, which is 45.17% better than traditional prompting methods. Our proposed method provides a solution for business process document generation in the absence of datasets, and secondly, it becomes potentially possible to provide a large number of datasets for the process model extraction (PME) domain.",
+    "citations": 1
+  },
+  {
+    "title": "Revisiting the Reliability of Language Models in Instruction-Following",
+    "year": 2025,
+    "authors": "Jianshuo Dong, Yutong Zhang, Yan Liu, Zhenyu Zhong, Tao Wei, Chao Zhang, Han Qiu",
+    "url": "https://api.semanticscholar.org/CorpusId:283920099",
+    "relevance": 3,
+    "abstract": "Advanced LLMs have achieved near-ceiling instruction-following accuracy on benchmarks such as IFEval. However, these impressive scores do not necessarily translate to reliable services in real-world use, where users often vary their phrasing, contextual framing, and task formulations. In this paper, we study nuance-oriented reliability: whether models exhibit consistent competence across cousin prompts that convey analogous user intents but with subtle nuances. To quantify this, we introduce a new metric, reliable@k, and develop an automated pipeline that generates high-quality cousin prompts via data augmentation. Building upon this, we construct IFEval++ for systematic evaluation. Across 20 proprietary and 26 open-source LLMs, we find that current models exhibit substantial insufficiency in nuance-oriented reliability -- their performance can drop by up to 61.8% with nuanced prompt modifications. What's more, we characterize it and explore three potential improvement recipes. Our findings highlight nuance-oriented reliability as a crucial yet underexplored next step toward more dependable and trustworthy LLM behavior. Our code and benchmark are accessible: https://github.com/jianshuod/IFEval-pp.",
+    "citations": 1
+  },
+  {
+    "title": "GAPO: Learning Preferential Prompt through Generative Adversarial Policy Optimization",
+    "year": 2025,
+    "authors": "Zhouhong Gu, Xingzhou Chen, Xiaoran Shi, Tao Wang, Suhang Zheng, Tianyu Li, Hongwei Feng, Yanghua Xiao",
+    "url": "https://api.semanticscholar.org/CorpusId:277321547",
+    "relevance": 3,
+    "abstract": "Recent advances in large language models have highlighted the critical need for precise control over model outputs through predefined constraints. While existing methods attempt to achieve this through either direct instruction-response synthesis or preferential response optimization, they often struggle with constraint understanding and adaptation. This limitation becomes particularly evident when handling fine-grained constraints, leading to either hallucination or brittle performance. We introduce Generative Adversarial Policy Optimization (GAPO), a novel framework that combines GAN-based training dynamics with an encoder-only reward model to progressively learn and adapt to increasingly complex constraints. GAPO leverages adversarial training to automatically generate training samples of varying difficulty while utilizing the encoder-only architecture to better capture prompt-response relationships. Extensive experiments demonstrate GAPO's superior performance across multiple benchmarks, particularly in scenarios requiring fine-grained constraint handling, where it significantly outperforms existing methods like PPO, DPO, and KTO. Our results suggest that GAPO's unique approach to preferential prompt learning offers a more robust and effective solution for controlling LLM outputs. Code is avaliable in https://github.com/MikeGu721/GAPO.",
+    "citations": 1
+  },
+  {
+    "title": "Benchmarking Hindi LLMs: A New Suite of Datasets and a Comparative Analysis",
+    "year": 2025,
+    "authors": "Anusha Kamath, Kanishk Singla, Rakesh Paul, Raviraj Joshi, Utkarsh Vaidya, Sanjay Singh Chauhan, Niranjan Wartikar",
+    "url": "https://www.semanticscholar.org/paper/a2b050a76438e11b8d431428e2c3f7ab1dea1b1f",
+    "relevance": 3,
+    "abstract": "Evaluating instruction-tuned Large Language Models (LLMs) in Hindi is challenging due to a lack of high-quality benchmarks, as direct translation of English datasets fails to capture crucial linguistic and cultural nuances. To address this, we introduce a suite of five Hindi LLM evaluation datasets: IFEval-Hi, MT-Bench-Hi, GSM8K-Hi, ChatRAG-Hi, and BFCL-Hi. These were created using a methodology that combines from-scratch human annotation with a translate-and-verify process. We leverage this suite to conduct an extensive benchmarking of open-source LLMs supporting Hindi, providing a detailed comparative analysis of their current capabilities. Our curation process also serves as a replicable methodology for developing benchmarks in other low-resource languages.",
+    "citations": 1
+  },
+  {
+    "title": "Behavioral Generative Agents for Power Dispatch and Auction",
+    "year": 2026,
+    "authors": "Shaoze Li, J. Kim, Cong Chen",
+    "url": "https://www.semanticscholar.org/paper/2b0df601404f5df1ee928701d9869d9639e53670",
+    "relevance": 3,
+    "abstract": "This paper presents positive initial evidence that generative agents can relax the rigidity of traditional mathematical models for human decision-making in power dispatch and auction settings. We design two proof-of-concept energy experiments with generative agents powered by a large language model (LLM). First, we construct a home battery management testbed with stochastic electricity prices and blackout interventions, and benchmark LLM decisions against dynamic programming. By incorporating an in-context learning (ICL) module, we show that behavioral patterns discovered by a stronger reasoning model can be transferred to a smaller LLM via example-based prompting, leading agents to prioritize post-blackout energy reserves over short-term profit. Second, we study LLM agents in simultaneous ascending auctions (SAA) for power network access, comparing their behavior with an optimization benchmark, the straightforward bidding strategy. By designing ICL prompts with rule-based, myopic, and strategic objectives, we find that structured prompting combined with ICL enables LLM agents to both reproduce economically rational strategies and exhibit systematic behavioral deviations. Overall, these results suggest that LLM-powered agents provide a flexible and expressive testbed for modeling human decision-making in power system applications.",
+    "citations": 0
+  },
+  {
+    "title": "IndicIFEval: A Benchmark for Verifiable Instruction-Following Evaluation in 14 Indic Languages",
+    "year": 2026,
+    "authors": "Thanmay Jayakumar, Mohammed Safi Ur Rahman Khan, Raj Dabre, Ratish Puduppully, Anoop Kunchukuttan",
+    "url": "https://www.semanticscholar.org/paper/278025c64bc5577f221a0246ccbb9849bac999f4",
+    "relevance": 3,
+    "abstract": "Instruction-following benchmarks remain predominantly English-centric, leaving a critical evaluation gap for the hundreds of millions of Indic language speakers. We introduce IndicIFEval, a benchmark evaluating constrained generation of LLMs across 14 Indic languages using automatically verifiable, rule-based instructions. It comprises around 800 human-verified examples per language spread across two complementary subsets: IndicIFEval-Ground, translated prompts from IFEval (Zhou et al., 2023) carefully localized for Indic contexts, and IndicIFEval-Ground, synthetically generated instructions grounded in native Indic content. We conduct a comprehensive evaluation of major open-weight and proprietary models spanning both reasoning and non-reasoning models. While models maintain strong adherence to formatting constraints, they struggle significantly with lexical and cross-lingual tasks -- and despite progress in high-resource languages, instruction-following across the broader Indic family lags significantly behind English. We release IndicIFEval and its evaluation scripts to support progress on multilingual constrained generation (http://github.com/ai4bharat/IndicIFEval).",
+    "citations": 0
+  },
+  {
+    "title": "GOPO: Policy Optimization using Ranked Rewards",
+    "year": 2026,
+    "authors": "Kyuseong Choi, Dwaipayan Saha, Woojeong Kim, Anish Agarwal, Raaz Dwivedi",
+    "url": "https://api.semanticscholar.org/CorpusId:285285624",
+    "relevance": 3,
+    "abstract": "Standard reinforcement learning from human feedback (RLHF) trains a reward model on pairwise preference data and then uses it for policy optimization. However, while reward models are optimized to capture relative preferences, existing policy optimization techniques rely on absolute reward magnitudes during training. In settings where the rewards are non-verifiable such as summarization, instruction following, and chat completion, this misalignment often leads to suboptimal performance. We introduce Group Ordinal Policy Optimization (GOPO), a policy optimization method that uses only the ranking of the rewards and discards their magnitudes. Our rank-based transformation of rewards provides several gains, compared to Group Relative Policy Optimization (GRPO), in settings with non-verifiable rewards: (1) consistently higher training/validation reward trajectories, (2) improved LLM-as-judge evaluations across most intermediate training steps, and (3) reaching a policy of comparable quality in substantially less training steps than GRPO. We demonstrate consistent improvements across a range of tasks and model sizes.",
+    "citations": 0
+  },
+  {
+    "title": "Chain of Thought Prompting Elicits Reasoning in Large Language Models",
+    "year": 2022,
+    "authors": "Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Ed H. Chi, F. Xia, Quoc Le, Denny Zhou",
+    "url": "https://www.semanticscholar.org/paper/1b6e810ce0afd0dd093f789d2b2742d047e316d5",
+    "relevance": 2,
+    "abstract": "We explore how generating a chain of thought -- a series of intermediate reasoning steps -- significantly improves the ability of large language models to perform complex reasoning. In particular, we show how such reasoning abilities emerge naturally in sufficiently large language models via a simple method called chain of thought prompting, where a few chain of thought demonstrations are provided as exemplars in prompting. Experiments on three large language models show that chain of thought prompting improves performance on a range of arithmetic, commonsense, and symbolic reasoning tasks. The empirical gains can be striking. For instance, prompting a 540B-parameter language model with just eight chain of thought exemplars achieves state of the art accuracy on the GSM8K benchmark of math word problems, surpassing even finetuned GPT-3 with a verifier.",
+    "citations": 16524
+  },
+  {
+    "title": "Large Language Models Are Human-Level Prompt Engineers",
+    "year": 2022,
+    "authors": "Yongchao Zhou, Andrei Ioan Muresanu, Ziwen Han, Keiran Paster, Silviu Pitis, Harris Chan, Jimmy Ba",
+    "url": "https://api.semanticscholar.org/CorpusId:253265328",
+    "relevance": 2,
+    "abstract": "By conditioning on natural language instructions, large language models (LLMs) have displayed impressive capabilities as general-purpose computers. However, task performance depends significantly on the quality of the prompt used to steer the model, and most effective prompts have been handcrafted by humans. Inspired by classical program synthesis and the human approach to prompt engineering, we propose Automatic Prompt Engineer (APE) for automatic instruction generation and selection. In our method, we treat the instruction as the\"program,\"optimized by searching over a pool of instruction candidates proposed by an LLM in order to maximize a chosen score function. To evaluate the quality of the selected instruction, we evaluate the zero-shot performance of another LLM following the selected instruction. Experiments on 24 NLP tasks show that our automatically generated instructions outperform the prior LLM baseline by a large margin and achieve better or comparable performance to the instructions generated by human annotators on 19/24 tasks. We conduct extensive qualitative and quantitative analyses to explore the performance of APE. We show that APE-engineered prompts can be applied to steer models toward truthfulness and/or informativeness, as well as to improve few-shot learning performance by simply prepending them to standard in-context learning prompts. Please check out our webpage at https://sites.google.com/view/automatic-prompt-engineer.",
+    "citations": 1265
+  },
+  {
+    "title": "Instruction-Following Evaluation for Large Language Models",
+    "year": 2023,
+    "authors": "Jeffrey Zhou, Tianjian Lu, Swaroop Mishra, Siddhartha Brahma, Sujoy Basu, Yi Luan, Denny Zhou, Le Hou",
+    "url": "https://www.semanticscholar.org/paper/1a9b8c545ba9a6779f202e04639c2d67e6d34f63",
+    "relevance": 2,
+    "abstract": "One core capability of Large Language Models (LLMs) is to follow natural language instructions. However, the evaluation of such abilities is not standardized: Human evaluations are expensive, slow, and not objectively reproducible, while LLM-based auto-evaluation is potentially biased or limited by the ability of the evaluator LLM. To overcome these issues, we introduce Instruction-Following Eval (IFEval) for large language models. IFEval is a straightforward and easy-to-reproduce evaluation benchmark. It focuses on a set of\"verifiable instructions\"such as\"write in more than 400 words\"and\"mention the keyword of AI at least 3 times\". We identified 25 types of those verifiable instructions and constructed around 500 prompts, with each prompt containing one or more verifiable instructions. We show evaluation results of two widely available LLMs on the market. Our code and data can be found at https://github.com/google-research/google-research/tree/master/instruction_following_eval",
+    "citations": 717
+  },
+  {
+    "title": "Principle-Driven Self-Alignment of Language Models from Scratch with Minimal Human Supervision",
+    "year": 2023,
+    "authors": "Zhiqing Sun, Yikang Shen, Qinhong Zhou, Hongxin Zhang, Zhenfang Chen, David D. Cox, Yiming Yang, Chuang Gan",
+    "url": "https://api.semanticscholar.org/CorpusId:258479665",
+    "relevance": 2,
+    "abstract": "Recent AI-assistant agents, such as ChatGPT, predominantly rely on supervised fine-tuning (SFT) with human annotations and reinforcement learning from human feedback (RLHF) to align the output of large language models (LLMs) with human intentions, ensuring they are helpful, ethical, and reliable. However, this dependence can significantly constrain the true potential of AI-assistant agents due to the high cost of obtaining human supervision and the related issues on quality, reliability, diversity, self-consistency, and undesirable biases. To address these challenges, we propose a novel approach called SELF-ALIGN, which combines principle-driven reasoning and the generative power of LLMs for the self-alignment of AI agents with minimal human supervision. Our approach encompasses four stages: first, we use an LLM to generate synthetic prompts, and a topic-guided method to augment the prompt diversity; second, we use a small set of human-written principles for AI models to follow, and guide the LLM through in-context learning from demonstrations (of principles application) to produce helpful, ethical, and reliable responses to user's queries; third, we fine-tune the original LLM with the high-quality self-aligned responses so that the resulting model can generate desirable responses for each query directly without the principle set and the demonstrations anymore; and finally, we offer a refinement step to address the issues of overly-brief or indirect responses. Applying SELF-ALIGN to the LLaMA-65b base language model, we develop an AI assistant named Dromedary. With fewer than 300 lines of human annotations (including<200 seed prompts, 16 generic principles, and 5 exemplars for in-context learning). Dromedary significantly surpasses the performance of several state-of-the-art AI systems, including Text-Davinci-003 and Alpaca, on benchmark datasets with various settings.",
+    "citations": 418
+  },
+  {
+    "title": "Evaluating Large Language Models at Evaluating Instruction Following",
+    "year": 2023,
+    "authors": "Zhiyuan Zeng, Jiatong Yu, Tianyu Gao, Yu Meng, Tanya Goyal, Danqi Chen",
+    "url": "https://api.semanticscholar.org/CorpusId:263834884",
+    "relevance": 2,
+    "abstract": "As research in large language models (LLMs) continues to accelerate, LLM-based evaluation has emerged as a scalable and cost-effective alternative to human evaluations for comparing the ever increasing list of models. This paper investigates the efficacy of these ``LLM evaluators'', particularly in using them to assess instruction following, a metric that gauges how closely generated text adheres to the given instruction. We introduce a challenging meta-evaluation benchmark, LLMBar, designed to test the ability of an LLM evaluator in discerning instruction-following outputs. The authors manually curated 419 pairs of outputs, one adhering to instructions while the other diverging, yet may possess deceptive qualities that mislead an LLM evaluator, e.g., a more engaging tone. Contrary to existing meta-evaluation, we discover that different evaluators (i.e., combinations of LLMs and prompts) exhibit distinct performance on LLMBar and even the highest-scoring ones have substantial room for improvement. We also present a novel suite of prompting strategies that further close the gap between LLM and human evaluators. With LLMBar, we hope to offer more insight into LLM evaluators and foster future research in developing better instruction-following models.",
+    "citations": 290
+  },
+  {
+    "title": "Unleashing the potential of prompt engineering for large language models",
+    "year": 2023,
+    "authors": "Banghao Chen, Zhaofeng Zhang, Nicolas Langren\u00e9, Shengxin Zhu",
+    "url": "https://api.semanticscholar.org/CorpusId:278444410",
+    "relevance": 2,
+    "abstract": "Summary This review explores the role of prompt engineering in unleashing the capabilities of large language models (LLMs). Prompt engineering is the process of structuring inputs, and it has emerged as a crucial technique for maximizing the utility and accuracy of these models. Both foundational and advanced prompt engineering methodologies\u2014including techniques such as self-consistency, chain of thought, and generated knowledge, which can significantly enhance the performance of models\u2014are explored in this paper. Additionally, the prompt methods for vision language models (VLMs) are examined in detail. Prompt methods are evaluated with subjective and objective metrics, ensuring a robust analysis of their efficacy. Critical to this discussion is the role of prompt engineering in artificial intelligence (AI) security, particularly in terms of defending against adversarial attacks that exploit vulnerabilities in LLMs. Strategies for minimizing these risks and improving the robustness of models are thoroughly reviewed. Finally, we provide a perspective for future research and applications.",
+    "citations": 194
+  },
+  {
+    "title": "Empowering Molecule Discovery for Molecule-Caption Translation With Large Language Models: A ChatGPT Perspective",
+    "year": 2023,
+    "authors": "Jiatong Li, Yunqing Liu, Wenqi Fan, Xiao Wei, Hui Liu, Jiliang Tang, Qing Li",
+    "url": "https://api.semanticscholar.org/CorpusId:259137456",
+    "relevance": 2,
+    "abstract": "Molecule discovery plays a crucial role in various scientific fields, advancing the design of tailored materials and drugs, which contributes to the development of society and human well-being. Specifically, molecule-caption translation is an important task for molecule discovery, aligning human understanding with molecular space. However, most of the existing methods heavily rely on domain experts, require excessive computational cost, or suffer from sub-optimal performance. On the other hand, Large Language Models (LLMs), like ChatGPT, have shown remarkable performance in various cross-modal tasks due to their powerful capabilities in natural language understanding, generalization, and in-context learning (ICL), which provides unprecedented opportunities to advance molecule discovery. Despite several previous works trying to apply LLMs in this task, the lack of domain-specific corpus and difficulties in training specialized LLMs still remain challenges. In this work, we propose a novel LLM-based framework (MolReGPT) for molecule-caption translation, where an In-Context Few-Shot Molecule Learning paradigm is introduced to empower molecule discovery with LLMs like ChatGPT to perform their in-context learning capability without domain-specific pre-training and fine-tuning. MolReGPT leverages the principle of molecular similarity to retrieve similar molecules and their text descriptions from a local database to enable LLMs to learn the task knowledge from context examples. We evaluate the effectiveness of MolReGPT on molecule-caption translation, including molecule understanding and text-based molecule generation. Experimental results show that compared to fine-tuned models, MolReGPT outperforms MolT5-base and is comparable to MolT5-large without additional training. To the best of our knowledge, MolReGPT is the first work to leverage LLMs via in-context learning in molecule-caption translation for advancing molecule discovery. Our work expands the scope of LLM applications, as well as providing a new paradigm for molecule discovery and design.",
+    "citations": 134
+  },
+  {
+    "title": "Iteratively Prompt Pre-trained Language Models for Chain of Thought",
+    "year": 2022,
+    "authors": "Boshi Wang, Xiang Deng, Huan Sun",
+    "url": "https://www.semanticscholar.org/paper/3f4d11971f2c64be9125a7fe99c019588bbebf16",
+    "relevance": 2,
+    "abstract": "While Pre-trained Language Models (PLMs) internalize a great amount of world knowledge, they have been shown incapable of recalling these knowledge to solve tasks requiring complex & multi-step reasoning. Similar to how humans develop a \u201cchain of thought\u201d for these tasks, how can we equip PLMs with such abilities? In this work, we explore an iterative prompting framework, a new prompting paradigm which progressively elicits relevant knowledge from PLMs for multi-step inference. We identify key limitations of existing prompting methods, namely they are either restricted to queries with a single identifiable relation/predicate, or being agnostic to input contexts, which makes it difficult to capture variabilities across different inference steps. We propose an iterative context-aware prompter, which addresses these limitations by learning to dynamically synthesize prompts conditioned on the current step\u2019s contexts. Experiments on three datasets involving multi-step reasoning show the effectiveness of the iterative scheme and the context-aware prompter design.",
+    "citations": 122
+  },
+  {
+    "title": "Synthetic Data (Almost) from Scratch: Generalized Instruction Tuning for Language Models",
+    "year": 2024,
+    "authors": "Haoran Li, Qingxiu Dong, Zhengyang Tang, Chaojun Wang, Xingxing Zhang, Haoyang Huang, Shaohan Huang, Xiaolong Huang, Zeqiang Huang, Dongdong Zhang, Yuxian Gu, Xin Cheng, Xun Wang, Si-Qing Chen, Li Dong, Wei Lu, Zhifang Sui, Benyou Wang, Wai Lam, Furu Wei",
+    "url": "https://api.semanticscholar.org/CorpusId:267759981",
+    "relevance": 2,
+    "abstract": "We introduce Generalized Instruction Tuning (called GLAN), a general and scalable method for instruction tuning of Large Language Models (LLMs). Unlike prior work that relies on seed examples or existing datasets to construct instruction tuning data, GLAN exclusively utilizes a pre-curated taxonomy of human knowledge and capabilities as input and generates large-scale synthetic instruction data across all disciplines. Specifically, inspired by the systematic structure in human education system, we build the taxonomy by decomposing human knowledge and capabilities to various fields, sub-fields and ultimately, distinct disciplines semi-automatically, facilitated by LLMs. Subsequently, we generate a comprehensive list of subjects for every discipline and proceed to design a syllabus tailored to each subject, again utilizing LLMs. With the fine-grained key concepts detailed in every class session of the syllabus, we are able to generate diverse instructions with a broad coverage across the entire spectrum of human knowledge and skills. Extensive experiments on large language models (e.g., Mistral) demonstrate that GLAN excels in multiple dimensions from mathematical reasoning, coding, academic exams, logical reasoning to general instruction following without using task-specific training data of these tasks. In addition, GLAN allows for easy customization and new fields or skills can be added by simply incorporating a new node into our taxonomy.",
+    "citations": 96
+  },
+  {
+    "title": "Improving Instruction-Following in Language Models through Activation Steering",
+    "year": 2024,
+    "authors": "Alessandro Stolfo, Vidhisha Balachandran, Safoora Yousefi, Eric Horvitz, Besmira Nushi",
+    "url": "https://api.semanticscholar.org/CorpusId:273403586",
+    "relevance": 2,
+    "abstract": "The ability to follow instructions is crucial for numerous real-world applications of language models. In pursuit of deeper insights and more powerful capabilities, we derive instruction-specific vector representations from language models and use them to steer models accordingly. These vectors are computed as the difference in activations between inputs with and without instructions, enabling a modular approach to activation steering. We demonstrate how this method can enhance model adherence to constraints such as output format, length, and word inclusion, providing inference-time control over instruction following. Our experiments across four models demonstrate how we can use the activation vectors to guide models to follow constraints even without explicit instructions and to enhance performance when instructions are present. Additionally, we explore the compositionality of activation steering, successfully applying multiple instructions simultaneously. Finally, we demonstrate that steering vectors computed on instruction-tuned models can transfer to improve base models. Our findings demonstrate that activation steering offers a practical and scalable approach for fine-grained control in language generation. Our code and data are available at https://github.com/microsoft/llm-steer-instruct.",
+    "citations": 93
+  },
+  {
+    "title": "How to Unleash the Power of Large Language Models for Few-shot Relation Extraction?",
+    "year": 2023,
+    "authors": "Xin Xu, Yuqi Zhu, Xiaohan Wang, Ningyu Zhang",
+    "url": "https://api.semanticscholar.org/CorpusId:258437068",
+    "relevance": 2,
+    "abstract": "Scaling language models have revolutionized widespread NLP tasks, yet little comprehensively explored few-shot relation extraction with large language models. In this paper, we investigate principal methodologies, in-context learning and data generation, for few-shot relation extraction via GPT-3.5 through exhaustive experiments. To enhance few-shot performance, we further propose task-related instructions and schema-constrained data generation. We observe that in-context learning can achieve performance on par with previous prompt learning approaches, and data generation with the large language model can boost previous solutions to obtain new state-of-the-art few-shot results on four widely-studied relation extraction datasets. We hope our work can inspire future research for the capabilities of large language models in few-shot relation extraction. Code is available in https://github.com/zjunlp/DeepKE/tree/main/example/llm.",
+    "citations": 72
+  },
+  {
+    "title": "Effectively Controlling Reasoning Models through Thinking Intervention",
+    "year": 2025,
+    "authors": "Tong Wu, Chong Xiang, Jiachen T. Wang, Prateek Mittal",
+    "url": "https://api.semanticscholar.org/CorpusId:277467483",
+    "relevance": 2,
+    "abstract": "Reasoning-enhanced large language models (LLMs) explicitly generate intermediate reasoning steps prior to generating final answers, helping the model excel in complex problem-solving. In this paper, we demonstrate that this emerging generation framework offers a unique opportunity for more fine-grained control over model behavior. We propose Thinking Intervention, a novel paradigm designed to explicitly guide the internal reasoning processes of LLMs by strategically inserting or revising specific thinking tokens. We find that the Thinking Intervention paradigm enhances the capabilities of reasoning models across a wide range of tasks, including instruction following on IFEval and Overthinking, instruction hierarchy on SEP, and safety alignment on XSTest and SorryBench. Our results demonstrate that Thinking Intervention significantly outperforms baseline prompting approaches, achieving up to 6.7% accuracy gains in instruction-following scenarios, 15.4% improvements in reasoning about instruction hierarchies, and a 40.0% increase in refusal rates for unsafe prompts using open-source DeepSeek R1 models. Overall, our work opens a promising new research avenue for controlling reasoning LLMs.",
+    "citations": 57
+  },
+  {
+    "title": "Checklists Are Better Than Reward Models For Aligning Language Models",
+    "year": 2025,
+    "authors": "Vijay Viswanathan, Yanchao Sun, Shuang Ma, Xiang Kong, Meng Cao, Graham Neubig, Tongshuang Wu",
+    "url": "https://www.semanticscholar.org/paper/c9c21c4706d42afce45145b23b6bc50957ff4340",
+    "relevance": 2,
+    "abstract": "Language models must be adapted to understand and follow user instructions. Reinforcement learning is widely used to facilitate this -- typically using fixed criteria such as\"helpfulness\"and\"harmfulness\". In our work, we instead propose using flexible, instruction-specific criteria as a means of broadening the impact that reinforcement learning can have in eliciting instruction following. We propose\"Reinforcement Learning from Checklist Feedback\"(RLCF). From instructions, we extract checklists and evaluate how well responses satisfy each item - using both AI judges and specialized verifier programs - then combine these scores to compute rewards for RL. We compare RLCF with other alignment methods applied to a strong instruction following model (Qwen2.5-7B-Instruct) on five widely-studied benchmarks -- RLCF is the only method to improve performance on every benchmark, including a 4-point boost in hard satisfaction rate on FollowBench, a 6-point increase on InFoBench, and a 3-point rise in win rate on Arena-Hard. These results establish checklist feedback as a key tool for improving language models'support of queries that express a multitude of needs.",
+    "citations": 45
+  },
+  {
+    "title": "Efficient Toxic Content Detection by Bootstrapping and Distilling Large Language Models",
+    "year": 2023,
+    "authors": "Jiang Zhang, Qiong Wu, Yiming Xu, Cheng Cao, Zhengxiao Du, Konstantinos Psounis",
+    "url": "https://api.semanticscholar.org/CorpusId:266191846",
+    "relevance": 2,
+    "abstract": "Toxic content detection is crucial for online services to remove inappropriate content that violates community standards. To automate the detection process, prior works have proposed varieties of machine learning (ML) approaches to train Language Models (LMs) for toxic content detection. However, both their accuracy and transferability across datasets are limited. Recently, Large Language Models (LLMs) have shown promise in toxic content detection due to their superior zero-shot and few-shot in-context learning ability as well as broad transferability on ML tasks.\nHowever, efficiently designing prompts for LLMs remains challenging. Moreover, the high run-time cost of LLMs may hinder their deployments in production. To address these challenges, in this work, we propose BD-LLM, a novel and efficient approach to bootstrapping and distilling LLMs for toxic content detection. \nSpecifically, we design a novel prompting method named Decision-Tree-of-Thought (DToT) to bootstrap LLMs' detection performance and extract high-quality rationales. DToT can automatically select more fine-grained context to re-prompt LLMs when their responses lack confidence. Additionally, we use the rationales extracted via DToT to fine-tune student LMs. Our experimental results on various datasets demonstrate that DToT can improve the accuracy of LLMs by up to 4.6%. Furthermore, student LMs fine-tuned with rationales extracted via DToT outperform baselines on all datasets with up to 16.9% accuracy improvement, while being more than 60x smaller than conventional LLMs. Finally, we observe that student LMs fine-tuned with rationales exhibit better cross-dataset transferability.",
+    "citations": 27
+  },
+  {
+    "title": "LLM Self-Correction with DeCRIM: Decompose, Critique, and Refine for Enhanced Following of Instructions with Multiple Constraints",
+    "year": 2024,
+    "authors": "Thomas Palmeira Ferraz, Kartik Mehta, Yu-Hsiang Lin, Haw-Shiuan Chang, Shereen Oraby, Sijia Liu, Vivek Subramanian, Tagyoung Chung, Mohit Bansal, Nanyun Peng",
+    "url": "https://api.semanticscholar.org/CorpusId:273228381",
+    "relevance": 2,
+    "abstract": "Instruction following is a key capability for LLMs. However, recent studies have shown that LLMs often struggle with instructions containing multiple constraints (e.g. a request to create a social media post\"in a funny tone\"with\"no hashtag\"). Despite this, most evaluations focus solely on synthetic data. To address this, we introduce RealInstruct, the first benchmark designed to evaluate LLMs' ability to follow real-world multi-constrained instructions by leveraging queries real users asked AI assistants. We also investigate model-based evaluation as a cost-effective alternative to human annotation for this task. Our findings reveal that even the proprietary GPT-4 model fails to meet at least one constraint on over 21% of instructions, highlighting the limitations of state-of-the-art models. To address the performance gap between open-source and proprietary models, we propose the Decompose, Critique and Refine (DeCRIM) self-correction pipeline, which enhances LLMs' ability to follow constraints. DeCRIM works by decomposing the original instruction into a list of constraints and using a Critic model to decide when and where the LLM's response needs refinement. Our results show that DeCRIM improves Mistral's performance by 7.3% on RealInstruct and 8.0% on IFEval even with weak feedback. Moreover, we demonstrate that with strong feedback, open-source LLMs with DeCRIM can outperform GPT-4 on both benchmarks.",
+    "citations": 27
+  },
+  {
+    "title": "From Complex to Simple: Enhancing Multi-Constraint Complex Instruction Following Ability of Large Language Models",
+    "year": 2024,
+    "authors": "Qi He, Jie Zeng, Qianxi He, Jiaqing Liang, Yanghua Xiao",
+    "url": "https://api.semanticscholar.org/CorpusId:269362443",
+    "relevance": 2,
+    "abstract": "It is imperative for Large language models (LLMs) to follow instructions with elaborate requirements (i.e. Complex Instructions Following). Yet, it remains under-explored how to enhance the ability of LLMs to follow complex instructions with multiple constraints. To bridge the gap, we initially study what training data is effective in enhancing complex constraints following abilities. We found that training LLMs with instructions containing multiple constraints enhances their understanding of complex instructions, especially those with lower complexity levels. The improvement can even generalize to compositions of out-of-domain constraints. Additionally, we further propose methods addressing how to obtain and utilize the effective training data. Finally, we conduct extensive experiments to prove the effectiveness of our methods in terms of overall performance and training efficiency. We also demonstrate that our methods improve models' ability to follow instructions generally and generalize effectively across out-of-domain, in-domain, and adversarial settings, while maintaining general capabilities.",
+    "citations": 25
+  },
+  {
+    "title": "Scaling Reasoning, Losing Control: Evaluating Instruction Following in Large Reasoning Models",
+    "year": 2025,
+    "authors": "Ting Fu, Jiawei Gu, Yafu Li, Xiaoye Qu, Yu Cheng",
+    "url": "https://api.semanticscholar.org/CorpusId:278782801",
+    "relevance": 2,
+    "abstract": "Instruction-following is essential for aligning large language models (LLMs) with user intent. While recent reasoning-oriented models exhibit impressive performance on complex mathematical problems, their ability to adhere to natural language instructions remains underexplored. In this work, we introduce MathIF, a dedicated benchmark for evaluating instruction-following in mathematical reasoning tasks. Our empirical analysis reveals a consistent tension between scaling up reasoning capacity and maintaining controllability, as models that reason more effectively often struggle to comply with user directives. We find that models tuned on distilled long chains-of-thought or trained with reasoning-oriented reinforcement learning often degrade in instruction adherence, especially when generation length increases. Furthermore, we show that even simple interventions can partially recover obedience, though at the cost of reasoning performance. These findings highlight a fundamental tension in current LLM training paradigms and motivate the need for more instruction-aware reasoning models. We release the code and data at https://github.com/TingchenFu/MathIF.",
+    "citations": 25
+  },
+  {
+    "title": "OpenRubrics: Towards Scalable Synthetic Rubric Generation for Reward Modeling and LLM Alignment",
+    "year": 2025,
+    "authors": "Tianci Liu, Ran Xu, Tony Yu, Ilgee Hong, Carl Yang, Tuo Zhao, Haoyu Wang",
+    "url": "https://api.semanticscholar.org/CorpusId:281951535",
+    "relevance": 2,
+    "abstract": "Reward modeling lies at the core of reinforcement learning from human feedback (RLHF), yet most existing reward models rely on scalar or pairwise judgments that fail to capture the multifaceted nature of human preferences. Recent studies have explored rubrics-as-rewards (RaR) that uses structured criteria to capture multiple dimensions of response quality. However, producing rubrics that are both reliable and scalable remains a key challenge. In this work, we introduce OpenRubrics, a diverse, large-scale collection of (prompt, rubric) pairs for training rubric-generation and rubric-based reward models. To elicit discriminative and comprehensive evaluation signals, we introduce Contrastive Rubric Generation (CRG), which derives both hard rules (explicit constraints) and principles (implicit qualities) by contrasting preferred and rejected responses. We further remove noisy rubrics via preserving preference-label consistency. Across multiple reward-modeling benchmarks, our rubric-based reward model, Rubric-RM, surpasses strong size-matched baselines by 8.4%. These gains transfer to policy models on instruction-following and biomedical benchmarks.",
+    "citations": 24
+  },
+  {
+    "title": "Do LLMs \"know\" internally when they follow instructions?",
+    "year": 2024,
+    "authors": "Juyeon Heo, Christina Heinze-Deml, Oussama Elachqar, Shirley Ren, Udhay Nallasamy, Andy Miller, Kwan Ho Ryan Chan, Jaya Narain",
+    "url": "https://api.semanticscholar.org/CorpusId:273482775",
+    "relevance": 2,
+    "abstract": "Instruction-following is crucial for building AI agents with large language models (LLMs), as these models must adhere strictly to user-provided constraints and guidelines. However, LLMs often fail to follow even simple and clear instructions. To improve instruction-following behavior and prevent undesirable outputs, a deeper understanding of how LLMs' internal states relate to these outcomes is required. In this work, we investigate whether LLMs encode information in their representations that correlate with instruction-following success - a property we term knowing internally. Our analysis identifies a direction in the input embedding space, termed the instruction-following dimension, that predicts whether a response will comply with a given instruction. We find that this dimension generalizes well across unseen tasks but not across unseen instruction types. We demonstrate that modifying representations along this dimension improves instruction-following success rates compared to random changes, without compromising response quality. Further investigation reveals that this dimension is more closely related to the phrasing of prompts rather than the inherent difficulty of the task or instructions. This work provides insight into the internal workings of LLMs' instruction-following, paving the way for reliable LLM agents.",
+    "citations": 24
+  },
+  {
+    "title": "Conifer: Improving Complex Constrained Instruction-Following Ability of Large Language Models",
+    "year": 2024,
+    "authors": "Haoran Sun, Lixin Liu, Junjie Li, Feng Wang, Baohua Dong, Ran Lin, Ruohui Huang",
+    "url": "https://api.semanticscholar.org/CorpusId:268876020",
+    "relevance": 2,
+    "abstract": "The ability of large language models (LLMs) to follow instructions is crucial to real-world applications. Despite recent advances, several studies have highlighted that LLMs struggle when faced with challenging instructions, especially those that include complex constraints, hindering their effectiveness in various tasks. To address this challenge, we introduce Conifer, a novel instruction tuning dataset, designed to enhance LLMs to follow multi-level instructions with complex constraints. Utilizing GPT-4, we curate the dataset by a series of LLM-driven refinement processes to ensure high quality. We also propose a progressive learning scheme that emphasizes an easy-to-hard progression, and learning from process feedback. Models trained with Conifer exhibit remarkable improvements in instruction-following abilities, especially for instructions with complex constraints. On several instruction-following benchmarks, our 7B model outperforms the state-of-the-art open-source 7B models, even exceeds the performance of models 10 times larger on certain metrics. All the code and Conifer dataset are available at https://www.github.com/ConiferLM/Conifer.",
+    "citations": 23
+  },
+  {
+    "title": "I-SHEEP: Self-Alignment of LLM from Scratch through an Iterative Self-Enhancement Paradigm",
+    "year": 2024,
+    "authors": "Yiming Liang, Ge Zhang, Xingwei Qu, Tianyu Zheng, Jiawei Guo, Xinrun Du, Zhenzhu Yang, Jiaheng Liu, Chenghua Lin, Lei Ma, Wenhao Huang, Jiajun Zhang",
+    "url": "https://api.semanticscholar.org/CorpusId:271874833",
+    "relevance": 2,
+    "abstract": "Large Language Models (LLMs) have achieved significant advancements, however, the common learning paradigm treats LLMs as passive information repositories, neglecting their potential for active learning and alignment. Some approaches train LLMs using their own generated synthetic data, exploring the possibility of active alignment. However, there is still a huge gap between these one-time alignment methods and the continuous automatic alignment of humans. In this paper, we introduce \\textbf{I-SHEEP}, an \\textbf{I}terative \\textbf{S}elf-En\\textbf{H}anc\\textbf{E}m\\textbf{E}nt \\textbf{P}aradigm.This human-like paradigm enables LLMs to \\textbf{continuously self-align from scratch with nothing}. Compared to the one-time alignment method Dromedary \\cite{sun2023principledriven}, which refers to the first iteration in this paper, I-SHEEP can significantly enhance capacities on both Qwen and Llama models. I-SHEEP achieves a maximum relative improvement of 78.2\\% in the Alpaca Eval, 24.0\\% in the MT Bench, and an absolute increase of 8.88\\% in the IFEval accuracy over subsequent iterations in Qwen-1.5 72B model. Additionally, I-SHEEP surpasses the base model in various standard benchmark generation tasks, achieving an average improvement of 24.77\\% in code generation tasks, 12.04\\% in TrivialQA, and 20.29\\% in SQuAD. We also provide new insights based on the experiment results. Our codes, datasets, and models are available at \\textbf{https://anonymous.4open.science/r/I-SHEEP}.",
+    "citations": 22
+  },
+  {
+    "title": "VerIF: Verification Engineering for Reinforcement Learning in Instruction Following",
+    "year": 2025,
+    "authors": "Hao Peng, Yunjia Qi, Xiaozhi Wang, Bin Xu, Lei Hou, Juanzi Li",
+    "url": "https://api.semanticscholar.org/CorpusId:279306273",
+    "relevance": 2,
+    "abstract": "Reinforcement learning with verifiable rewards (RLVR) has become a key technique for enhancing large language models (LLMs), with verification engineering playing a central role. However, best practices for RL in instruction following remain underexplored. In this work, we explore the verification challenge in RL for instruction following and propose VerIF, a verification method that combines rule-based code verification with LLM-based verification from a large reasoning model (e.g., QwQ-32B). To support this approach, we construct a high-quality instruction-following dataset, VerInstruct, containing approximately 22,000 instances with associated verification signals. We apply RL training with VerIF to two models, achieving significant improvements across several representative instruction-following benchmarks. The trained models reach state-of-the-art performance among models of comparable size and generalize well to unseen constraints. We further observe that their general capabilities remain unaffected, suggesting that RL with VerIF can be integrated into existing RL recipes to enhance overall model performance. We have released our datasets, codes, and models to facilitate future research at https://github.com/THU-KEG/VerIF.",
+    "citations": 17
+  },
+  {
+    "title": "Autonomous Prompt Engineering in Large Language Models",
+    "year": 2024,
+    "authors": "Daan Kepel, Konstantina Valogianni",
+    "url": "https://api.semanticscholar.org/CorpusId:271218437",
+    "relevance": 2,
+    "abstract": "Prompt engineering is a crucial yet challenging task for optimizing the performance of large language models (LLMs) on customized tasks. This pioneering research introduces the Automatic Prompt Engineering Toolbox (APET), which enables GPT-4 to autonomously apply prompt engineering techniques. By leveraging sophisticated strategies such as Expert Prompting, Chain of Thought, and Tree of Thoughts, APET empowers GPT-4 to dynamically optimize prompts, resulting in substantial improvements in tasks like Word Sorting (4.4% increase) and Geometric Shapes (6.8% increase). Despite encountering challenges in complex tasks such as Checkmate in One (-14.8%), these findings demonstrate the transformative potential of APET in automating complex prompt optimization processes without the use of external data. Overall, this research represents a significant leap in AI development, presenting a robust framework for future innovations in autonomous AI systems and highlighting the ability of GPT-4 to bring prompt engineering theory to practice. It establishes a foundation for enhancing performance in complex task performance and broadening the practical applications of these techniques in real-world scenarios.",
+    "citations": 15
+  },
+  {
+    "title": "M-IFEval: Multilingual Instruction-Following Evaluation",
+    "year": 2025,
+    "authors": "Antoine Dussolle, Andrea Cardena D'iaz, Shota Sato, Peter Devine",
+    "url": "https://www.semanticscholar.org/paper/d6977ab9e3295cd294c64b668755787b88518fb8",
+    "relevance": 2,
+    "abstract": "Instruction following is a core capability of modern Large language models (LLMs), making evaluating this capability essential to understanding these models. The Instruction Following Evaluation (IFEval) benchmark from the literature does this using objective criteria, offering a measure of LLM performance without subjective AI or human judgement. However, it only includes English instructions, limiting its ability to assess LLMs in other languages. We propose the Multilingual Instruction Following Evaluation (M-IFEval) benchmark, expanding the evaluation to French, Japanese, and Spanish, with both general and language-specific instructions. Applying this benchmark to 8 state-of-the-art LLMs, we find that benchmark performance across languages and instruction types can vary widely, underscoring the importance of a multilingual benchmark for evaluating LLMs in a diverse cultural context.",
+    "citations": 15
+  },
+  {
+    "title": "Breaking the Exploration Bottleneck: Rubric-Scaffolded Reinforcement Learning for General LLM Reasoning",
+    "year": 2025,
+    "authors": "Yang Zhou, Sunzhu Li, Shunyu Liu, Wenkai Fang, Jiale Zhao, Jingwen Yang, Jianwei Lv, Kongcheng Zhang, Yihe Zhou, Hengtong Lu, Wei Chen, Yan Xie, Mingli Song",
+    "url": "https://www.semanticscholar.org/paper/d4fce730c7ceb40d92612f9abd7eb12a6d13a652",
+    "relevance": 2,
+    "abstract": "Recent advances in Large Language Models (LLMs) have underscored the potential of Reinforcement Learning (RL) to facilitate the emergence of reasoning capabilities. Despite the encouraging results, a fundamental dilemma persists as RL improvement relies on learning from high-quality samples, yet the exploration for such samples remains bounded by the inherent limitations of LLMs. This, in effect, creates an undesirable cycle in which what cannot be explored cannot be learned. In this work, we propose Rubric-Scaffolded Reinforcement Learning (RuscaRL), a novel instructional scaffolding framework designed to break the exploration bottleneck for general LLM reasoning. Specifically, RuscaRL introduces checklist-style rubrics as (1) explicit scaffolding for exploration during rollout generation, where different rubrics are provided as external guidance within task instructions to steer diverse high-quality responses. This guidance is gradually decayed over time, encouraging the model to internalize the underlying reasoning patterns; (2) verifiable rewards for exploitation during model training, where we can obtain robust LLM-as-a-Judge scores using rubrics as references, enabling effective RL on general reasoning tasks. Extensive experiments demonstrate the superiority of the proposed RuscaRL across various benchmarks, effectively expanding reasoning boundaries under the Best-of-N evaluation. Our code is available at https://github.com/IANNXANG/RuscaRL.",
+    "citations": 15
+  },
+  {
+    "title": "RuleR: Improving LLM Controllability by Rule-based Data Recycling",
+    "year": 2024,
+    "authors": "Ming Li, Han Chen, Chenguang Wang, Dang Nguyen, Dianqi Li, Tianyi Zhou",
+    "url": "https://api.semanticscholar.org/CorpusId:270702330",
+    "relevance": 2,
+    "abstract": "Large language models (LLMs) still lack delicate controllability over their responses, which is critical to enhancing their performance and the user experience. However, curating supervised fine-tuning (SFT) datasets to improve LLM controllability usually relies on human experts or proprietary LLMs, which requires additional costs. To bridge this gap, we propose Rule-based Data Recycling (RuleR), a data augmentation method incorporating multiple constraints into the original data samples according to predefined rules, which creates new training tasks to consolidate the controllability of LLMs. Instead of creating new data from scratch, RuleR\"recycles\"existing data by simply applying rule-based edits to their responses and appending the rule-instructions in their original instructions. Experimental results demonstrate RuleR's effectiveness in improving LLM controllability while maintaining general instruction-following capabilities.",
+    "citations": 14
+  },
+  {
+    "title": "SPaR: Self-Play with Tree-Search Refinement to Improve Instruction-Following in Large Language Models",
+    "year": 2024,
+    "authors": "Jiale Cheng, Xiao Liu, Cunxiang Wang, Xiaotao Gu, Yida Lu, Dan Zhang, Yuxiao Dong, Jie Tang, Hongning Wang, Minlie Huang",
+    "url": "https://api.semanticscholar.org/CorpusId:274777238",
+    "relevance": 2,
+    "abstract": "Instruction-following is a fundamental capability of language models, requiring the model to recognize even the most subtle requirements in the instructions and accurately reflect them in its output. Such an ability is well-suited for and often optimized by preference learning. However, existing methods often directly sample multiple independent responses from the model when creating preference pairs. Such practice can introduce content variations irrelevant to whether the instruction is precisely followed (e.g., different expressions about the same semantic), interfering with the goal of teaching models to recognize the key differences that lead to improved instruction following. In light of this, we introduce SPaR, a self-play framework integrating tree-search self-refinement to yield valid and comparable preference pairs free from distractions. By playing against itself, an LLM employs a tree-search strategy to refine its previous responses with respect to the instruction while minimizing unnecessary variations. Our experiments show that a LLaMA3-8B model, trained over three iterations guided by SPaR, surpasses GPT-4-Turbo on the IFEval benchmark without losing general capabilities. Furthermore, SPaR demonstrates promising scalability, greatly enhancing models like GLM-4-9B and LLaMA3-70B. We also identify how inference scaling in tree search would impact model performance. Our code and data are publicly available at https://github.com/thu-coai/SPaR.",
+    "citations": 13
+  },
+  {
+    "title": "Spotlight Your Instructions: Instruction-following with Dynamic Attention Steering",
+    "year": 2025,
+    "authors": "Praveen Venkateswaran, Danish Contractor",
+    "url": "https://api.semanticscholar.org/CorpusId:278739904",
+    "relevance": 2,
+    "abstract": "In many real-world applications, users rely on natural language instructions to guide large language models (LLMs) across a wide range of tasks. These instructions are often complex, diverse, and subject to frequent change. However, LLMs do not always attend to these instructions reliably, and users lack simple mechanisms to emphasize their importance beyond modifying prompt wording or structure. To address this, we present an inference-time method that enables users to emphasize specific parts of their prompt by steering the model's attention toward them, aligning the model's perceived importance of different prompt tokens with user intent. Unlike prior approaches that are limited to static instructions, require significant offline profiling, or rely on fixed biases, we dynamically update the proportion of model attention given to the user-specified parts--ensuring improved instruction following without performance degradation. We demonstrate that our approach improves instruction following across a variety of tasks involving multiple instructions and generalizes across models of varying scales.",
+    "citations": 11
+  },
+  {
+    "title": "BenchMAX: A Comprehensive Multilingual Evaluation Suite for Large Language Models",
+    "year": 2025,
+    "authors": "Xu Huang, Wenhao Zhu, Hanxu Hu, Conghui He, Lei Li, Shujian Huang, Fei Yuan",
+    "url": "https://api.semanticscholar.org/CorpusId:276259236",
+    "relevance": 2,
+    "abstract": "Previous multilingual benchmarks focus primarily on simple understanding tasks, but for large language models(LLMs), we emphasize proficiency in instruction following, reasoning, long context understanding, code generation, and so on. However, measuring these advanced capabilities across languages is underexplored. To address the disparity, we introduce BenchMAX, a multi-way multilingual evaluation benchmark that allows for fair comparisons of these important abilities across languages. To maintain high quality, three distinct native-speaking annotators independently annotate each sample within all tasks after the data was machine-translated from English into 16 other languages. Additionally, we present a novel translation challenge stemming from dataset construction. Extensive experiments on BenchMAX reveal varying effectiveness of core capabilities across languages, highlighting performance gaps that cannot be bridged by simply scaling up model size. BenchMAX serves as a comprehensive multilingual evaluation platform, providing a promising test bed to promote the development of multilingual language models. The dataset and code are publicly accessible.",
+    "citations": 11
+  },
+  {
+    "title": "Do Large Language Models Understand Logic or Just Mimick Context?",
+    "year": 2024,
+    "authors": "Junbing Yan, Chengyu Wang, Junyuan Huang, Wei Zhang",
+    "url": "https://api.semanticscholar.org/CorpusId:267751049",
+    "relevance": 2,
+    "abstract": "Over the past few years, the abilities of large language models (LLMs) have received extensive attention, which have performed exceptionally well in complicated scenarios such as logical reasoning and symbolic inference. A significant factor contributing to this progress is the benefit of in-context learning and few-shot prompting. However, the reasons behind the success of such models using contextual reasoning have not been fully explored. Do LLMs have understand logical rules to draw inferences, or do they ``guess'' the answers by learning a type of probabilistic mapping through context? This paper investigates the reasoning capabilities of LLMs on two logical reasoning datasets by using counterfactual methods to replace context text and modify logical concepts. Based on our analysis, it is found that LLMs do not truly understand logical rules; rather, in-context learning has simply enhanced the likelihood of these models arriving at the correct answers. If one alters certain words in the context text or changes the concepts of logical terms, the outputs of LLMs can be significantly disrupted, leading to counter-intuitive responses. This work provides critical insights into the limitations of LLMs, underscoring the need for more robust mechanisms to ensure reliable logical reasoning in LLMs.",
+    "citations": 9
+  },
+  {
+    "title": "A Sequential Optimal Learning Approach to Automated Prompt Engineering in Large Language Models",
+    "year": 2025,
+    "authors": "Shuyang Wang, Somayeh Moazeni, Diego Klabjan",
+    "url": "https://api.semanticscholar.org/CorpusId:275342690",
+    "relevance": 2,
+    "abstract": "Designing effective prompts is essential to guiding large language models (LLMs) toward desired responses. Automated prompt engineering aims to reduce reliance on manual effort by streamlining the design, refinement, and optimization of natural language prompts. This paper proposes an optimal learning framework for automated prompt engineering, designed to sequentially identify effective prompt features while efficiently allocating a limited evaluation budget. We introduce a feature-based method to express prompts, which significantly broadens the search space. Bayesian regression is employed to utilize correlations among similar prompts, accelerating the learning process. To efficiently explore the large space of prompt features for a high quality prompt, we adopt the forward-looking Knowledge-Gradient (KG) policy for sequential optimal learning. The KG policy is computed efficiently by solving mixed-integer second-order cone optimization problems, making it scalable and capable of accommodating prompts characterized only through constraints. We demonstrate that our method significantly outperforms a set of benchmark strategies assessed on instruction induction tasks. The results highlight the advantages of using the KG policy for prompt learning given a limited evaluation budget. Our framework provides a solution to deploying automated prompt engineering in a wider range applications where prompt evaluation is costly.",
+    "citations": 6
+  },
+  {
+    "title": "Constraint Back-translation Improves Complex Instruction Following of Large Language Models",
+    "year": 2024,
+    "authors": "Yunjia Qi, Hao Peng, Xiaozhi Wang, Bin Xu, Lei Hou, Juanzi Li",
+    "url": "https://api.semanticscholar.org/CorpusId:273707766",
+    "relevance": 2,
+    "abstract": "Large language models (LLMs) struggle to follow instructions with complex constraints in format, length, etc. Following the conventional instruction-tuning practice, previous works conduct post-training on complex instruction-response pairs generated by feeding complex instructions to advanced LLMs. However, even advanced LLMs cannot follow complex instructions well, thus limiting the quality of generated data. In this work, we find that existing datasets inherently contain implicit complex constraints and propose a novel data generation technique, constraint back-translation. Specifically, we take the high-quality instruction-response pairs in existing datasets and only adopt advanced LLMs to add complex constraints already met by the responses to the instructions, which naturally reduces costs and data noise. In the experiments, we adopt Llama3-70B-Instruct to back-translate constraints and create a high-quality complex instruction-response dataset, named Crab. We present that post-training on Crab improves multiple backbone LLMs' complex instruction-following ability, evaluated on extensive instruction-following benchmarks. We further find that constraint back-translation also serves as a useful auxiliary training objective in post-training. Our code, data, and models are released to facilitate future research.",
+    "citations": 6
+  },
+  {
+    "title": "Divide-Verify-Refine: Aligning LLM Responses with Complex Instructions",
+    "year": 2024,
+    "authors": "Xianren Zhang, Xianfeng Tang, Hui Liu, Zongyu Wu, Qi He, Dongwon Lee, Suhang Wang",
+    "url": "https://www.semanticscholar.org/paper/098587482b48d792bb570c3a0dc760ad4929c725",
+    "relevance": 2,
+    "abstract": "",
+    "citations": 5
+  },
+  {
+    "title": "Generative Reliability-Based Design Optimization Using In-Context Learning Capabilities of Large Language Models",
+    "year": 2025,
+    "authors": "Zhonglin Jiang, Qian Tang, Zequn Wang",
+    "url": "https://api.semanticscholar.org/CorpusId:277434967",
+    "relevance": 2,
+    "abstract": "\n Large Language Models (LLMs) have demonstrated remarkable in-context learning capabilities, enabling flexible utilization of limited historical information to play pivotal roles in reasoning, problem-solving, and complex pattern recognition tasks. Inspired by the successful applications of LLMs in multiple domains, this paper proposes a generative design method by leveraging the in-context learning capabilities of LLMs with the iterative search mechanisms of metaheuristic algorithms for solving reliability-based design optimization problems. In detail, reliability analysis is performed by engaging the LLMs and Kriging surrogate modeling to overcome the computational burden. By dynamically providing critical information of design points to the LLMs with prompt engineering, the method enables rapid generation of high-quality design alternatives that satisfy reliability constraints while achieving performance optimization. With the Deepseek-V3 model, three case studies are used to demonstrated the performance of the proposed approach. Experimental results indicate that the proposed LLM-RBDO method successfully identifies feasible solutions that meet reliability constraints while achieving a comparable convergence rate compared to traditional genetic algorithms.",
+    "citations": 4
+  },
+  {
+    "title": "Multi-label Sequential Sentence Classification via Large Language Model",
+    "year": 2024,
+    "authors": "Mengfei Lan, Lecheng Zheng, Shufan Ming, H. Kilicoglu",
+    "url": "https://api.semanticscholar.org/CorpusId:274060642",
+    "relevance": 2,
+    "abstract": "Sequential sentence classification (SSC) in scientific publications is crucial for supporting downstream tasks such as fine-grained information retrieval and extractive summarization. However, current SSC methods are constrained by model size, sequence length, and single-label setting. To address these limitations, this paper proposes LLM-SSC, a large language model (LLM)-based framework for both single- and multi-label SSC tasks. Unlike previous approaches that employ small- or medium-sized language models, the proposed framework utilizes LLMs to generate SSC labels through designed prompts, which enhance task understanding by incorporating demonstrations and a query to describe the prediction target. We also present a multi-label contrastive learning loss with auto-weighting scheme, enabling the multi-label classification task. To support our multi-label SSC analysis, we introduce and release a new dataset, BIORC800, which mainly contains unstructured abstracts in the biomedical domain with manual annotations. Experiments demonstrate LLM-SSC's strong performance in SSC under both in-context learning and task-specific tuning settings. We release BIORC800 and our code at: https://github.com/ScienceNLPLab/LLM-SSC.",
+    "citations": 4
+  },
+  {
+    "title": "IFDECORATOR: Wrapping Instruction Following Reinforcement Learning with Verifiable Rewards",
+    "year": 2025,
+    "authors": "Xu Guo, Tianyi Liang, Tong Jian, Xiaogui Yang, Ling-I Wu, Chenhui Li, Zhihui Lu, Qipeng Guo, Kai Chen",
+    "url": "https://api.semanticscholar.org/CorpusId:280536555",
+    "relevance": 2,
+    "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) improves instruction following capabilities of large language models (LLMs), but suffers from training inefficiency due to inadequate difficulty assessment. Moreover, RLVR is prone to over-optimization, where LLMs exploit verification shortcuts without aligning to the actual intent of user instructions. We introduce Instruction Following Decorator (IFDecorator}, a framework that wraps RLVR training into a robust and sample-efficient pipeline. It consists of three components: (1) a cooperative-adversarial data flywheel that co-evolves instructions and hybrid verifications, generating progressively more challenging instruction-verification pairs; (2) IntentCheck, a bypass module enforcing intent alignment; and (3) trip wires, a diagnostic mechanism that detects reward hacking via trap instructions, which trigger and capture shortcut exploitation behaviors. Our Qwen2.5-32B-Instruct-IFDecorator achieves 87.43% accuracy on IFEval, outperforming larger proprietary models such as GPT-4o. Additionally, we demonstrate substantial improvements on FollowBench while preserving general capabilities. Our trip wires show significant reductions in reward hacking rates. We will release models, code, and data for future research.",
+    "citations": 4
+  },
+  {
+    "title": "IFEval-Extended: Enhancing Instruction-Following Evaluation in Large Language Models through Dynamic Prompt Generation",
+    "year": 2024,
+    "authors": "Bohdan Kovalevskyi",
+    "url": "https://www.semanticscholar.org/paper/d78bfd6d10e1f1a5b198106acb24e59e29f56f96",
+    "relevance": 2,
+    "abstract": "This paper introduces IFEval-Extended, an innovative benchmark for evaluating the instruction-following capabilities of Large Language Models (LLMs). Building upon the foundational principles of the existing IFEval framework, IFEval-Extended addresses the limitations of predefined prompts by employing a dynamic, generative approach to instruction synthesis. This method allows for the creation of thousands of unique, human-like instructions from a single base template, mitigating the risk of overfitting and enhancing the diversity and robustness of the evaluation process. The benchmark extends the original set of instruction categories in IFEval, providing a more granular assessment of LLM performance across various parameters such as language structure, keyword usage, and response formatting. The study evaluates state-of-the-art LLMs, including GPT-4o, LLama 3.1 (8B), and LLama 3 (70B), using strict and loose accuracy metrics. Results reveal that while models excel in handling simpler instructions, they struggle with complex tasks requiring precise adherence to multiple constraints. The findings highlight the strengths and weaknesses of current LLM capabilities, offering valuable insights for model development and real-world applications. IFEval-Extended contributes to the ongoing development of more robust, scalable, and objective LLM evaluation methods, thereby advancing the field of Natural Language Processing.",
+    "citations": 4
+  },
+  {
+    "title": "Discourse-Aware In-Context Learning for Temporal Expression Normalization",
+    "year": 2024,
+    "authors": "Akash Gautam, Lukas Lange, Jannik Strotgen",
+    "url": "https://www.semanticscholar.org/paper/3189fb267fd83bfc5d82d1cde5e1db237b125eab",
+    "relevance": 2,
+    "abstract": "Temporal expression (TE) normalization is a well-studied problem. However, the predominately used rule-based systems are highly restricted to specific settings, and upcoming machine learning approaches suffer from a lack of labeled data. In this work, we explore the feasibility of proprietary and open-source large language models (LLMs) for TE normalization using in-context learning to inject task, document, and example information into the model. We explore various sample selection strategies to retrieve the most relevant set of examples. By using a window-based prompt design approach, we can perform TE normalization across sentences, while leveraging the LLM knowledge without training the model.Our experiments show competitive results to models designed for this task. In particular, our method achieves large performance improvements for non-standard settings by dynamically including relevant examples during inference.",
+    "citations": 3
+  },
+  {
+    "title": "Parallel Sampling from Masked Diffusion Models via Conditional Independence Testing",
+    "year": 2025,
+    "authors": "Iskander Azangulov, Teodora Pandeva, Niranjani Prasad, Javier Zazo, Sushrut Karmalkar",
+    "url": "https://api.semanticscholar.org/CorpusId:282389838",
+    "relevance": 2,
+    "abstract": "Masked diffusion models (MDMs) offer a compelling alternative to autoregressive models (ARMs) for discrete text generation because they enable parallel token sampling, rather than sequential, left-to-right generation. This means potentially much faster inference. However, effective parallel sampling faces two competing requirements: (i) simultaneously updated tokens must be conditionally independent, and (ii) updates should prioritise high-confidence predictions. These goals conflict because high-confidence predictions often cluster and depend on each other, opportunities for parallel updates. We present PUNT, a model-agnostic sampler that reconciles this trade-off. Our method identifies token dependencies and removes lower-confidence tokens from conflicting groups. This produces sets of indices for unmasking that satisfy both independence and confidence criteria. Our approach ensures improved parallel unmasking through approximate conditional independence testing. Our experiments show that PUNT delivers a superior trade-off between accuracy and compute when compared to other strong training-free baselines, especially for generation of longer sequences. On the IFEval benchmark, it achieves up to 16\\% higher accuracy over baseline methods, including sequential generation (one-by-one). These gains hold across different values of hyperparameters, mitigating the need for brittle hyperparameter tuning. Moreover, we observe that PUNT induces an emergent hierarchical generation strategy, where the model first establishes high-level paragraph structure before local refinement, suggesting a planning-like generation process that contributes to strong alignment performance.",
+    "citations": 3
+  },
+  {
+    "title": "Co-rewarding: Stable Self-supervised RL for Eliciting Reasoning in Large Language Models",
+    "year": 2025,
+    "authors": "Zizhuo Zhang, Jianing Zhu, Xinmu Ge, Zihua Zhao, Zhanke Zhou, Xuan Li, Xiao Feng, Jiangchao Yao, Bo Han",
+    "url": "https://api.semanticscholar.org/CorpusId:280417531",
+    "relevance": 2,
+    "abstract": "While reinforcement learning with verifiable rewards (RLVR) is effective to improve the reasoning ability of large language models (LLMs), its reliance on human-annotated labels leads to the scaling up dilemma, especially for complex tasks. Recent self-rewarding methods investigate a label-free alternative to unlock the reasoning capabilities of LLMs, yet they frequently encounter the non-negligible training collapse issue, as the single-view supervision signal easily forms the self-consistent illusion, yielding the reward hacking. Inspired by the success of self-supervised learning, we propose \\textit{Co-rewarding}, a novel self-supervised RL framework that improves training stability by seeking complementary supervision from another views. Specifically, we instantiate Co-rewarding in two ways: (1) \\textit{Co-rewarding-I} is a data-side instantiation that derives reward signals from contrastive agreement across semantically analogous questions; and (2) \\textit{Co-rewarding-II} is a model-side instantiation that maintains a slowly-updated reference teacher with pseudo labels to realize self-distillation. Intuitively, such instantiations introduce different levels of discrepancy to increase the difficulty of training collapse on trivial reasoning solutions. We also explore their orthogonally combined version to further boost the performance. Empirically, Co-rewarding exhibits stable training across various setups, and outperforms other self-rewarding baselines by $+3.31\\%$ improvements on average on multiple mathematical reasoning benchmarks, especially by $+7.49\\%$ on Llama-3.2-3B-Instruct. Notably, Co-rewarding reaches or even surpasses RLVR with ground-truth (GT) label in several cases, such as a Pass@$1$ of $94.01\\%$ on GSM8K with Qwen3-8B-Base remarkably higher than GT. Our code is released at https://github.com/tmlr-group/Co-rewarding.",
+    "citations": 3
+  },
+  {
+    "title": "Teaching LLMs Music Theory with In-Context Learning and Chain-of-Thought Prompting: Pedagogical Strategies for Machines",
+    "year": 2025,
+    "authors": "Liam Pond, Ichiro Fujinaga",
+    "url": "https://api.semanticscholar.org/CorpusId:277452160",
+    "relevance": 2,
+    "abstract": "This study evaluates the baseline capabilities of Large Language Models (LLMs) like ChatGPT, Claude, and Gemini to learn concepts in music theory through in-context learning and chain-of-thought prompting. Using carefully designed prompts (in-context learning) and step-by-step worked examples (chain-of-thought prompting), we explore how LLMs can be taught increasingly complex material and how pedagogical strategies for human learners translate to educating machines. Performance is evaluated using questions from an official Canadian Royal Conservatory of Music (RCM) Level 6 examination, which covers a comprehensive range of topics, including interval and chord identification, key detection, cadence classification, and metrical analysis. Additionally, we evaluate the suitability of various music encoding formats for these tasks (ABC, Humdrum, MEI, MusicXML). All experiments were run both with and without contextual prompts. Results indicate that without context, ChatGPT with MEI performs the best at 52%, while with context, Claude with MEI performs the best at 75%. Future work will further refine prompts and expand to cover more advanced music theory concepts. This research contributes to the broader understanding of teaching LLMs and has applications for educators, students, and developers of AI music tools alike.",
+    "citations": 2
+  },
+  {
+    "title": "PALM: Synergizing Program Analysis and LLMs to Enhance Rust Unit Test Coverage",
+    "year": 2025,
+    "authors": "Bei-juan Chu, Yang Feng, Kui Liu, Hange Shi, Zifan Nan, Zhaoqiang Guo, Baowen Xu",
+    "url": "https://api.semanticscholar.org/CorpusId:279261119",
+    "relevance": 2,
+    "abstract": "Unit testing is essential for ensuring software reliability and correctness. Classic Search-Based Software Testing (SBST) methods and concolic execution-based approaches for generating unit tests often fail to achieve high coverage due to difficulties in handling complex program units, such as branching conditions and external dependencies. Recent work has increasingly utilized large language models (LLMs) to generate test cases, improving the quality of test generation by providing better context and correcting errors in the model\u2019s output. However, these methods rely on fixed prompts, resulting in relatively low compilation success rates and coverage.This paper presents PALM, an approach that leverages large language models (LLMs) to enhance the generation of high-coverage unit tests. PALM performs program analysis to identify branching conditions within functions, which are then combined into path constraints. These constraints and relevant contextual information are used to construct prompts that guide the LLMs in generating unit tests. We implement the approach and evaluate it in 15 open-source Rust crates. Experimental results show that within just two or three hours, PALM can significantly improve test coverage compared to classic methods, with increases in overall project coverage exceeding 50% in some instances and its generated tests achieving an average coverage of 72.30%, comparable to human effort (70.94%), highlighting the potential of LLMs in automated test generation. We submitted 91 PALM-generated unit tests targeting new code. Of these submissions, 80 were accepted, 5 were rejected, and 6 remain pending review. The results demonstrate the effectiveness of integrating program analysis with AI and open new avenues for future research in automated software testing.",
+    "citations": 2
+  },
+  {
+    "title": "Self-Critique-Guided Curiosity Refinement: Enhancing Honesty and Helpfulness in Large Language Models via In-Context Learning",
+    "year": 2025,
+    "authors": "Duc Hieu Ho, Chenglin Fan",
+    "url": "https://api.semanticscholar.org/CorpusId:279465491",
+    "relevance": 2,
+    "abstract": "Large language models (LLMs) have demonstrated robust capabilities across various natural language tasks. However, producing outputs that are consistently honest and helpful remains an open challenge. To overcome this challenge, this paper tackles the problem through two complementary directions. It conducts a comprehensive benchmark evaluation of ten widely used large language models, including both proprietary and open-weight models from OpenAI, Meta, and Google. In parallel, it proposes a novel prompting strategy, self-critique-guided curiosity refinement prompting. The key idea behind this strategy is enabling models to self-critique and refine their responses without additional training. The proposed method extends the curiosity-driven prompting strategy by incorporating two lightweight in-context steps including self-critique step and refinement step. The experiment results on the HONESET dataset evaluated using the framework $\\mathrm{H}^2$ (honesty and helpfulness), which was executed with GPT-4o as a judge of honesty and helpfulness, show consistent improvements across all models. The approach reduces the number of poor-quality responses, increases high-quality responses, and achieves relative gains in $\\mathrm{H}^2$ scores ranging from 1.4% to 4.3% compared to curiosity-driven prompting across evaluated models. These results highlight the effectiveness of structured self-refinement as a scalable and training-free strategy to improve the trustworthiness of LLMs outputs.",
+    "citations": 2
+  },
+  {
+    "title": "Benchmarking LLMs on the Semantic Overlap Summarization Task",
+    "year": 2024,
+    "authors": "John Salvador, Naman Bansal, Mousumi Akter, Souvik Sarkar, Anupam Das, S. Karmaker",
+    "url": "https://api.semanticscholar.org/CorpusId:268033125",
+    "relevance": 2,
+    "abstract": "Semantic Overlap Summarization (SOS) is a constrained multi-document summarization task, where the constraint is to capture the common/overlapping information between two alternative narratives. In this work, we perform a benchmarking study of popular Large Language Models (LLMs) exclusively on the SOS task. Additionally, we introduce the PrivacyPolicyPairs (3P) dataset to expand the space of SOS benchmarks in terms of quantity and variety. This dataset provides 135 high-quality SOS data samples sourced from privacy policy documents. We then use a standard prompting taxonomy called TELeR to create and evaluate 905,216 distinct LLM-generated summaries over two SOS datasets from different domains, and we further conduct human evaluation on a subset of 540 samples. We conclude the paper by analyzing models'performances and the reliability of automatic evaluation. The code and datasets used to conduct this study are available at https://anonymous.4open.science/r/llm_eval-E16D.",
+    "citations": 2
+  },
+  {
+    "title": "DecIF: Improving Instruction-Following through Meta-Decomposition",
+    "year": 2025,
+    "authors": "Tingfeng Hui, Pengyu Zhu, Bowen Ping, Ling Tang, Yaqi Zhang, Sen Su",
+    "url": "https://api.semanticscholar.org/CorpusId:278769072",
+    "relevance": 2,
+    "abstract": "Instruction-following has emerged as a crucial capability for large language models (LLMs). However, existing approaches often rely on pre-existing documents or external resources to synthesize instruction-following data, which limits their flexibility and generalizability. In this paper, we introduce DecIF, a fully autonomous, meta-decomposition guided framework that generates diverse and high-quality instruction-following data using only LLMs. DecIF is grounded in the principle of decomposition. For instruction generation, we guide LLMs to iteratively produce various types of meta-information, which are then combined with response constraints to form well-structured and semantically rich instructions. We further utilize LLMs to detect and resolve potential inconsistencies within the generated instructions. Regarding response generation, we decompose each instruction into atomic-level evaluation criteria, enabling rigorous validation and the elimination of inaccurate instruction-response pairs. Extensive experiments across a wide range of scenarios and settings demonstrate DecIF's superior performance on instruction-following tasks. Further analysis highlights its strong flexibility, scalability, and generalizability in automatically synthesizing high-quality instruction data.",
+    "citations": 2
+  },
+  {
+    "title": "Inverse IFEval: Can LLMs Unlearn Stubborn Training Conventions to Follow Real Instructions?",
+    "year": 2025,
+    "authors": "Qinyan Zhang, Xinping Lei, Ruijie Miao, Yu Fu, Haojie Fan, L. Chang, Jiafan Hou, Dingling Zhang, Zhongfei Hou, Zi Yang, Changxin Pu, Fei Hu, Jingkai Liu, Meng Liu, Yang Liu, Xiang Gao, Jiaheng Liu, Tong Yang, Zaiyuan Wang, Ge Zhang, Wenhao Huang",
+    "url": "https://api.semanticscholar.org/CorpusId:281103038",
+    "relevance": 2,
+    "abstract": "Large Language Models (LLMs) achieve strong performance on diverse tasks but often exhibit cognitive inertia, struggling to follow instructions that conflict with the standardized patterns learned during supervised fine-tuning (SFT). To evaluate this limitation, we propose Inverse IFEval, a benchmark that measures models Counter-intuitive Abilitytheir capacity to override training-induced biases and comply with adversarial instructions. Inverse IFEval introduces eight types of such challenges, including Question Correction, Intentional Textual Flaws, Code without Comments, and Counterfactual Answering. Using a human-in-the-loop pipeline, we construct a dataset of 1012 high-quality Chinese and English questions across 23 domains, evaluated under an optimized LLM-as-a-Judge framework. Experiments on existing leading LLMs demonstrate the necessity of our proposed Inverse IFEval benchmark. Our findings emphasize that future alignment efforts should not only pursue fluency and factual correctness but also account for adaptability under unconventional contexts. We hope that Inverse IFEval serves as both a diagnostic tool and a foundation for developing methods that mitigate cognitive inertia, reduce overfitting to narrow patterns, and ultimately enhance the instruction-following reliability of LLMs in diverse and unpredictable real-world scenarios.",
+    "citations": 2
+  },
+  {
+    "title": "Instructions are all you need: Self-supervised Reinforcement Learning for Instruction Following",
+    "year": 2025,
+    "authors": "Qingyu Ren, Qi He, Bowei Zhang, Jie Zeng, Jiaqing Liang, Yanghua Xiao, Weikang Zhou, Zeye Sun, Fei Yu",
+    "url": "https://api.semanticscholar.org/CorpusId:282138975",
+    "relevance": 2,
+    "abstract": "Language models often struggle to follow multi-constraint instructions that are crucial for real-world applications. Existing reinforcement learning (RL) approaches suffer from dependency on external supervision and sparse reward signals from multi-constraint tasks. We propose a label-free self-supervised RL framework that eliminates dependency on external supervision by deriving reward signals directly from instructions and generating pseudo-labels for reward model training. Our approach introduces constraint decomposition strategies and efficient constraint-wise binary classification to address sparse reward challenges while maintaining computational efficiency. Experiments show that our approach generalizes well, achieving strong improvements across 3 in-domain and 5 out-of-domain datasets, including challenging agentic and multi-turn instruction following. The data and code are publicly available at https://github.com/Rainier-rq/verl-if",
+    "citations": 2
+  },
+  {
+    "title": "Mapping Overlaps in Benchmarks through Perplexity in the Wild",
+    "year": 2025,
+    "authors": "Siyang Wu, Honglin Bao, Sida Li, Ari Holtzman, James A. Evans",
+    "url": "https://api.semanticscholar.org/CorpusId:281676210",
+    "relevance": 2,
+    "abstract": "We introduce benchmark signatures to characterize the capacity demands of LLM benchmarks and their overlaps. Signatures are sets of salient tokens from in-the-wild corpora whose model token perplexity, reflecting training exposure, predicts benchmark performance. We extract them via stepwise forward selection with linear regression in a meta-evaluation spanning 32 LLMs and 89 benchmarks across diverse domains. We then analyze how these signatures relate to both the semantic similarity of benchmark questions and the correlation structure of model performance. While performance correlations are uniformly high and semantic overlaps stay in a narrow mid-range, benchmark signatures reveal more nuanced structure. For instance, they uncover substantial overlap between benchmarks in knowledge and reasoning tasks, whereas benchmarks in culture- and humanity-oriented domains show low similarity with each other. Unlike raw performance correlations, which are influenced by benchmark-orthogonal factors such as question formats, signatures are robust to such confounds. We further identify cross-functional overlaps between logic, math, language, instruction following, and cultural/world modeling, with coding emerging as the most isolated function, interacting only moderately with the ability of detecting missing information. Qualitative analysis shows that only the knowledge signature aligns with actual knowledge, suggesting that LLM semantic organization may differ from human conceptual structure. Together, these findings offer insights into benchmark validity, LLM sensitivities, and the landscape of interconnected LLM capacities. We have open-sourced the code and data in this https://github.com/siyangwu1/Benchmark-Signature-Repository.",
+    "citations": 2
+  },
+  {
+    "title": "Evolutionary Contrastive Distillation for Language Model Alignment",
+    "year": 2024,
+    "authors": "Julian Katz-Samuels, Zheng Li, Hyokun Yun, Priyank Nigam, Yi Xu, Vaclav Petricek, Bing Yin, Trishul M. Chilimbi",
+    "url": "https://api.semanticscholar.org/CorpusId:273233278",
+    "relevance": 2,
+    "abstract": "The ability of large language models (LLMs) to execute complex instructions is essential for their real-world applications. However, several recent studies indicate that LLMs struggle with challenging instructions. In this paper, we propose Evolutionary Contrastive Distillation (ECD), a novel method for generating high-quality synthetic preference data designed to enhance the complex instruction-following capability of language models. ECD generates data that specifically illustrates the difference between a response that successfully follows a set of complex instructions and a response that is high-quality, but nevertheless makes some subtle mistakes. This is done by prompting LLMs to progressively evolve simple instructions to more complex instructions. When the complexity of an instruction is increased, the original successful response to the original instruction becomes a\"hard negative\"response for the new instruction, mostly meeting requirements of the new instruction, but barely missing one or two. By pairing a good response with such a hard negative response, and employing contrastive learning algorithms such as DPO, we improve language models' ability to follow complex instructions. Empirically, we observe that our method yields a 7B model that exceeds the complex instruction-following performance of current SOTA 7B models and is competitive even with open-source 70B models.",
+    "citations": 2
+  },
+  {
+    "title": "Evaluation of Large Language Models for Numeric Anomaly Detection in Power Systems",
+    "year": 2025,
+    "authors": "Yichen Liu, Hongyu Wu, Bo Liu",
+    "url": "https://www.semanticscholar.org/paper/dacc8554a0b3cd41ff2fd53837288bbe705176b8",
+    "relevance": 2,
+    "abstract": "Large language models (LLMs) have gained increasing attention in power grids for their general-purpose capabilities. Meanwhile, anomaly detection (AD) remains critical for grid resilience, requiring accurate and interpretable decisions based on multivariate telemetry. Yet the performance of LLMs on large-scale numeric data for AD remains largely unexplored. This paper presents a comprehensive evaluation of LLMs for numeric AD in power systems. We use GPT-OSS-20B as a representative model and evaluate it on the IEEE 14-bus system. A standardized prompt framework is applied across zero-shot, few-shot, in-context learning, low rank adaptation (LoRA), fine-tuning, and a hybrid LLM-traditional approach. We adopt a rule-aware design based on the three-sigma criterion, and report detection performance and rationale quality. This study lays the groundwork for further investigation into the limitations and capabilities of LLM-based AD and its integration with classical detectors in cyber-physical power grid applications.",
+    "citations": 1
+  },
+  {
+    "title": "Enhancing Complex Instruction Following for Large Language Models with Mixture-of-Contexts Fine-tuning",
+    "year": 2025,
+    "authors": "Yuheng Lu, Zimeng Bai, Caixia Yuan, Huixing Jiang, Xiaojie Wang",
+    "url": "https://api.semanticscholar.org/CorpusId:278740987",
+    "relevance": 2,
+    "abstract": "Large language models (LLMs) exhibit remarkable capabilities in handling natural language tasks; however, they may struggle to consistently follow complex instructions including those involve multiple constraints. Post-training LLMs using supervised fine-tuning (SFT) is a standard approach to improve their ability to follow instructions. In addressing complex instruction following, existing efforts primarily focus on data-driven methods that synthesize complex instruction-output pairs for SFT. However, insufficient attention allocated to crucial sub-contexts may reduce the effectiveness of SFT. In this work, we propose transforming sequentially structured input instruction into multiple parallel instructions containing subcontexts. To support processing this multi-input, we propose MISO (Multi-Input Single-Output), an extension to currently dominant decoder-only transformer-based LLMs. MISO introduces a mixture-of-contexts paradigm that jointly considers the overall instruction-output alignment and the influence of individual sub-contexts to enhance SFT effectiveness. We apply MISO fine-tuning to complex instructionfollowing datasets and evaluate it with standard LLM inference. Empirical results demonstrate the superiority of MISO as a fine-tuning method for LLMs, both in terms of effectiveness in complex instruction-following scenarios and its potential for training efficiency.",
+    "citations": 1
+  },
+  {
+    "title": "Replay Failures as Successes: Sample-Efficient Reinforcement Learning for Instruction Following",
+    "year": 2025,
+    "authors": "Kongcheng Zhang, Qi Yao, Shunyu Liu, Wenjian Zhang, Mingcan Cen, Yang Zhou, Wenkai Fang, Yiru Zhao, Baisheng Lai, Mingli Song",
+    "url": "https://api.semanticscholar.org/CorpusId:284311803",
+    "relevance": 2,
+    "abstract": "Reinforcement Learning (RL) has shown promise for aligning Large Language Models (LLMs) to follow instructions with various constraints. Despite the encouraging results, RL improvement inevitably relies on sampling successful, high-quality responses; however, the initial model often struggles to generate responses that satisfy all constraints due to its limited capabilities, yielding sparse or indistinguishable rewards that impede learning. In this work, we propose Hindsight instruction Replay (HiR), a novel sample-efficient RL framework for complex instruction following tasks, which employs a select-then-rewrite strategy to replay failed attempts as successes based on the constraints that have been satisfied in hindsight. We perform RL on these replayed samples as well as the original ones, theoretically framing the objective as dual-preference learning at both the instruction- and response-level to enable efficient optimization using only a binary reward signal. Extensive experiments demonstrate that the proposed HiR yields promising results across different instruction following tasks, while requiring less computational budget. Our code and dataset is available at https://github.com/sastpg/HIR.",
+    "citations": 1
+  },
+  {
+    "title": "Self-Review Framework for Enhancing Instruction Following Capability of LLM",
+    "year": 2025,
+    "authors": "Sihyun Park",
+    "url": "https://api.semanticscholar.org/CorpusId:280092026",
+    "relevance": 2,
+    "abstract": "Various techniques have been proposed to improve large language models (LLMs) adherence to formatting and instruction constraints. One of the most effective approaches involves utilizing high-quality data generated by powerful models. However, such models often fail to fully comply with complex instructions in a single generation. To address this limitation, iterative revision methods have been introduced. Nevertheless, as the number of data points and revision iterations increases, the associated monetary costs grow significantly. As a resource-efficient alternative, methods have been proposed that leverage high-performance evaluation tools to compensate for the limited self-evaluation capabilities of open-source LLMs. However, these approaches often lead to a degradation in output quality due to excessive revision. To overcome these challenges, we propose Re5, a self-evaluation and revision framework designed to enhance instruction-following performance while preserving the quality of the generated content. Re5 extracts task and constraint components from user instructions, performs structural evaluations to prevent error accumulation, and applies fine-grained constraint-specific content evaluations followed by selective revisions. This process ensures precise and quality-preserving improvements. The final high-quality outputs are used for alignment tuning, enabling long-term alignment improvements through a data-centric iterative refinement loop. Experimental results demonstrate that Re5 achieves instruction-following performance comparable to models trained on data generated by GPT-4o-mini, a high-performance model, even with a small amount of data while maintaining response quality with a 64.24%-win rate over the non-revised initial responses. These results validate Re5 as an efficient and effective solution for enhancing instruction adherence with minimal external supervision.",
+    "citations": 1
+  },
+  {
+    "title": "PACE: Prefix-Protected and Difficulty-Aware Compression for Efficient Reasoning",
+    "year": 2026,
+    "authors": "Ruixiang Feng, Yuntao Wen, Silin Zhou, Kejian Shi, Yifan Wang, Ran Le, Zhenwei An, Zongchao Chen, Chen Yang, Guangyue Peng, Yiming Jia, Dongsheng Wang, Tao Zhang, Lisi Chen, Yang Song, Shen Gao, Shuo Shang",
+    "url": "https://api.semanticscholar.org/CorpusId:285540904",
+    "relevance": 2,
+    "abstract": "Language Reasoning Models (LRMs) achieve strong performance by scaling test-time computation but often suffer from ``overthinking'', producing excessively long reasoning traces that increase latency and memory usage. Existing LRMs typically enforce conciseness with uniform length penalties, which over-compress crucial early deduction steps at the sequence level and indiscriminately penalize all queries at the group level. To solve these limitations, we propose \\textbf{\\model}, a dual-level framework for prefix-protected and difficulty-aware compression under hierarchical supervision. At the sequence level, prefix-protected optimization employs decaying mixed rollouts to maintain valid reasoning paths while promoting conciseness. At the group level, difficulty-aware penalty dynamically scales length constraints based on query complexity, maintaining exploration for harder questions while curbing redundancy on easier ones. Extensive experiments on DeepSeek-R1-Distill-Qwen (1.5B/7B) demonstrate that \\model achieves a substantial reduction in token usage (up to \\textbf{55.7\\%}) while simultaneously improving accuracy (up to \\textbf{4.1\\%}) on math benchmarks, with generalization ability to code, science, and general domains.",
+    "citations": 1
+  },
+  {
+    "title": "What Matters in Linearizing Language Models? A Comparative Study of Architecture, Scale, and Task Adaptation",
+    "year": 2025,
+    "authors": "Patrick Haller, Jonas Golde, Alan Akbik",
+    "url": "https://api.semanticscholar.org/CorpusId:277954916",
+    "relevance": 2,
+    "abstract": "Linearization has emerged as a strategy for developing efficient language models (LMs). Starting from an existing Transformer-based LM, linearization replaces the attention component with computationally efficient subquadratic \\textit{token mixers}. However, as an increasing number of mixers are proposed, it remains unclear which inductive biases are best suited to inherit the original Transformer's capabilities. Furthermore, it is unknown how linearization is affected by parameter and token budget scaling. To address these questions, we propose a unified setup to compare seven representative architectures, including xLSTM, GLA, and Gated DeltaNet. Our findings reveal that performance hierarchies remain stable from 140M to 1.7B parameters, with error-correcting update rules demonstrating superior scaling exponents. We show that performance gaps are established early and persist through asymptotic maturity at 10B tokens, suggesting that state resolution is a more fundamental bottleneck than the distillation budget. Finally, while most models adapt to instruction tuning, only gated delta-rule formulations maintain the precision necessary for long-context retrieval, whereas additive models suffer from irreversible state saturation. These results suggest that for successful linearization, architectural inductive biases remain the primary constraint that cannot be overcome by simply scaling training compute.",
+    "citations": 1
+  },
+  {
+    "title": "Feasibility with Language Models for Open-World Compositional Zero-Shot Learning",
+    "year": 2025,
+    "authors": "Jae Myung Kim, Stephan Alaniz, Cordelia Schmid, Zeynep Akata",
+    "url": "https://api.semanticscholar.org/CorpusId:278715228",
+    "relevance": 2,
+    "abstract": "Humans can easily tell if an attribute (also called state) is realistic, i.e., feasible, for an object, e.g. fire can be hot, but it cannot be wet. In Open-World Compositional Zero-Shot Learning, when all possible state-object combinations are considered as unseen classes, zero-shot predictors tend to perform poorly. Our work focuses on using external auxiliary knowledge to determine the feasibility of state-object combinations. Our Feasibility with Language Model (FLM) is a simple and effective approach that leverages Large Language Models (LLMs) to better comprehend the semantic relationships between states and objects. FLM involves querying an LLM about the feasibility of a given pair and retrieving the output logit for the positive answer. To mitigate potential misguidance of the LLM given that many of the state-object compositions are rare or completely infeasible, we observe that the in-context learning ability of LLMs is essential. We present an extensive study identifying Vicuna and ChatGPT as best performing, and we demonstrate that our FLM consistently improves OW-CZSL performance across all three benchmarks.",
+    "citations": 0
+  },
+  {
+    "title": "Fine-tuning on simulated data outperforms prompting for agent tone of voice",
+    "year": 2025,
+    "authors": "Ingo Marquardt, Philippe Brule",
+    "url": "https://api.semanticscholar.org/CorpusId:280112685",
+    "relevance": 2,
+    "abstract": "Deploying language models (LMs) in customer-facing speech applications requires conversational fluency and adherence to specific stylistic guidelines. This can be challenging to achieve reliably using complex system prompts due to issues like instruction following limitations and in-context bias. This study investigates the effectiveness of fine-tuning versus system prompting for aligning LMs with a specific behavioral target: responding in a natural, conversational tone suitable for voice interactions. We fine-tuned a small, open-weights model (`Llama3.2-1B-Instruct`) using Low-Rank Adaptation (LoRA) on a synthetically generated dataset derived from Wikipedia. Additionally, we fine-tuned two closed-source models (`gpt-4o-mini`, `gpt-4.1-mini`). Our results demonstrate that fine-tuning outperformed system prompting, achieving a high percentage of conversational responses, even when trained on only 100 data samples. Semantic similarity analysis confirmed that fine-tuning did not degrade content quality. Interestingly, fine-tuning with 8-bit integer quantization converged faster towards the target style than using bfloat16 precision, potentially due to implicit regularization effects. We conclude that fine-tuning small, open-weights LMs on simulated data is a highly effective and data-efficient method for instilling specific stylistic behaviors, offering a preferable alternative to complex system prompting for practical applications requiring nuanced response styles.",
+    "citations": 0
+  },
+  {
+    "title": "Causality by Abstraction: Symbolic Rule Learning in Multivariate Timeseries with Large Language Models",
+    "year": 2026,
+    "authors": "P. Biswas, G. Pedrielli, K. Candan",
+    "url": "https://www.semanticscholar.org/paper/32a5d121d24677beea1b6fd6bdb0102184bbe779",
+    "relevance": 2,
+    "abstract": "Inferring causal relations in timeseries data with delayed effects is a fundamental challenge, especially when the underlying system exhibits complex dynamics that cannot be captured by simple functional mappings. Traditional approaches often fail to produce generalized and interpretable explanations, as multiple distinct input trajectories may yield nearly indistinguishable outputs. In this work, we present ruleXplain, a framework that leverages Large Language Models (LLMs) to extract formal explanations for input-output relations in simulation-driven dynamical systems. Our method introduces a constrained symbolic rule language with temporal operators and delay semantics, enabling LLMs to generate verifiable causal rules through structured prompting. ruleXplain relies on the availability of a principled model (e.g., a simulator) that maps multivariate input time series to output time series. Within ruleXplain, the simulator is used to generate diverse counterfactual input trajectories that yield similar target output, serving as candidate explanations. Such counterfactual inputs are clustered and provided as context to the LLM, which is tasked with the generation of symbolic rules encoding the joint temporal trends responsible for the patterns observable in the output times series. A closed-loop refinement process ensures rule consistency and semantic validity. We validate the framework using the PySIRTEM epidemic simulator, mapping testing rate inputs to daily infection counts; and the EnergyPlus building energy simulator, observing temperature and solar irradiance inputs to electricity needs. For validation, we perform three classes of experiments: (1) the efficacy of the ruleset through input reconstruction; (2) ablation studies evaluating the causal encoding of the ruleset; and (3) generalization tests of the extracted rules across unseen output trends with varying phase dynamics.",
+    "citations": 0
+  },
+  {
+    "title": "Educational Regulating of Student-LLM Interactions Using System Prompts: Introducing the EDU-PROMPT Framework for Teachers",
+    "year": 2025,
+    "authors": "Thomas Raimbault",
+    "url": "https://www.semanticscholar.org/paper/414af311fb023ce021b870b6b1369667f11c0571",
+    "relevance": 2,
+    "abstract": "The rise of Large Language Models (LLMs) is transforming educational practices, particularly in higher education, by offering students new possibilities for learning assistance. However, their unregulated use (e.g. direct answers, copy-paste effects, illusion of understanding) risks by-passing essential cognitive learning processes such as mental effort, elaboration, error correction, and autonomy. This article introduces the EDUPROMPT framework, which enables teachers to design system prompts - defining expected behavioral rules for LLMs - that students can use to regulate their LLM interactions. The approach relies on a framing strategy based on levels of context (global, thematic, task-specific) and adaptive roles for the LLM (tutor, coach, reviewer, etc.). The achievement of this work lies in an operational setting that transforms LLMs into teaching assistants that promote active, adaptive, reflective, and responsible learning.",
+    "citations": 0
+  },
+  {
+    "title": "Analyzing and Internalizing Complex Policy Documents for LLM Agents",
+    "year": 2025,
+    "authors": "Jiateng Liu, Zhenhailong Wang, Xiaojiang Huang, Yingjie Li, Xing Fan, Xiang Li, Chenlei Guo, Ruhi Sarikaya, Heng Ji",
+    "url": "https://www.semanticscholar.org/paper/bca3f131269212638a724ccc71a05fd7f4423e88",
+    "relevance": 2,
+    "abstract": "Large Language Model (LLM)-based agentic systems rely on in-context policy documents encoding diverse business rules. As requirements grow, these documents expand rapidly, causing high computational overhead. This motivates developing internalization methods that embed policy documents into model priors while preserving performance. Prior prompt compression work targets generic prompts, but agentic policy documents span multiple complexity levels and require deeper reasoning, making internalization harder. We introduce CC-Gen, an agentic benchmark generator with Controllable Complexity across four levels, enabling systematic evaluation of agents'ability to handle complexity and offering a unified framework for assessing policy internalization. Our analysis shows that complex policy specifications governing workflows pose major reasoning challenges. Supporting internalization with gold user agent interaction trajectories containing chain-of-thought (CoT) annotations via supervised fine-tuning (SFT) is data-intensive and degrades sharply as policy complexity increases. To mitigate data and reasoning burdens, we propose Category-Aware Policy Continued Pretraining (CAP-CPT). Our automated pipeline parses policy documents to extract key specifications, grouping them into factual, behavioral, and conditional categories, and isolating complex conditions that drive workflow complexity. This guides targeted data synthesis and enables agents to internalize policy information through an autoregressive pretraining loss. Experiments show CAP-CPT improves SFT baselines in all settings, with up to 41% and 22% gains on Qwen-3-32B, achieving 97.3% prompt length reduction on CC-Gen and further enhancing tau-Bench with minimal SFT data.",
+    "citations": 0
+  },
+  {
+    "title": "Reasoning Based Context Aware Action Sequence Prediction Using Neuro Symbolic AI",
+    "year": 2025,
+    "authors": "Anany Prem, Sourabh Tiwari",
+    "url": "https://www.semanticscholar.org/paper/8423362942c159fe1c8eac65fb0758bd06a79dcc",
+    "relevance": 2,
+    "abstract": "In modern smart homes, users increasingly depend on natural language interfaces to control interconnected devices. However, existing voice assistant systems typically rely on static intent-slot models or rule-based logic that lack adaptability to dynamic, real-world contexts. This paper presents a reasoning-driven, context-aware framework that combines Large Language Models (LLMs) with neuro-symbolic AI to predict optimized, minimal action sequences in response to user commands. By integrating contextual signals\u2014such as device states, user location, and environmental variables\u2014our model mimics human-like reasoning to skip redundant actions and resolve ambiguity through intelligent prompting. We evaluated the performance of four LLMs: Mistral 7B, Phi-4 14B, Gemini 2.0, and ChatGPT-4o, using zero-shot, one-shot, and few-shot prompting strategies. Without neuro-symbolic reasoning, Gemini 2.0 and ChatGPT-4o outperformed smaller models in both few-shot and zero-shot scenarios. However, when combined with neuro-symbolic logic, all models showed a substantial boost in accuracy\u2014Mistral 7B and Phi-4 14B improved from 66% and 59% (few-shot) to 94.71% and 97.67% respectively. Our proposed architecture leverages symbolic rules for interpreting commands, inferring missing parameters, and conditionally skipping steps based on real-time context. It outperforms both rule-based and LLM-only baselines, enhancing both relevance and user experience. This work marks a significant step toward contextually intelligent AI systems that align with human expectations and decision-making patterns, opening new avenues for ambient computing and voice-based automation.",
+    "citations": 0
+  },
+  {
+    "title": "Logic Sketch Prompting (LSP): A Deterministic and Interpretable Prompting Method",
+    "year": 2025,
+    "authors": "Satvik Tripathi",
+    "url": "https://www.semanticscholar.org/paper/059492e544c7514fe23058efb5b855f7d607a41b",
+    "relevance": 2,
+    "abstract": "Large language models (LLMs) excel at natural language reasoning but remain unreliable on tasks requiring strict rule adherence, determinism, and auditability. Logic Sketch Prompting (LSP) is a lightweight prompting framework that introduces typed variables, deterministic condition evaluators, and a rule based validator that produces traceable and repeatable outputs. Using two pharmacologic logic compliance tasks, we benchmark LSP against zero shot prompting, chain of thought prompting, and concise prompting across three open weight models: Gemma 2, Mistral, and Llama 3. Across both tasks and all models, LSP consistently achieves the highest accuracy (0.83 to 0.89) and F1 score (0.83 to 0.89), substantially outperforming zero shot prompting (0.24 to 0.60), concise prompts (0.16 to 0.30), and chain of thought prompting (0.56 to 0.75). McNemar tests show statistically significant gains for LSP across nearly all comparisons (p<0.01). These results demonstrate that LSP improves determinism, interpretability, and consistency without sacrificing performance, supporting its use in clinical, regulated, and safety critical decision support systems.",
+    "citations": 0
+  },
+  {
+    "title": "Controllable Reasoning Models Are Private Thinkers",
+    "year": 2026,
+    "authors": "Haritz Puerto, Haonan Li, Xudong Han, Timothy Baldwin, Iryna Gurevych",
+    "url": "https://www.semanticscholar.org/paper/22cfbd2cf91c9c5b6bbb6817b1b5bb728ecbdde4",
+    "relevance": 2,
+    "abstract": "AI agents powered by reasoning models require access to sensitive user data. However, their reasoning traces are difficult to control, which can result in the unintended leakage of private information to external parties. We propose training models to follow instructions not only in the final answer, but also in reasoning traces, potentially under different constraints. We hypothesize that improving their instruction following abilities in the reasoning traces can improve their privacy-preservation skills. To demonstrate this, we fine-tune models on a new instruction-following dataset with explicit restrictions on reasoning traces. We further introduce a generation strategy that decouples reasoning and answer generation using separate LoRA adapters. We evaluate our approach on six models from two model families, ranging from 1.7B to 14B parameters, across two instruction-following benchmarks and two privacy benchmarks. Our method yields substantial improvements, achieving gains of up to 20.9 points in instruction-following performance and up to 51.9 percentage points on privacy benchmarks. These improvements, however, can come at the cost of task utility, due to the trade-off between reasoning performance and instruction-following abilities. Overall, our results show that improving instruction-following behavior in reasoning models can significantly enhance privacy, suggesting a promising direction for the development of future privacy-aware agents. Our code and data are available at https://github.com/UKPLab/arxiv2026-controllable-reasoning-models",
+    "citations": 0
+  },
+  {
+    "title": "Training with Pseudo-Code for Instruction Following",
+    "year": 2025,
+    "authors": "Prince Kumar, Rudra Murthy, R. Bhat, Danish Contractor",
+    "url": "https://api.semanticscholar.org/CorpusId:278886563",
+    "relevance": 2,
+    "abstract": "Despite rapid advances in the capabilities of Large Language Models (LLMs), they continue to struggle with following relatively simple and unambiguous instructions, particularly when compositional structure is involved. Recent work suggests that models may follow instructions more effectively when they are expressed in pseudo-code rather than natural language. However, writing pseudo-code programs can be tedious, and relying on few-shot demonstrations or inference-time code prompting is often unnatural for non-expert users of LLMs. To overcome these limitations, we propose a training time approach that fine-tunes LLMs using instruction-tuning data augmented with pseudo-code representations of natural language instructions paired with final responses. We evaluate our method on 12 publicly available benchmarks spanning instruction-following, mathematical reasoning, and commonsense reasoning, across six base models. Our results show that models trained with pseudo-code follow instructions more reliably, achieving relative gains of 8-21\\% on instruction following benchmarks, while largely preserving and in some cases improving performance on mathematical and commonsense reasoning tasks, with an average gain of up to 30\\% across all evaluated benchmarks.",
+    "citations": 0
+  },
+  {
+    "title": "LSRIF: Logic-Structured Reinforcement Learning for Instruction Following",
+    "year": 2026,
+    "authors": "Qingyu Ren, Qi He, Jingwen Chang, Jie Zeng, Jiaqing Liang, Yanghua Xiao, Han Xia, Zeye Sun, Fei Yu",
+    "url": "https://api.semanticscholar.org/CorpusId:284648091",
+    "relevance": 2,
+    "abstract": "Instruction-following is critical for large language models, but real-world instructions often contain logical structures such as sequential dependencies and conditional branching. Existing methods typically construct datasets with parallel constraints and optimize average rewards, ignoring logical dependencies and yielding noisy signals. We propose a logic-structured training framework LSRIF that explicitly models instruction logic. We first construct a dataset LSRInstruct with constraint structures such as parallel, sequential, and conditional types, and then design structure-aware rewarding method LSRIF including average aggregation for parallel structures, failure-penalty propagation for sequential structures, and selective rewards for conditional branches. Experiments show LSRIF brings significant improvements in instruction-following (in-domain and out-of-domain) and general reasoning. Analysis reveals that learning with explicit logic structures brings parameter updates in attention layers and sharpens token-level attention to constraints and logical operators.",
+    "citations": 0
+  },
+  {
+    "title": "Typhoon-S: Minimal Open Post-Training for Sovereign Large Language Models",
+    "year": 2026,
+    "authors": "Kunat Pipatanakul, Pittawat Taveekitworachai",
+    "url": "https://api.semanticscholar.org/CorpusId:285051393",
+    "relevance": 2,
+    "abstract": "Large language models (LLMs) have progressed rapidly; however, most state-of-the-art models are trained and evaluated primarily in high-resource languages such as English and Chinese, and are often developed by a small number of organizations with access to large-scale compute and data. This gatekeeping creates a practical barrier for sovereign settings in which a regional- or national-scale institution or domain owner must retain control and understanding of model weights, training data, and deployment while operating under limited resources and strict transparency constraints. To this end, we identify two core requirements: (1) adoptability, the ability to transform a base model into a general-purpose assistant, and (2) sovereign capability, the ability to perform high-stakes, region-specific tasks (e.g., legal reasoning in local languages and cultural knowledge). We investigate whether these requirements can be achieved without scaling massive instruction corpora or relying on complex preference tuning pipelines and large-scale reinforcement fine-tuning (RFT). We present Typhoon S, a minimal and open post-training recipe that combines supervised fine-tuning, on-policy distillation, and small-scale RFT. Using Thai as a representative case study, we demonstrate that our approach transforms both sovereign-adapted and general-purpose base models into instruction-tuned models with strong general performance. We further show that small-scale RFT with InK-GRPO -- an extension of GRPO that augments the GRPO loss with a next-word prediction loss -- improves Thai legal reasoning and Thai-specific knowledge while preserving general capabilities. Our results suggest that a carefully designed post-training strategy can reduce the required scale of instruction data and computation, providing a practical path toward high-quality sovereign LLMs under academic-scale resources.",
+    "citations": 0
+  },
+  {
+    "title": "Multi-Level Aware Preference Learning: Enhancing RLHF for Complex Multi-Instruction Tasks",
+    "year": 2025,
+    "authors": "Ruopei Sun, Jianfeng Cai, Jinhua Zhu, Kangwen Zhao, Dongyun Xue, Weng Zhou, Li Li, Houqiang Li",
+    "url": "https://api.semanticscholar.org/CorpusId:278740303",
+    "relevance": 2,
+    "abstract": "RLHF has emerged as a predominant approach for aligning artificial intelligence systems with human preferences, demonstrating exceptional and measurable efficacy in instruction following tasks; however, it exhibits insufficient compliance capabilities when confronted with complex multi-instruction tasks. Conventional approaches rely heavily on human annotation or more sophisticated large language models, thereby introducing substantial resource expenditure or potential bias concerns. Meanwhile, alternative synthetic methods that augment standard preference datasets often compromise the model's semantic quality. Our research identifies a critical oversight in existing techniques, which predominantly focus on comparing responses while neglecting valuable latent signals embedded within prompt inputs, and which only focus on preference disparities at the intra-sample level, while neglecting to account for the inter-sample level preference differentials that exist among preference data. To leverage these previously neglected indicators, we propose a novel Multi-level Aware Preference Learning (MAPL) framework, capable of enhancing multi-instruction capabilities. Specifically, for any given response in original preference data pairs, we construct varied prompts with a preference relation under different conditions, in order to learn intra-sample level preference disparities. Furthermore, for any given original preference pair, we synthesize multi-instruction preference pairs to capture preference discrepancies at the inter-sample level. Building on the two datasets constructed above, we consequently devise two sophisticated training objective functions. Subsequently, our framework integrates seamlessly into both Reward Modeling and Direct Preference Optimization paradigms. Through rigorous evaluation across multiple benchmarks, we empirically validate the efficacy of our framework.",
+    "citations": 0
+  },
+  {
+    "title": "MAIN: Mutual Alignment Is Necessary for instruction tuning",
+    "year": 2025,
+    "authors": "Fanyi Yang, Jianfeng Liu, Xin Zhang, Haoyu Liu, Xixin Cao, Yuefeng Zhan, Hao Sun, Weiwei Deng, Feng Sun, Qi Zhang",
+    "url": "https://api.semanticscholar.org/CorpusId:277856955",
+    "relevance": 2,
+    "abstract": "Instruction tuning has empowered large language models (LLMs) to achieve remarkable performance, yet its success heavily depends on the availability of large-scale, high-quality instruction-response pairs. To meet this demand, various methods have been developed to synthesize data at scale. However, current methods for scaling up data generation often overlook a crucial aspect: the alignment between instructions and responses. We hypothesize that the quality of instruction-response pairs is determined not by the individual quality of each component, but by the degree of mutual alignment. To address this, we propose a Mutual Alignment Framework (MAIN) which enforces coherence between instructions and responses through mutual constraints. We demonstrate that MAIN generalizes well across model architectures and sizes, achieving state-of-the-art performance on LLaMA, Mistral, and Qwen models across diverse benchmarks. This work underscores the critical role of instruction-response alignment in enabling generalizable and high-quality instruction tuning for LLMs. All code is available from our repository.",
+    "citations": 0
+  },
+  {
+    "title": "EuroLLM-22B: Technical Report",
+    "year": 2026,
+    "authors": "Miguel Moura Ramos, Duarte M. Alves, Hippolyte Gisserot-Boukhlef, Jo\u00e3o Alves, P. Martins, Patrick Fernandes, Jos\u00e9 Pombal, Nuno M. Guerreiro, Ricardo Rei, Nicolas Boizard, Amin Farajian, Mateusz Klimaszewski, J. G. D. Souza, Barry Haddow, Franccois Yvon, Pierre Colombo, Alexandra Birch, Andr'e F. T. Martins",
+    "url": "https://api.semanticscholar.org/CorpusId:285303862",
+    "relevance": 2,
+    "abstract": "This report presents EuroLLM-22B, a large language model trained from scratch to support the needs of European citizens by covering all 24 official European Union languages and 11 additional languages. EuroLLM addresses the issue of European languages being underrepresented and underserved in existing open large language models. We provide a comprehensive overview of EuroLLM-22B's development, including tokenizer design, architectural specifications, data filtering, and training procedures. Across a broad set of multilingual benchmarks, EuroLLM-22B demonstrates strong performance in reasoning, instruction following, and translation, achieving results competitive with models of comparable size. To support future research, we release our base and instruction-tuned models, our multilingual web pretraining data and updated EuroBlocks instruction datasets, as well as our pre-training and evaluation codebases.",
+    "citations": 0
+  },
+  {
+    "title": "Benchmarking Complex Instruction-Following with Multiple Constraints Composition",
+    "year": 2024,
+    "authors": "Bosi Wen, Pei Ke, Xiaotao Gu, Lindong Wu, Hao Huang, Jinfeng Zhou, Wenchuang Li, Bin Hu, Wen Gao, Jiaxin Xu, Yiming Liu, Jie Tang, Hongning Wang, Minlie Huang",
+    "url": "https://api.semanticscholar.org/CorpusId:271039484",
+    "relevance": 1,
+    "abstract": "Instruction following is one of the fundamental capabilities of large language models (LLMs). As the ability of LLMs is constantly improving, they have been increasingly applied to deal with complex human instructions in real-world scenarios. Therefore, how to evaluate the ability of complex instruction-following of LLMs has become a critical research problem. Existing benchmarks mainly focus on modeling different types of constraints in human instructions while neglecting the composition of different constraints, which is an indispensable constituent in complex instructions. To this end, we propose ComplexBench, a benchmark for comprehensively evaluating the ability of LLMs to follow complex instructions composed of multiple constraints. We propose a hierarchical taxonomy for complex instructions, including 4 constraint types, 19 constraint dimensions, and 4 composition types, and manually collect a high-quality dataset accordingly. To make the evaluation reliable, we augment LLM-based evaluators with rules to effectively verify whether generated texts can satisfy each constraint and composition. Furthermore, we obtain the final evaluation score based on the dependency structure determined by different composition types. ComplexBench identifies significant deficiencies in existing LLMs when dealing with complex instructions with multiple constraints composition.",
+    "citations": 119
+  },
+  {
+    "title": "MIA-Bench: Towards Better Instruction Following Evaluation of Multimodal LLMs",
+    "year": 2024,
+    "authors": "Yusu Qian, Hanrong Ye, J. Fauconnier, Peter Grasch, Yinfei Yang, Zhe Gan",
+    "url": "https://api.semanticscholar.org/CorpusId:270869992",
+    "relevance": 1,
+    "abstract": "We introduce MIA-Bench, a new benchmark designed to evaluate multimodal large language models (MLLMs) on their ability to strictly adhere to complex instructions. Our benchmark comprises a diverse set of 400 image-prompt pairs, each crafted to challenge the models' compliance with layered instructions in generating accurate responses that satisfy specific requested patterns. Evaluation results from a wide array of state-of-the-art MLLMs reveal significant variations in performance, highlighting areas for improvement in instruction fidelity. Additionally, we create extra training data and explore supervised fine-tuning to enhance the models' ability to strictly follow instructions without compromising performance on other tasks. We hope this benchmark not only serves as a tool for measuring MLLM adherence to instructions, but also guides future developments in MLLM training methods.",
+    "citations": 48
+  },
+  {
+    "title": "MM-IFEngine: Towards Multimodal Instruction Following",
+    "year": 2025,
+    "authors": "Shengyuan Ding, Shenxi Wu, Xiangyu Zhao, Yuhang Zang, Haodong Duan, Xiao-wen Dong, Pan Zhang, Yuhang Cao, Dahua Lin, Jiaqi Wang",
+    "url": "https://api.semanticscholar.org/CorpusId:277667536",
+    "relevance": 1,
+    "abstract": "The Instruction Following (IF) ability measures how well Multi-modal Large Language Models (MLLMs) understand exactly what users are telling them and whether they are doing it right. Existing multimodal instruction following training data is scarce, the benchmarks are simple with atomic instructions, and the evaluation strategies are imprecise for tasks demanding exact output constraints. To address this, we present MM-IFEngine, an effective pipeline to generate high-quality image-instruction pairs. Our MM-IFEngine pipeline yields large-scale, diverse, and high-quality training data MM-IFInstruct-23k, which is suitable for Supervised Fine-Tuning (SFT) and extended as MM-IFDPO-23k for Direct Preference Optimization (DPO). We further introduce MM-IFEval, a challenging and diverse multi-modal instruction-following benchmark that includes (1) both compose-level constraints for output responses and perception-level constraints tied to the input images, and (2) a comprehensive evaluation pipeline incorporating both rule-based assessment and judge model. We conduct SFT and DPO experiments and demonstrate that fine-tuning MLLMs on MM-IFInstruct-23k and MM-IFDPO-23k achieves notable gains on various IF benchmarks, such as MM-IFEval (+10.2$\\%$), MIA (+7.6$\\%$), and IFEval (+12.3$\\%$). We have fully open-sourced the datasets (both SFT and DPO), evaluation code and training scripts at https://github.com/SYuan03/MM-IFEngine.",
+    "citations": 28
+  },
+  {
+    "title": "IOPO: Empowering LLMs with Complex Instruction Following via Input-Output Preference Optimization",
+    "year": 2024,
+    "authors": "Xinghua Zhang, Haiyang Yu, Cheng Fu, Fei Huang, Yongbin Li",
+    "url": "https://api.semanticscholar.org/CorpusId:273962660",
+    "relevance": 1,
+    "abstract": "In the realm of large language models (LLMs), the ability of models to accurately follow instructions is paramount as more agents and applications leverage LLMs for construction, where the complexity of instructions are rapidly increasing. However, on the one hand, there is only a certain amount of complex instruction evaluation data; on the other hand, there are no dedicated algorithms to improve the ability to follow complex instructions. To this end, this paper introduces TRACE, a benchmark for improving and evaluating the complex instructionfollowing ability, which consists of 120K training data and 1K evaluation data. Furthermore, we propose IOPO (Input-Output Preference Optimization) alignment method which takes both input and output preference pairs into consideration, where LLMs not only rapidly align with response preferences but also meticulously explore the instruction preferences. Extensive experiments on both in-domain and outof-domain datasets confirm the effectiveness of IOPO, showing 8.15%, 2.18% improvements on in-domain data and 6.29%, 3.13% on outof-domain data compared to SFT and DPO respectively.",
+    "citations": 26
+  },
+  {
+    "title": "Speech-IFEval: Evaluating Instruction-Following and Quantifying Catastrophic Forgetting in Speech-Aware Language Models",
+    "year": 2025,
+    "authors": "Ke-Han Lu, Chun-Yi Kuan, Hung-yi Lee",
+    "url": "https://api.semanticscholar.org/CorpusId:278904790",
+    "relevance": 1,
+    "abstract": "We introduce Speech-IFeval, an evaluation framework designed to assess instruction-following capabilities and quantify catastrophic forgetting in speech-aware language models (SLMs). Recent SLMs integrate speech perception with large language models (LLMs), often degrading textual capabilities due to speech-centric training. Existing benchmarks conflate speech perception with instruction-following, hindering evaluation of these distinct skills. To address this gap, we provide a benchmark for diagnosing the instruction-following abilities of SLMs. Our findings show that most SLMs struggle with even basic instructions, performing far worse than text-based LLMs. Additionally, these models are highly sensitive to prompt variations, often yielding inconsistent and unreliable outputs. We highlight core challenges and provide insights to guide future research, emphasizing the need for evaluation beyond task-level metrics.",
+    "citations": 23
+  },
+  {
+    "title": "Step-by-Step Mastery: Enhancing Soft Constraint Following Ability of Large Language Models",
+    "year": 2025,
+    "authors": "Qingyu Ren, Jie Zeng, Qi He, Jiaqing Liang, Yanghua Xiao, Weikang Zhou, Zeye Sun, Fei Yu",
+    "url": "https://api.semanticscholar.org/CorpusId:275405571",
+    "relevance": 1,
+    "abstract": "It is crucial for large language models (LLMs) to follow instructions that involve multiple constraints. However, it is an unexplored area to enhance LLMs' ability to follow soft constraints. To bridge the gap, we initially design a pipeline to construct datasets with high-quality outputs automatically. Additionally, to fully utilize the positive and negative samples generated during the data construction process, we choose Direct Preference Optimization (DPO) as the training method. Furthermore, taking into account the difficulty of soft constraints indicated by the number of constraints, we design a curriculum learning training paradigm based on the constraint quantity. We experimentally evaluate the effectiveness of our methods in improving LLMs' soft constraint following ability and analyze the factors driving the improvements.The datasets and code are publicly available at https://github.com/Rainier-rq/FollowSoftConstraint.",
+    "citations": 7
+  },
+  {
+    "title": "Reverse Preference Optimization for Complex Instruction Following",
+    "year": 2025,
+    "authors": "Xiang Huang, Ting-En Lin, Feiteng Fang, Yuchuan Wu, Hangyu Li, Yuzhong Qu, Fei Huang, Yongbin Li",
+    "url": "https://api.semanticscholar.org/CorpusId:278959688",
+    "relevance": 1,
+    "abstract": "Instruction following (IF) is a critical capability for large language models (LLMs). However, handling complex instructions with multiple constraints remains challenging. Previous methods typically select preference pairs based on the number of constraints they satisfy, introducing noise where chosen examples may fail to follow some constraints and rejected examples may excel in certain respects over the chosen ones. To address the challenge of aligning with multiple preferences, we propose a simple yet effective method called Reverse Preference Optimization (RPO). It mitigates noise in preference pairs by dynamically reversing the constraints within the instruction to ensure the chosen response is perfect, alleviating the burden of extensive sampling and filtering to collect perfect responses. Besides, reversal also enlarges the gap between chosen and rejected responses, thereby clarifying the optimization direction and making it more robust to noise. We evaluate RPO on two multi-turn IF benchmarks, Sysbench and Multi-IF, demonstrating average improvements over the DPO baseline of 4.6 and 2.5 points (on Llama-3.1 8B), respectively. Moreover, RPO scales effectively across model sizes (8B to 70B parameters), with the 70B RPO model surpassing GPT-4o.",
+    "citations": 3
+  },
+  {
+    "title": "RECAST: Expanding the Boundaries of LLMs'Complex Instruction Following with Multi-Constraint Data",
+    "year": 2025,
+    "authors": "Wenhao Liu, Zhengkang Guo, Min Xie, Jingwen Xu, Zisu Huang, Muzhao Tian, Jianhan Xu, Muling Wu, Xiaohua Wang, Changze Lv, He-Da Wang, Huaxiu Yao, Xiaoqing Zheng, Xuanjing Huang",
+    "url": "https://api.semanticscholar.org/CorpusId:278904450",
+    "relevance": 1,
+    "abstract": "Large language models (LLMs) are increasingly expected to tackle complex tasks, driven by their expanding applications and users'growing proficiency in crafting sophisticated prompts. However, as the number of explicitly stated requirements increases (particularly more than 10 constraints), LLMs often struggle to accurately follow such complex instructions, which limits their applicability in complex real-world scenarios. To the best of our knowledge, existing datasets do not exceed 10 constraints per instance. To address this challenge, we propose RECAST, an efficient and scalable framework for synthesizing datasets where each example incorporates far more constraints than those in existing benchmarks, aiming to challenge and extend the boundaries of models'ability to follow complex instructions. These constraints are extracted from real-world prompt-response pairs to ensure practical relevance. Using this framework, we construct RECAST-30K, a large-scale, high-quality dataset comprising 30k instances spanning 19 constraint types. Experimental results demonstrate that models finetuned on RECAST-30K substantially improve in following complex instructions while maintaining their general capabilities without degradation. Moreover, RECAST enables automatic verification of constraint satisfaction via rule-based validators for quantitative constraints and LLM-based validators for qualitative ones; the verifiability provided by RECAST enables the design of reward functions for reinforcement learning, which further boosts model performance on complex and challenging tasks.",
+    "citations": 2
+  },
+  {
+    "title": "IFEval-Audio: Benchmarking Instruction-Following Capability in Audio-based Large Language Models",
+    "year": 2025,
+    "authors": "Yiming Gao, Bin Wang, Chengwei Wei, Shuo Sun, AiTi Aw",
+    "url": "https://api.semanticscholar.org/CorpusId:278788650",
+    "relevance": 1,
+    "abstract": "Large language models (LLMs) have demonstrated strong instruction-following capabilities in text-based tasks. However, this ability often deteriorates in multimodal models after alignment with non-text modalities such as images or audio. While several recent efforts have investigated instruction-following performance in text and vision-language models, instruction-following in audio-based large language models remains largely unexplored. To bridge this gap, we introduce IFEval-Audio, a novel evaluation dataset designed to assess the ability to follow instructions in an audio LLM. IFEval-Audio contains 280 audio-instruction-answer triples across six diverse dimensions: Content, Capitalization, Symbol, List Structure, Length, and Format. Each example pairs an audio input with a text instruction, requiring the model to generate an output that follows a specified structure. We benchmark state-of-the-art audio LLMs on their ability to follow audio-involved instructions. The dataset is released publicly to support future research in this emerging area.",
+    "citations": 2
+  },
+  {
+    "title": "A Hierarchical and Evolvable Benchmark for Fine-Grained Code Instruction Following with Multi-Turn Feedback",
+    "year": 2025,
+    "authors": "Guoliang Duan, Mingwei Liu, Yanlin Wang, Chong Wang, Xing Peng, Zibin Zheng",
+    "url": "https://www.semanticscholar.org/paper/7a097ebe594b1007491c390367669961bebc02e7",
+    "relevance": 1,
+    "abstract": "Large language models (LLMs) have advanced significantly in code generation, yet their ability to follow complex programming instructions with layered and diverse constraints remains underexplored. Existing benchmarks often prioritize functional correctness, overlooking the nuanced requirements found in real-world development. We introduce MultiCodeIF, a comprehensive benchmark designed to evaluate instruction-following in code generation across multiple dimensions: constraint type, hierarchical levels, and iterative refinement. Built upon a structured taxonomy of 9 categories and 27 constraint types, MultiCodeIF enables granular assessment of both functional and non-functional instruction adherence. Using an automated pipeline, ConstraGen, we synthesize and evolve 2,021 code tasks sourced from 14 programming languages, supporting multi-turn evaluation through feedback-driven task variants. Empirical evaluation of six state-of-the-art LLMs uncovers substantial performance disparities. The top-performing model, Claude-3-7-Sonnet, achieves 63.0% average constraint satisfaction, while smaller models like Qwen3-1.7B fall to 44.8%. Models perform well on explicit constraints, but struggle with implicit or abstract constraints. Tasks with multiple hierarchical constraints significantly reduce model success rates, from 54.5% in single-level to just 18.8% in multi-level scenarios. However, structured feedback enables progressive improvement: average constraint satisfaction rises from 63.0% to 83.4% over four iterative refinement rounds. MultiCodeIF provides a scalable, constraint-aware, and feedback-sensitive framework to benchmark LLMs under realistic code generation scenarios, bridging the gap between synthetic evaluations and real-world instruction complexity. The full benchmark dataset, evaluation pipeline, and source code are available at https://github.com/SYSUSELab/MultiCodeIF.",
+    "citations": 2
+  },
+  {
+    "title": "Empowering Reliable Visual-Centric Instruction Following in MLLMs",
+    "year": 2026,
+    "authors": "Wei He, Feng Ju, Zhiyuan Fan, Rui Min, Minhao Cheng, Yi R. Fung",
+    "url": "https://api.semanticscholar.org/CorpusId:284512988",
+    "relevance": 1,
+    "abstract": "Evaluating the instruction-following (IF) capabilities of Multimodal Large Language Models (MLLMs) is essential for rigorously assessing how faithfully model outputs adhere to user-specified intentions. Nevertheless, existing benchmarks for evaluating MLLMs'instruction-following capability primarily focus on verbal instructions in the textual modality. These limitations hinder a thorough analysis of instruction-following capabilities, as they overlook the implicit constraints embedded in the semantically rich visual modality. To address this gap, we introduce VC-IFEval, a new benchmark accompanied by a systematically constructed dataset that evaluates MLLMs'instruction-following ability under multimodal settings. Our benchmark systematically incorporates vision-dependent constraints into instruction design, enabling a more rigorous and fine-grained assessment of how well MLLMs align their outputs with both visual input and textual instructions. Furthermore, by fine-tuning MLLMs on our dataset, we achieve substantial gains in visual instruction-following accuracy and adherence. Through extensive evaluation across representative MLLMs, we provide new insights into the strengths and limitations of current models.",
+    "citations": 2
+  },
+  {
+    "title": "Beyond the Trade-off: Self-Supervised Reinforcement Learning for Reasoning Models' Instruction Following",
+    "year": 2025,
+    "authors": "Qingyu Ren, Qi He, Bowei Zhang, Jie Zeng, Jiaqing Liang, Yanghua Xiao, Weikang Zhou, Zeye Sun, Fei Yu",
+    "url": "https://api.semanticscholar.org/CorpusId:280422554",
+    "relevance": 1,
+    "abstract": "Reasoning models excel in complex problem solving but exhibit a concerning trade off between reasoning capabilities and instruction following abilities. Existing approaches for improving instruction following rely on stronger external models, creating methodological bottlenecks and practical limitations including increased costs and accessibility constraints. We propose a self-supervised RL framework that leverages reasoning models'own internal signals to improve instruction following capabilities without external supervision. Extensive experiments demonstrate that our framework significantly improves instruction following capabilities while maintaining reasoning performance, offering a scalable and cost-effective approach to enhance instruction following in reasoning models. The data and code are publicly available at https://github.com/Rainier-rq/verl-if.",
+    "citations": 1
+  },
+  {
+    "title": "Boosting Instruction Following at Scale",
+    "year": 2025,
+    "authors": "Benjamin D. Elder, Evelyn Duesterwald, Vinod Muthusamy",
+    "url": "https://api.semanticscholar.org/CorpusId:282139003",
+    "relevance": 1,
+    "abstract": "A typical approach developers follow to influence an LLM's behavior in an application is through careful manipulation of the prompt, such as by adding or modifying instructions. However, merely adding more instructions provides little assurance that they will actually be followed. We introduce Instruction Boosting as a post-generation method to increase the reliability of LLM prompt instructions. We show that Instruction Boosting improves the instruction following rate by up to 7 points for two instructions and up to 4 points for ten instructions. To demonstrate these results we introduce SCALEDIF, a benchmark with a scaled instruction volume of up to ten instructions per data sample. We also present an analysis of the commonly observed trend that performance degrades as more instructions are added. We show that an important factor contributing to this trend is the degree of tension and conflict that arises as the number of instructions is increased. We contribute a quantitative conflict scoring tool that explains the observed performance trends and provides feedback to developers on the impact that additional prompt instructions have on a model's performance.",
+    "citations": 0
+  },
+  {
+    "title": "Precision over Diversity: High-Precision Reward Generalizes to Robust Instruction Following",
+    "year": 2026,
+    "authors": "Yirong Zeng, Yufei Liu, Xiao Ding, Yutai Hou, Yuxian Wang, Haonan Song, Wu Ning, Dandan Tu, Qixun Zhang, Bibo Cai, Yuxiang He, Ting Liu",
+    "url": "https://www.semanticscholar.org/paper/312c4e56273246d274048c8636611ee30fd18b58",
+    "relevance": 1,
+    "abstract": "A central belief in scaling reinforcement learning with verifiable rewards for instruction following (IF) tasks is that, a diverse mixture of verifiable hard and unverifiable soft constraints is essential for generalizing to unseen instructions. In this work, we challenge this prevailing consensus through a systematic empirical investigation. Counter-intuitively, we find that models trained on hard-only constraints consistently outperform those trained on mixed datasets. Extensive experiments reveal that reward precision, rather than constraint diversity, is the primary driver of effective alignment. The LLM judge suffers from a low recall rate in detecting false response, which leads to severe reward hacking, thereby undermining the benefits of diversity. Furthermore, analysis of the attention mechanism reveals that high-precision rewards develop a transferable meta-skill for IF. Motivated by these insights, we propose a simple yet effective data-centric refinement strategy that prioritizes reward precision. Evaluated on five benchmarks, our approach outperforms competitive baselines by 13.4\\% in performance while achieving a 58\\% reduction in training time, maintaining strong generalization beyond instruction following. Our findings advocate for a paradigm shift: moving away from the indiscriminate pursuit of data diversity toward high-precision rewards.",
+    "citations": 0
+  },
+  {
+    "title": "RAIN-Merging: A Gradient-Free Method to Enhance Instruction Following in Large Reasoning Models with Preserved Thinking Format",
+    "year": 2026,
+    "authors": "Zhehao Huang, Yuhang Liu, Baijiong Lin, Yixin Lou, Zhengbao He, Hanling Tian, Taoran Li, Xiaolin Huang",
+    "url": "https://api.semanticscholar.org/CorpusId:286083096",
+    "relevance": 1,
+    "abstract": "Large reasoning models (LRMs) excel at a long chain of reasoning but often fail to faithfully follow instructions regarding output format, constraints, or specific requirements. We investigate whether this gap can be closed by integrating an instruction-tuned model (ITM) into an LRM. Analyzing their differences in parameter space, namely task vectors, we find that their principal subspaces are nearly orthogonal across key modules, suggesting a lightweight merging with minimal interference. However, we also demonstrate that naive merges are fragile because they overlook the output format mismatch between LRMs (with explicit thinking and response segments) and ITMs (answers-only). We introduce RAIN-Merging (Reasoning-Aware Instruction-attention guided Null-space projection Merging), a gradient-free method that integrates instruction following while preserving thinking format and reasoning performance. First, with a small reasoning calibration set, we project the ITM task vector onto the null space of forward features at thinking special tokens, which preserves the LRM's structured reasoning mechanisms. Second, using a small instruction calibration set, we estimate instruction attention to derive module-specific scaling that amplifies instruction-relevant components and suppresses leakage. Across four instruction-following benchmarks and nine reasoning&general capability benchmarks, RAIN-Merging substantially improves instruction adherence while maintaining reasoning quality. The gains are consistent across model scales and architectures, translating to improved performance in agent settings.",
+    "citations": 0
+  },
+  {
+    "title": "Financial Instruction Following Evaluation (FIFE)",
+    "year": 2025,
+    "authors": "Glenn Scott Matlin, Siddharth, JM Anirudh, Aditya Shukla, Yahya Hassan, S. Chava",
+    "url": "https://www.semanticscholar.org/paper/5c73d57f7b38465acfd7820dc0a969e3bd855223",
+    "relevance": 1,
+    "abstract": "Language Models (LMs) struggle with complex, interdependent instructions, particularly in high-stakes domains like finance where precision is critical. We introduce FIFE, a novel, high-difficulty benchmark designed to assess LM instruction-following capabilities for financial analysis tasks. FIFE comprises 88 human-authored prompts and employs a verification system with chainable, verifiable constraints for fine-grained reward signals. We evaluate 53 models (proprietary, open-weight, open-source) in a zero-shot setting. Our key findings reveal a clear performance hierarchy: the top open-weight model (76.1 strict / 79.5 loose) surpasses the leading proprietary system (65.9 strict / 70.5 loose), while the best open-source models lag significantly (45.5 strict / 48.9 loose). However, even top-performing models struggle with FIFE's complex requirements, failing to achieve perfect compliance. We release our dataset and code as an open-source resource to promote research in Reinforcement Learning for the financial domain.",
+    "citations": 0
+  },
+  {
+    "title": "Separating Constraint Compliance from Semantic Accuracy: A Novel Benchmark for Evaluating Instruction-Following Under Compression",
+    "year": 2025,
+    "authors": "Rahul Baxi",
+    "url": "https://api.semanticscholar.org/CorpusId:284077631",
+    "relevance": 1,
+    "abstract": "Large language models (LLMs) exhibit degraded performance under prompt compression, but the mechanisms remain poorly understood. We introduce the Compression-Decay Comprehension Test (CDCT), a benchmark that independently measures constraint compliance (CC) and semantic accuracy (SA) across compression levels. We evaluate 9 frontier LLMs across 8 concepts using 5 compression levels from extreme (c=0.0, ~2 words) to none (c=1.0, ~135 words). A three-judge LLM jury achieves almost perfect inter-rater agreement on CC (Fleiss'\\k{appa}=0.90). We observe a universal U-curve pattern in constraint compliance (97.2% prevalence), with violations peaking at medium compression (c=0.5, ~27 words). Counterintuitively, models perform better at extreme compression than medium lengths. The dimensions are statistically orthogonal (r=0.193, p=0.084), with constraint effects 2.9x larger than semantic effects. Experimental validation via RLHF ablation confirms our constraint salience hypothesis: removing\"helpfulness\"signals improves CC by 598% on average (71/72 trials, p<0.001), with 79% achieving perfect compliance. This demonstrates that RLHF-trained helpfulness behaviors are the dominant cause of constraint violations at medium compression. Reasoning models outperform efficient models by 27.5% (Cohen's d=0.96). Our findings reveal a fundamental tension between RLHF alignment and instruction-following, providing actionable guidelines for improving deployed systems.",
+    "citations": 0
+  },
+  {
+    "title": "SciIF: Benchmarking Scientific Instruction Following Towards Rigorous Scientific Intelligence",
+    "year": 2026,
+    "authors": "Encheng Su, Jianyu Wu, Chen Tang, Lintao Wang, Pengze Li, Aoran Wang, Jinouwen Zhang, Yizhou Wang, Yuan Meng, Xinzhu Ma, Shixiang Tang, Houqiang Li",
+    "url": "https://api.semanticscholar.org/CorpusId:284544045",
+    "relevance": 1,
+    "abstract": "As large language models (LLMs) transition from general knowledge retrieval to complex scientific discovery, their evaluation standards must also incorporate the rigorous norms of scientific inquiry. Existing benchmarks exhibit a critical blind spot: general instruction-following metrics focus on superficial formatting, while domain-specific scientific benchmarks assess only final-answer correctness, often rewarding models that arrive at the right result with the wrong reasons. To address this gap, we introduce scientific instruction following: the capability to solve problems while strictly adhering to the constraints that establish scientific validity. Specifically, we introduce SciIF, a multi-discipline benchmark that evaluates this capability by pairing university-level problems with a fixed catalog of constraints across three pillars: scientific conditions (e.g., boundary checks and assumptions), semantic stability (e.g., unit and symbol conventions), and specific processes(e.g., required numerical methods). Uniquely, SciIF emphasizes auditability, requiring models to provide explicit evidence of constraint satisfaction rather than implicit compliance. By measuring both solution correctness and multi-constraint adherence, SciIF enables finegrained diagnosis of compositional reasoning failures, ensuring that LLMs can function as reliable agents within the strict logical frameworks of science.",
+    "citations": 0
+  }
+]

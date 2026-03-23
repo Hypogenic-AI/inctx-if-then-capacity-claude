@@ -1,0 +1,30 @@
+\section{Discussion}
+\label{sec:discussion}
+
+\para{Why do some types fail?}
+The difficulty hierarchy reveals a pattern: conditions that require \emph{semantic reasoning} about the input (content detection, length assessment, nested branching) are harder than conditions that require \emph{surface-level pattern matching} (keyword presence, negation of keyword presence). This aligns with the finding of \citet{heo2024llms} that instruction-following signals in model embeddings do not generalize across instruction types---different types likely engage different internal mechanisms.
+
+The complete failure of \gptsmall on \itype{Length} conditions ($\FNR = 100\%$) is particularly striking. The model never correctly shortens or lengthens its response based on input properties such as word count. This suggests that smaller models do not attend to \emph{meta-properties} of the input (e.g., ``is this a single word?'') when those properties serve as conditions. Larger models handle this better but still imperfectly (91.7\%).
+
+\para{False positive vs.\ false negative asymmetry.}
+The finding that stronger models tend to over-trigger while weaker models tend to under-trigger has a natural interpretation. \gptlarge, with greater capacity, is more sensitive to potential triggers and more eager to apply conditional rules---even when the condition is not strictly met. This manifests as semantic over-generalization (\eg associating ``plants'' with the color green). \gptsmall, with less capacity, is more conservative and misses genuine triggers. This asymmetry echoes the precision--recall tradeoff in classification: stronger models sacrifice precision for recall, while weaker models do the opposite.
+
+\para{Implications for practitioners.}
+Our results yield actionable guidance for designing conditional system prompts:
+\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=0pt]
+    \item \textbf{Prefer keyword-based conditions} over semantic or length-based conditions whenever possible. Keyword conditions are perfectly reliable across both models.
+    \item \textbf{Avoid nested if-then-else logic.} Flatten nested conditions into separate, independent rules.
+    \item \textbf{Test with both trigger and non-trigger inputs.} Testing only positive cases will miss the over-triggering failure mode that predominates in stronger models.
+    \item \textbf{Expect different failure modes by model size.} When using smaller models, watch for missed triggers; when using larger models, watch for over-triggering.
+\end{itemize}
+
+\para{Implications for research.}
+Our findings suggest that conditional instruction following is a distinct capability from imperative instruction following and warrants dedicated evaluation. The consistent difficulty hierarchy across models ($\rho = 0.83$) implies that improving conditional instruction following may require targeted interventions---possibly structured instruction representations such as pseudo-code \citep{kumar2025pseudocode} or specialized training on diverse conditional types \citep{zhang2024onlyif}.
+
+\para{Limitations.}
+We acknowledge several limitations of this work.
+\emph{Sample size}: With 120 test cases (12--18 per type), our per-type estimates have moderate statistical power. Larger samples would yield tighter confidence intervals. The marginal significance of the chi-squared test for \gptlarge ($p = 0.065$) may reflect this limitation.
+\emph{Model coverage}: We test only two models from the same family (OpenAI GPT). Evaluating models from other families (Claude, Gemini, Llama, Qwen) is needed to validate whether the difficulty hierarchy generalizes beyond the GPT family.
+\emph{Condition complexity}: Our conditions are relatively clean and unambiguous by design. Real-world conditional instructions are often vaguely specified, and performance on natural conditions may be substantially worse.
+\emph{Scaling benchmark scope}: The scaling experiment uses only simple keyword-to-marker conditions. Scaling with complex condition types composed together may show different patterns.
+\emph{Single run}: While temperature 0.0 provides deterministic outputs, we do not capture variance under stochastic sampling conditions.

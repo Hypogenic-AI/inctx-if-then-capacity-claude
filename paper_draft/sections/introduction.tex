@@ -1,0 +1,18 @@
+\section{Introduction}
+\label{sec:intro}
+
+When deploying large language models (LLMs) as assistants and agents, practitioners routinely embed conditional rules in system prompts: ``if the user asks about pricing, respond with the latest rate card''; ``if the input contains profanity, decline to answer.'' These \emph{if-then instructions} govern when and how the model should act, and their reliability directly determines the trustworthiness of the deployed system. Yet when such rules misfire---triggering when they should not or failing to trigger when they should---the consequences range from poor user experience to safety violations.
+
+A growing body of work evaluates LLM instruction following, including IFEval~\citep{zhou2023ifeval}, FollowBench~\citep{jiang2023followbench}, and COLLIE~\citep{yao2023collie}. These benchmarks focus on \emph{imperative} instructions (``write in JSON'', ``keep it under 100 words'') but do not isolate the \emph{conditional} aspect: whether the model correctly determines when a rule applies. The SIFo benchmark~\citep{chen2024sifo} includes a security-rules task that is implicitly conditional, and \citet{heo2024llms} show that internal instruction-following signals do not generalize across instruction types---hinting that conditional capacity may vary systematically. However, no benchmark directly and comprehensively evaluates if-then instruction following.
+
+We fill this gap with \benchname, the first systematic benchmark for conditional instruction following. We design 120 test cases spanning 8 instruction types that cover a range of cognitive demands: simple keyword matching, format switching, content detection, length control, negation, nested branching, conjunction, and disjunction. Each test case pairs a conditional instruction with an input that either triggers or does not trigger the condition, and compliance is verified by deterministic checker functions inspired by IFEval's verifiable-instruction paradigm~\citep{zhou2023ifeval}. We evaluate two models from the GPT family---\gptlarge and \gptsmall---and analyze accuracy, false positive rates, and false negative rates per instruction type.
+
+Our main findings are:
+\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=0pt]
+    \item We introduce \benchname, a benchmark of 8 conditional instruction types with balanced trigger/non-trigger inputs and deterministic verification, filling a gap in instruction-following evaluation.
+    \item We show that if-then capacity varies dramatically by instruction type (25--50 percentage point ranges) and that the difficulty ranking is consistent across models (Spearman $\rho = 0.83$, $p = 0.011$), establishing an inherent hierarchy of conditional instruction difficulty.
+    \item We identify an asymmetry in failure modes: stronger models predominantly over-trigger (false positives) while weaker models predominantly miss triggers (false negatives), providing distinct design implications for practitioners.
+    \item We demonstrate that the capacity bottleneck lies in the complexity of individual conditions rather than the number of simultaneous conditions, with both models maintaining near-perfect accuracy on up to 4 concurrent simple conditions.
+\end{itemize}
+
+The rest of this paper is organized as follows. \Secref{sec:related} reviews related work on instruction-following evaluation. \Secref{sec:method} describes the \benchname benchmark and evaluation protocol. \Secref{sec:results} presents our main results and analysis. \Secref{sec:discussion} discusses implications and limitations. \Secref{sec:conclusion} concludes.
